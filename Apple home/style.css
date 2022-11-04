@@ -55,7 +55,7 @@ main section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 10rem;
+    padding: 0rem 5rem;
 }
 
 .main-text img {
@@ -143,4 +143,24 @@ main section {
 
 #red {
     background: #ae0617;
+}
+
+.main-img {
+    transition: all 1s ease;
+    z-index: 100;
+}
+
+.main-img img {
+    width: 350px;
+    transform: rotate(-7deg);
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #445c42;
+    clip-path: circle(800px at right 1000px)
 }
