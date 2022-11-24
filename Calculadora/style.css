@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    background: rgb(63,184,251);
+    background: radial-gradient(circle, rgba(63,184,251,1) 0%, rgba(252,70,211,1) 83%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 40px;
+    color: #fff;
+    font-family: monospace;
+    border-right: 2px solid;
+    width: 11ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(11),
+    blinking 0.5s infinite step-end alternate;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.calculator {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "result result result result"
+    "clear backspace division multiply"
+    "seven eight nine subtraction"
+    "four five six adition"
+    "one two three equal"
+    "zero zero point equal";
+    gap: 5px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.result {
+    background-color: white;
+    min-height: 50px;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    grid-area: result;
+    font-size: 20px;
+    text-align: right;
+}
+
+.button {
+    background-color: #1f1f1f;
+    color: #fff;
+    min-width: 50px;
+    min-height: 50px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #000;
+    border: 1px solid #fff;
+}
+
+.clear {
+    grid-area: clear;
+}
+.backspace {
+    grid-area: backspace;
+}
+.division {
+    grid-area: division;
+}
+.multiply {
+    grid-area: multiply;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.subtraction {
+    grid-area: subtraction;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.adition {
+    grid-area: adition;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.equal {
+    grid-area: equal;
+}
+.zero {
+    grid-area: zero;
+}
+.point {
+    grid-area: point;
+}
+.equal {
+    grid-area: equal;
+}
