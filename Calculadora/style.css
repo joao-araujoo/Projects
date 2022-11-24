@@ -66,6 +66,8 @@ p {
     grid-area: result;
     font-size: 20px;
     text-align: right;
+    max-width: 215px;
+    overflow: hidden;
 }
 
 .button {
