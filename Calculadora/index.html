@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +10,19 @@
 
 <body>
     <div class="container">
-        <p>João Araujo</p>
+        <p>joao araujo</p>
         <div class="calculator">
-            <div class="result">
-                
-            </div>
-            <div class=" button clear">
+            <div class="result"></div>
+            <div class=" button clear" onclick="clean()">
                 C
             </div>
-            <div class="button backspace">
+            <div class="button backspace" onclick="backspace()">
                 ⌫
             </div>
-            <div class="button division">
+            <div class="button division" onclick="insert('/')">
                 ÷
             </div>
-            <div class="button multiply">
+            <div class="button multiply" onclick="insert('x')">
                 x
             </div>
             <div class="button seven" onclick="insert('7')">
@@ -36,7 +34,7 @@
             <div class="button nine" onclick="insert('9')">
                 9
             </div>
-            <div class="button subtraction">
+            <div class="button subtraction" onclick="insert('-')">
                 -
             </div>
             <div class="button four" onclick="insert('4')">
@@ -48,7 +46,7 @@
             <div class="button six" onclick="insert('6')">
                 6
             </div>
-            <div class="button adition">
+            <div class="button adition" onclick="insert('+')">
                 +
             </div>
             <div class="button one" onclick="insert('1')">
@@ -60,13 +58,13 @@
             <div class="button three" onclick="insert('3')">
                 3
             </div>
-            <div class="button equal">
+            <div class="button equal" onclick="calculate()">
                 =
             </div>
             <div class="button zero" onclick="insert('0')">
                 0
             </div>
-            <div class="button point">
+            <div class="button point" onclick="insert('.')">
                 .
             </div>
         </div>
