@@ -50,7 +50,7 @@
   gap: 50px;
 }
 .container .main-content .info-content .item {
-  min-width: 200px;
+  width: 200px;
   height: 200px;
   background-color: white;
 }
@@ -60,12 +60,12 @@
   gap: 50px;
 }
 .container .main-content .form-content .form-description {
-  min-width: 300px;
+  width: 300px;
   height: 300px;
   background-color: white;
 }
 .container .main-content .form-content .form {
-  min-width: 500px;
+  width: 500px;
   height: 300px;
   background-color: white;
 }
@@ -87,6 +87,44 @@
   width: 40%;
   height: 150px;
   background-color: white;
+}
+
+@media (max-width: 949px) {
+  .form-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .info-content {
+    justify-content: center;
+  }
+}
+@media (max-width: 530px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .logo {
+    margin: 0 !important;
+  }
+  .header .links {
+    margin: 0 !important;
+  }
+  .header .links a {
+    margin: 5px;
+  }
+  .form {
+    width: 300px !important;
+  }
+}
+@media (max-width: 385px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
