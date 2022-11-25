@@ -52,11 +52,18 @@
                 width: 70%;
                 height: 30px;
                 border: 2px solid transparent;
-                border-bottom: 2px solid #fff;
+                border-bottom-color: #fff;
                 background-color: transparent;
+                border-radius: 5px 0px 5px 0px;
                 font-size: 15px;
                 color: #757575;
                 outline: none;
+                padding: 5px;
+                transition: 0.5s;
+
+                &:hover {
+                    border-color: #fff;
+                }
             }
 
             .checkbox {
@@ -81,6 +88,7 @@
                 background-color: $tertiary-color;
                 border-radius: 10px 0px 10px 0px;
                 cursor: pointer;
+                transition: 0.3s;
 
                 &:hover {
                     background-color: #993e50;
