@@ -1,6 +1,7 @@
 $primary-color: #C1D9C2;
 $secondaty-color: #733F4E;
-$terciary-color: #1f1e1e;
+$tertiary-color: #1f1e1e;
+$quaternary-color: #ddd5d0;
 
 @mixin font-style($c, $fs, $ff, $td) {
     color: $c;
@@ -50,7 +51,7 @@ $terciary-color: #1f1e1e;
 
     .main-content {
         flex: 1 0 auto;
-        background-color: #ff0000;
+        background-color: $quaternary-color;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -92,7 +93,7 @@ $terciary-color: #1f1e1e;
     .footer {
         width: 100%;
         min-height: 200px;
-        background-color: $terciary-color;
+        background-color: $tertiary-color;
         display: flex;
         align-items: center;
         justify-content: space-between;

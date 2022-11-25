@@ -37,7 +37,7 @@
 }
 .container .main-content {
   flex: 1 0 auto;
-  background-color: #ff0000;
+  background-color: #ddd5d0;
   display: flex;
   flex-direction: column;
   align-items: center;
