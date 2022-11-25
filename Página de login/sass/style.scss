@@ -1,6 +1,9 @@
 //Colors
 @import "./colors/colors.scss";
 
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -38,13 +41,22 @@
             align-items: center;
             gap: 30px;
             padding: 50px;
+            font-family: 'Mountserrat';
+
+            .title {
+                font-size: 40px;
+                color: #fff;
+            }
 
             input {
                 width: 70%;
                 height: 30px;
                 border: 2px solid transparent;
-                border-bottom: 2px solid white;
+                border-bottom: 2px solid #fff;
                 background-color: transparent;
+                font-size: 15px;
+                color: #757575;
+                outline: none;
             }
 
             .checkbox {
@@ -52,17 +64,27 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-            }
-
-            #keep-logged {
-                width: 15px;
-                height: 15px;
+                
+                #keep-logged {
+                    width: 15px;
+                    height: 15px;
+                }
+                p {
+                    color: #fff;
+                }
             }
 
             #submit {
+                color: #fff;
                 height: 40px;
                 border: 2px solid #fff;
                 background-color: $tertiary-color;
+                border-radius: 10px 0px 10px 0px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #993e50;
+                }
             }
         }
     }
