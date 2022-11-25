@@ -20,11 +20,43 @@
         background-color: white;
         border-radius: 10px 12px 12px 10px;
         box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        gap: 300px;
 
         .form {
             width: 40%;
             background-color: blue;
             border-radius: 50px 10px 10px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 50px;
+
+            input {
+                width: 70%;
+                height: 30px;
+                border: 2px solid transparent;
+                border-bottom: 2px solid white;
+                background-color: transparent;
+            }
+
+            .checkbox {
+                width: 70%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            #keep-logged {
+                width: 15px;
+                height: 15px;
+            }
+
+            #submit {
+                height: 40px;
+                border: 2px solid green;
+                background-color: black;
+            }
         }
     }
 }
