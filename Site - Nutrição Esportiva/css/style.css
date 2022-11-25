@@ -1,3 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  min-height: 100px;
+  width: 100%;
+  background-color: #C1D9C2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.container .header .logo {
+  margin-left: 30px;
+}
+.container .header .links {
+  margin-right: 30px;
+}
+.container .header .links a {
+  margin-right: 30px;
+  color: #733F4E;
+  font-size: 20px;
+  font-family: Arial;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.container .header .links a:hover {
+  color: white;
+}
+.container .main-content {
+  flex: 1 0 auto;
+  background-color: #ff0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 100px;
+}
+.container .main-content .info-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.container .main-content .info-content .item {
+  min-width: 200px;
+  height: 200px;
+  background-color: white;
+}
+.container .main-content .form-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.container .main-content .form-content .form-description {
+  min-width: 300px;
+  height: 300px;
+  background-color: white;
+}
+.container .main-content .form-content .form {
+  min-width: 500px;
+  height: 300px;
+  background-color: white;
+}
+.container .footer {
+  width: 100%;
+  min-height: 200px;
+  background-color: #1f1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+.container .footer .footer-info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .map-location {
+  width: 40%;
+  height: 150px;
+  background-color: white;
+}
 
 /*# sourceMappingURL=style.css.map */

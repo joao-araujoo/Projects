@@ -1,0 +1,113 @@
+$primary-color: #C1D9C2;
+$secondaty-color: #733F4E;
+$terciary-color: #1f1e1e;
+
+@mixin font-style($c, $fs, $ff, $td) {
+    color: $c;
+    font-size: $fs;
+    font-family: $ff;
+    text-decoration: $td;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        min-height: 100px;
+        width: 100%;
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        .logo {
+            margin-left: 30px;
+        }
+
+        .links {
+            margin-right: 30px;
+
+            a {
+                margin-right: 30px;
+                @include font-style($secondaty-color, 20px, Arial, none);
+                transition: 0.3s;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .main-content {
+        flex: 1 0 auto;
+        background-color: #ff0000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        gap: 100px;
+
+        .info-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            
+            .item {
+                min-width: 200px;
+                height: 200px;
+                background-color: white;
+            }
+        }
+
+        .form-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+
+            .form-description {
+                min-width: 300px;
+                height: 300px;
+                background-color: white;
+            }
+
+            .form {
+                min-width: 500px;
+                height: 300px;
+                background-color: white;
+            }
+        }
+    }
+
+
+    .footer {
+        width: 100%;
+        min-height: 200px;
+        background-color: $terciary-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+
+        .footer-info {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-location {
+            width: 40%;
+            height: 150px;
+            background-color: white;
+        }
+    }
+}
