@@ -9,13 +9,13 @@
   width: 100%;
 }
 .container .navbar {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   position: fixed;
-  right: 51%;
-  left: 49%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
 }
 .container .navbar a {
   color: white;
@@ -38,12 +38,12 @@
   background-size: cover;
 }
 .container #section-3 {
-  background-image: url("../img/brian-lundquist-pIgiLH1TXPk-unsplash.jpg");
+  background-image: url("../img/cody-reed-aNEoZH3qbfU-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .container #section-4 {
-  background-image: url("../img/cody-reed-aNEoZH3qbfU-unsplash.jpg");
+  background-image: url("../img/brian-lundquist-pIgiLH1TXPk-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
