@@ -6,6 +6,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Roboto';
+    color: #fff;
 }
 
 .container {
@@ -21,10 +22,15 @@
         background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
 
         a {
-            color: white;
             text-decoration: none;
             font-size: 15px;
             margin: 7px;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+
+            &:hover {
+                border-bottom-color: #fff;
+            }
         }
     }
 
@@ -37,6 +43,32 @@
         background-image: url("../img/adrian-n-0rvjvne8HG0-unsplash.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            margin-bottom: 100px;
+            background-color: transparent;
+            border: 3px solid #fff;
+            font-size: 15px;
+            font-family: 'Montserrat';
+            transition: 0.5s;
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+                border-radius: 10px;
+            }
+        }
     }
     #section-2 {
         background-image: url("../img/flavien-ESXhISyyHho-unsplash.jpg");
