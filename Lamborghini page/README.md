@@ -1,4 +1,5 @@
 ## Lamborghini Page
+<p><em>Projeto inspirado no site da spaceX, a qual possui uma navbar fixa e possui o scroll smooth.</em></p>
 
 <h4>Tecnologias:</h4>
 <ul>
