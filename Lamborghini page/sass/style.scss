@@ -20,23 +20,45 @@
         padding: 20px;
         position: fixed;
         background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
-
+        
         a {
             text-decoration: none;
             font-size: 15px;
             margin: 7px;
             border-bottom: 1px solid transparent;
             transition: 0.3s;
-
+            
             &:hover {
                 border-bottom-color: #fff;
             }
         }
     }
-
+    
     .section {
         width: 100%;
         height: 100vh;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    button {
+        width: 150px;
+        height: 50px;
+        margin-bottom: 100px;
+        background-color: transparent;
+        border: 3px solid #fff;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        transition: 0.5s;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+        }
     }
 
     #section-1 {
@@ -48,41 +70,62 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-
-        h1 {
-            font-size: 50px;
-        }
-
-        button {
-            width: 150px;
-            height: 50px;
-            margin-bottom: 100px;
-            background-color: transparent;
-            border: 3px solid #fff;
-            font-size: 15px;
-            font-family: 'Montserrat';
-            transition: 0.5s;
-
-            &:hover {
-                background-color: #fff;
-                color: #000;
-                border-radius: 10px;
-            }
-        }
+        
     }
+    
     #section-2 {
         background-image: url("../img/flavien-ESXhISyyHho-unsplash.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 30px;
+
+        h1, button {
+            margin-right: 200px;
+        }
     }
     #section-3 {
         background-image: url("../img/cody-reed-aNEoZH3qbfU-unsplash.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+
+        button {
+            margin-bottom: 150px;
+        }
     }
     #section-4 {
         background-image: url("../img/brian-lundquist-pIgiLH1TXPk-unsplash.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+
+        h1 {
+            color: #000;
+            margin-left: 200px;
+        }
+
+        button {
+            margin-left: 200px;
+            background-color: #000;
+            
+            &:hover {
+                background-color: rgb(32, 32, 32);
+                color: #fff;
+            }
+        }
     }
 }
