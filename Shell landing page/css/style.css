@@ -1,3 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/img/rodion-kutsaiev-IJ25m7fXqtk-unsplash.jpg");
+  background-size: contain;
+}
+.container .navbar {
+  width: 100%;
+  height: 100px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.container .navbar img {
+  width: 50px;
+  height: 50px;
+}
+.container .navbar .links {
+  text-decoration: none;
+}
+.container .navbar .links a {
+  margin-right: 20px;
+}
+.container .text-content {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  gap: 30px;
+  padding-bottom: 100px;
+}
+.container .text-content h1 {
+  font-size: 5rem;
+}
+.container .text-content button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
+@media (max-width: 830px) {
+  .container {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
