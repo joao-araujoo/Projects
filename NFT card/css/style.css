@@ -21,6 +21,12 @@ p {
   background-color: hsl(217deg, 54%, 11%);
 }
 
+.background-card {
+  background-color: #0d1a2e;
+  padding: 20px 40px 70px 40px;
+  border-radius: 40px;
+}
+
 .card {
   background-color: hsl(216deg, 50%, 16%);
   width: 350px;
@@ -31,6 +37,7 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  box-shadow: 0px 27px 0px 15px #0C1729;
 }
 .card .image {
   background-color: hsl(178deg, 100%, 50%);
@@ -75,7 +82,7 @@ p {
 .card .creator {
   width: 100%;
   border-top: 1px solid hsl(215deg, 32%, 27%);
-  padding-top: 15px;
+  padding: 15px 0px;
 }
 .card .creator .profile-pic {
   display: flex;
