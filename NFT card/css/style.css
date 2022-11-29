@@ -32,8 +32,24 @@ p {
   align-items: center;
   gap: 20px;
 }
+.card .image {
+  background-color: hsl(178deg, 100%, 50%);
+  height: 300px;
+  cursor: pointer;
+}
+.card .image img {
+  transition: 0.5s;
+}
+.card .image img:hover {
+  opacity: 50%;
+}
 .card .description h1 {
   color: hsl(0deg, 0%, 100%);
+  transition: 0.5s;
+}
+.card .description h1:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
 }
 .card .description p {
   margin-top: 20px;
@@ -73,6 +89,11 @@ p {
 .card .creator .profile-pic span {
   margin-left: -5px;
   color: hsl(0deg, 0%, 100%);
+  transition: 0.5s;
+}
+.card .creator .profile-pic span:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
