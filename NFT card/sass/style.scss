@@ -4,4 +4,84 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-family;
+}
+
+p {
+    font-size: $p-font-size;
+    color: $softblue;
+    font-weight: 300;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-background;
+}
+
+.card {
+    background-color: $card-background;
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .description {
+        h1 {
+            color: $white;
+        }
+        p {
+            margin-top: 20px;
+        }
+    }
+
+    .info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .ethereum {
+            color: $cyan;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+        }
+        .clock {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    .creator {
+        width: 100%;
+        border-top: 1px solid $line;
+        padding-top: 15px;
+
+        .profile-pic {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                border: 1px solid $white;
+                border-radius: 50%;
+            }
+
+            span {
+                margin-left: -5px;
+                color: $white;
+            }
+        }
+    }
 }
