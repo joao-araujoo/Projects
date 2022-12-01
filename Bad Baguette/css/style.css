@@ -70,5 +70,8 @@
   box-shadow: none;
   padding: 7px;
 }
+.home-section .right-side img {
+  margin: 60px;
+}
 
 /*# sourceMappingURL=style.css.map */
