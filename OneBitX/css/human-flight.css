@@ -1,0 +1,127 @@
+.nav-item a {
+  color: #fff;
+  font-weight: 700;
+}
+
+* {
+  color: #fff;
+}
+
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/human flight/01 (1).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section-1 .title {
+  font-size: 120px;
+  font-weight: 600;
+}
+.section-1 .paragraph {
+  font-size: 30px;
+  font-weight: 300;
+}
+.section-1 .content {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact-us {
+  background-color: black;
+  color: #fff;
+}
+.contact-us .paragraph {
+  font-size: 20px;
+}
+.contact-us .paragraph a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.contact-us .paragraph a:hover {
+  color: #b9b9b9;
+}
+
+.section-2, .section-5, .section-4, .section-3 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/human flight/02 (1).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.section-2 .content, .section-5 .content, .section-4 .content, .section-3 .content {
+  margin-left: 55%;
+  padding-top: 20%;
+}
+.section-2 .paragraph, .section-5 .paragraph, .section-4 .paragraph, .section-3 .paragraph {
+  font-size: 12px;
+  font-weight: 300;
+}
+.section-2 .title, .section-5 .title, .section-4 .title, .section-3 .title {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.section-3 {
+  background-image: url("../../img/human flight/03 (1).jpg");
+}
+.section-3 .content {
+  margin-left: 0;
+}
+
+.section-4 {
+  background-image: url("../../img/human flight/04 (1).jpg");
+}
+
+.section-5 {
+  background-image: url("../../img/human flight/05 (1).jpg");
+}
+.section-5 .content {
+  margin-left: 0;
+}
+
+footer .services {
+  height: 85vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .services .paragraph {
+  font-size: 12px;
+}
+footer .services .paragraph a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+footer .services .paragraph a:hover {
+  color: #b9b9b9;
+}
+footer .footer {
+  background-color: #000;
+}
+footer .footer .paragraph {
+  color: #555252;
+}
+footer .footer .paragraph a {
+  margin-left: 10px;
+}
+footer .footer .paragraph a i {
+  transition: 0.5s;
+  color: #fff;
+}
+footer .footer .paragraph a i:hover {
+  color: #b9b9b9;
+}
+
+/*# sourceMappingURL=human-flight.css.map */
