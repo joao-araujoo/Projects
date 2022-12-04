@@ -1,0 +1,159 @@
+.nav-item a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/falcon-9/01.jpg");
+  background-size: cover;
+}
+.section-1 .content {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+.section-1 .content .title {
+  font-size: 90px;
+  font-weight: 700;
+}
+.section-1 .content .paragraph {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.numbers {
+  background-color: #000;
+  color: #fff;
+}
+.numbers .title {
+  font-size: 90px;
+  font-weight: 600;
+}
+.numbers .paragraph {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/falcon-9/02.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.section-2 .content {
+  width: 50%;
+  margin-left: 100px;
+}
+.section-2 .content .paragraph {
+  font-size: 22px;
+  color: #fff;
+  line-height: 50px;
+}
+
+.section-3 {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+.section-3 .visao-geral {
+  background-image: url("../../img/falcon-9/03.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding: 200px;
+}
+.section-3 .visao-geral .paragraph, .section-3 .visao-geral .table-title {
+  color: #fff;
+}
+.section-3 .visao-geral .table {
+  width: 500px;
+  color: #fff;
+}
+.section-3 .primeiro-estagio, .section-3 .interestadual, .section-3 .segundo-estagio, .section-3 .carga-util {
+  background-image: url("../../img/falcon-9/04.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding: 200px;
+  color: #fff;
+}
+.section-3 .primeiro-estagio .container, .section-3 .interestadual .container, .section-3 .segundo-estagio .container, .section-3 .carga-util .container {
+  width: 500px;
+  margin-left: -40px;
+}
+.section-3 .segundo-estagio, .section-3 .carga-util {
+  background-image: url("../../img/falcon-9/05.jpg");
+}
+.section-3 .segundo-estagio .table, .section-3 .carga-util .table {
+  color: #fff;
+}
+.section-3 .interestadual {
+  background-image: url("../../img/falcon-9/06.jpg");
+}
+.section-3 .carga-util {
+  background-image: url("../../img/falcon-9/07.jpg");
+}
+
+.section-4 {
+  background-image: url("../../img/falcon-9/08.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding: 200px;
+  color: #fff;
+}
+.section-4 .container {
+  width: 500px;
+  margin-left: -40px;
+}
+.section-4 .container .table {
+  color: #fff;
+}
+
+.section-5 .carousel img {
+  height: 100vh;
+}
+
+footer .services {
+  height: 85vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .services .paragraph {
+  font-size: 12px;
+  color: #fff;
+}
+footer .services .paragraph a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+footer .services .paragraph a:hover {
+  color: #b9b9b9;
+}
+footer .footer {
+  background-color: #000;
+}
+footer .footer .paragraph {
+  color: #555252;
+}
+footer .footer .paragraph a {
+  margin-left: 10px;
+}
+footer .footer .paragraph a i {
+  transition: 0.3s;
+  color: #fff;
+}
+footer .footer .paragraph a i:hover {
+  color: #b9b9b9;
+}
+
+/*# sourceMappingURL=falcon-9.css.map */
