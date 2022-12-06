@@ -54,4 +54,31 @@
   border-radius: 0px 0px 10px 10px;
 }
 
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: stretch;
+    height: 60vh;
+    padding: 150px 200px;
+  }
+  .container img {
+    width: 60px;
+  }
+  .container .title {
+    font-size: 40px !important;
+  }
+  .container .paragraph {
+    line-height: 25px;
+  }
+  .container .button {
+    margin-top: 70px !important;
+  }
+  .box-1 {
+    border-radius: 10px 0px 0px 10px !important;
+  }
+  .box-3 {
+    border-radius: 0px 10px 10px 0px !important;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
