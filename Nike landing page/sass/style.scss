@@ -36,6 +36,22 @@ button {
             color: #000;
             font-size: 15px;
             margin-right: 40px;
+            position: relative;
+            padding: 0 3px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                background-color: #000;
+                height: 2px;
+                width: 0;
+                left: 0;
+                bottom: -5px;
+                transition: 0.3s;
+            }
+            &:hover:after {
+                width: 100%;
+            }
         }
     }
 }
