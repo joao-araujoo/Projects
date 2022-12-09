@@ -1,3 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
 
+button {
+  width: 100px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .nav-items a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  margin-right: 40px;
+}
 
 /*# sourceMappingURL=style.css.map */
