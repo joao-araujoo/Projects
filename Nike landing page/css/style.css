@@ -10,8 +10,15 @@ button {
   background-color: #000;
   color: #fff;
   border-radius: 20px;
-  padding: 5px;
+  padding: 7px;
   font-size: 15px;
+  font-weight: 600;
+  transition: 0.5s;
+  border: transparent;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(48, 48, 48);
 }
 
 .navbar {
@@ -44,6 +51,9 @@ button {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.main-container .text-content button {
+  padding: 10px;
 }
 
 @media (max-width: 720px) {
