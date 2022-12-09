@@ -39,10 +39,38 @@ button {
   flex-wrap: wrap-reverse;
 }
 .main-container .text-content {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media (max-width: 605px) {
+  .nav-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .nav-items a {
+    margin-right: 0 !important;
+    width: 100%;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  .nav-items button {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
