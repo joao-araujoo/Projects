@@ -29,4 +29,20 @@ button {
   margin-right: 40px;
 }
 
+.main-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap-reverse;
+}
+.main-container .text-content {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
