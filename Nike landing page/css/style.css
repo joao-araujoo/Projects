@@ -91,7 +91,17 @@ button:hover {
     margin-right: 0 !important;
     width: 100%;
     padding: 3px;
+    text-align: center;
     border: 1px solid black;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.65);
+    transition: 0.3s;
+  }
+  .nav-items a:after {
+    display: none;
+  }
+  .nav-items a:hover {
+    transform: translateX(3px) translateY(3px);
+    box-shadow: none;
   }
   .nav-items button {
     width: 100%;
