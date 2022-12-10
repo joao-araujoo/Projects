@@ -70,6 +70,9 @@ button:hover {
 .main-container .text-content .title {
   font-size: 40px;
 }
+.main-container .text-content .paragraph {
+  font-size: 15px;
+}
 .main-container .text-content button {
   padding: 10px;
 }
@@ -149,6 +152,27 @@ button:hover {
   margin-top: 20px;
 }
 
+.collections {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.collections .text-content {
+  max-width: 400px;
+}
+.collections .text-content .title {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.collections .text-content .paragraph {
+  font-size: 15px;
+}
+
 @media (max-width: 720px) {
   .navbar {
     flex-direction: column;
@@ -163,10 +187,9 @@ button:hover {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    margin-right: 20px;
   }
   .nav-items a {
-    margin-right: 0 !important;
+    margin-right: 0px !important;
     width: 100%;
     padding: 3px;
     text-align: center;
@@ -192,8 +215,11 @@ button:hover {
   .subtitle {
     display: none;
   }
-  .tendencies img {
+  .tendencies img, .collections img {
     width: 300px;
+  }
+  .collections .text-content {
+    max-width: 300px;
   }
 }
 
