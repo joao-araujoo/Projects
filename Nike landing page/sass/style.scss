@@ -29,10 +29,13 @@ button {
     font-weight: 600;
     transition: 0.5s;
     border: transparent;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
     cursor: pointer;
 
     &:hover {
-        background-color: rgb(48, 48, 48);
+        background-color: rgb(59, 59, 59);
+        box-shadow: none;
+        transform: translateX(2px) translateY(2px);
     }
 }
 
