@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="img/nike-99.svg" type="image/x-icon">
     <title>Nike</title>
@@ -33,35 +34,40 @@
             </div>
         </div>
         <section class="releases" id="releases">
-            <img width="300" src="./img/releses.png" alt="snkrs nike">
-            <div class="text-content">
+            <img width="300" src="./img/releses.png" alt="snkrs nike" data-aos="fade-right" data-aos-duration="1500">
+            <div class="text-content" data-aos="fade-left" data-aos-duration="1500">
                 <h1 class="title">Moonwalking...</h1>
                 <p class="paragraph">SNKRS provides insider access to the latest launches, hottest events and exclusive releases that Nike and Jordan Brand have to offer</p>
             </div>
         </section>
         <section class="offers" id="offers">
-            <img width="300" src="./img/offers.png" alt="just do it">
-            <div class="text-content">
+            <img width="300" src="./img/offers.png" alt="just do it" data-aos="flip-up" data-aos-duration="1500">
+            <div class="text-content" data-aos="flip-down" data-aos-duration="1500">
                 <h1 class="title">SAVE 60%</h1>
                 <h2 class="subtitle">ON ALL CATEGORIES</h2>
                 <p class="paragraph">Retail stores and at exclusive sample sales for up to 50% off.</p>
                 <button>Buy Now</button>
             </div>
         </section>
-        <section class="tendencies" id="tendencies">
-            <div class="text-content">
+        <section class="tendencies" id="tendencies" data-aos="fade-down" data-aos-duration="1500">
+            <div class="text-content" data-aos="fade-up" data-aos-duration="1500">
                 <h1 class="title">NIKE BETS ON A VARIED AND EXPRESSIVE DESIGN LANGUAGE.</h1>
                 <button>See All</button>
             </div>
             <img width="400" src="./img/tendencies.png" alt="nike shoes">
         </section>
         <section class="collections" id="collections">
-            <img width="400" src="./img/collections.png" alt="jordan collection">
-            <div class="text-content">
+            <img width="400" src="./img/collections.png" alt="jordan collection" data-aos="zoom-in-right" data-aos-duration="1500">
+            <div class="text-content" data-aos="zoom-in-left" data-aos-duration="1500">
                 <h1 class="title">Since 1985.</h1>
                 <p class="paragraph">The Air Jordans' exclusive level relative to other types of footwear has been the reason behind this phenomenon. They made these sneakers with extremely high-quality materials like full-grain calfskin and premium leather uppers like boots. Thus, people cannot marvel at the look and feel of a high-quality product.</p>
             </div>
         </section>
     </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
