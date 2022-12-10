@@ -92,6 +92,37 @@ button:hover {
   font-size: 15px;
 }
 
+.offers {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.offers .text-content {
+  text-align: center;
+}
+.offers .text-content .title {
+  font-size: 50px;
+  font-weight: 700;
+}
+.offers .text-content .subtitle {
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.offers .text-content .paragraph {
+  margin-top: 5px;
+  font-size: 15px;
+}
+.offers .text-content button {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+}
+
 @media (max-width: 720px) {
   .navbar {
     flex-direction: column;
@@ -129,6 +160,11 @@ button:hover {
   }
   .releases {
     text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .subtitle {
+    display: none;
   }
 }
 
