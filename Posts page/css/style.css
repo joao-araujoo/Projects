@@ -76,7 +76,7 @@ header .new-post {
   color: rgb(141, 141, 141);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 820px) {
   .post {
     width: 100% !important;
   }
