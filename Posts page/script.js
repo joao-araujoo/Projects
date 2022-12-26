@@ -21,18 +21,28 @@ function createPost(){
     content.innerText = prompt('Insira o conteúdo do post:')
 
     const date = new Date()
-    const postDay = date.getDate()
-    const postMonth = date.getMonth() + 1
-    const postHour = date.getHours()
-    const postMinutes = date.getMinutes()
+    let postDay = date.getDate()
+    if(postDay < 10){
+        postDay = `0${postDay}`
+    }
+    let postMonth = date.getMonth() + 1
+    if(postMonth < 10){
+        postMonth = `0${postMonth}`
+    }
+    let postHour = date.getHours()
+    if(postHour < 10){
+        postHour = `0${postHour}`
+    }
+    let postMinutes = date.getMinutes()
+    if(postMinutes < 10){
+        postMinutes = `0${postMinutes}`
+    }
     const postDate = document.createElement('div')
     postDate.className = 'date'
     postDate.innerText = `${postDay}/${postMonth}, ${postHour}:${postMinutes}`
 
     post.append(user, content, postDate)
     postsSection.appendChild(post)
-
-    console.log({postDay, postMonth, postHour, postMinutes})
 }
 
 function changeUserName(){
