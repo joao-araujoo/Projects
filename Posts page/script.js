@@ -1,5 +1,5 @@
-let profilePicture = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnSMDqDPHw6nv-15k9U6_sDvRVwqZqh4K9HQ&usqp=CAU'
-let profileName = 'Joaozinho'
+let profilePicture = 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png'
+let profileName = 'Anônimo'
 
 function createPost(){
     const postsSection = document.querySelector('section.posts')
@@ -33,4 +33,19 @@ function createPost(){
     postsSection.appendChild(post)
 
     console.log({postDay, postMonth, postHour, postMinutes})
+}
+
+function changeUserName(){
+    profileName = prompt('Digite o novo nome de perfil:')
+    if(profileName){
+        document.getElementById('username').innerText = profileName
+    } else {
+        alert('Digite um nome válido!')
+    }
+}
+
+function changeUserPhoto(){
+    profilePicture = prompt('Insira o link da imagem:')
+    document.getElementById('user-picture').src = profilePicture
+    document.getElementById('user-picture').width = 50
 }
