@@ -1,14 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Noto+Sans+KR&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: #000;
+}
+
 header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
 }
 header .profile {
   display: flex;
@@ -17,6 +22,12 @@ header .profile {
 }
 header .profile img {
   border-radius: 50%;
+  cursor: pointer;
+}
+header .profile h2 {
+  cursor: pointer;
+  color: #fff;
+  font-family: "Hanken Grotesk";
 }
 header .new-post {
   width: 50px;
@@ -27,6 +38,48 @@ header .new-post {
   font-size: 20px;
   background-color: #0e402d;
   color: #fff;
+  cursor: pointer;
+}
+
+.posts {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.posts .post {
+  width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.posts .post .user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-family: "Hanken Grotesk";
+}
+.posts .post .user img {
+  border-radius: 50%;
+}
+.posts .post .content {
+  margin-bottom: 15px;
+  font-family: "Noto Sans KR";
+}
+.posts .post .date {
+  color: rgb(141, 141, 141);
+}
+
+@media (max-width: 720px) {
+  .post {
+    width: 100% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

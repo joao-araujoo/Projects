@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Noto+Sans+KR&display=swap');
+
+$user-font: 'Hanken Grotesk';
+$content-font: 'Noto Sans KR';
+
 * {
     padding: 0;
     margin: 0;
@@ -5,14 +10,14 @@
 }
 
 body {
-    // background-color: #000;
+    background-color: #000;
 }
 
 header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
 
     .profile {
         display: flex;
@@ -21,6 +26,12 @@ header {
 
         img {
             border-radius: 50%;
+            cursor: pointer;
+        }
+        h2 {
+            cursor: pointer;
+            color: #fff;
+            font-family: $user-font;
         }
     }
     .new-post {
@@ -32,5 +43,50 @@ header {
         font-size: 20px;
         background-color: #0e402d;
         color: #fff;
+        cursor: pointer;
+    }
+}
+
+.posts {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    
+    .post {
+        width: 800px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 15px;
+            font-family: $user-font;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+        .content {
+            margin-bottom: 15px;
+            font-family: $content-font;
+        }
+        .date {
+            color: rgb(141, 141, 141);
+        }
+    }
+}
+
+@media (max-width: 720px){
+    .post {
+        width: 100% !important;
     }
 }
