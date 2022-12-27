@@ -21,13 +21,24 @@ header .profile {
   gap: 10px;
 }
 header .profile img {
+  background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.3s;
+  opacity: 100%;
+}
+header .profile img:hover {
+  opacity: 50%;
 }
 header .profile h2 {
   cursor: pointer;
   color: #fff;
   font-family: "Hanken Grotesk";
+  opacity: 100%;
+  transition: 0.3s;
+}
+header .profile h2:hover {
+  opacity: 70%;
 }
 header .new-post {
   width: 50px;
@@ -39,6 +50,11 @@ header .new-post {
   background-color: #0e402d;
   color: #fff;
   cursor: pointer;
+  transition: 0.3s;
+}
+header .new-post:hover {
+  color: rgb(172, 172, 172);
+  background-color: #07251a;
 }
 
 .posts {

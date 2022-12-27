@@ -25,13 +25,26 @@ header {
         gap: 10px;
 
         img {
+            background-color: #fff;
             border-radius: 50%;
             cursor: pointer;
+            transition: 0.3s;
+            opacity: 100%;
+            
+            &:hover {
+                opacity: 50%;
+            }
         }
         h2 {
             cursor: pointer;
             color: #fff;
             font-family: $user-font;
+            opacity: 100%;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 70%;
+            }
         }
     }
     .new-post {
@@ -44,6 +57,12 @@ header {
         background-color: #0e402d;
         color: #fff;
         cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            color: rgb(172, 172, 172);
+            background-color: #07251a;
+        }
     }
 }
 
