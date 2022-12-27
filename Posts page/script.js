@@ -1,10 +1,12 @@
 let profilePicture = 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png'
 let profileName = 'Anônimo'
+let postOrder = 1
 
 function createPost(){
     const postsSection = document.querySelector('section.posts')
     const post = document.createElement('div')
     post.className = 'post'
+    post.id = `post-${postOrder}`
 
     const user = document.createElement('div')
     user.className = 'user'
@@ -14,7 +16,15 @@ function createPost(){
     userPicture.width = 20
     const userName = document.createElement('h4')
     userName.innerText = profileName
-    user.append(userPicture, userName)
+
+    const deleteButton = document.createElement('button')
+    deleteButton.className = `post-${postOrder}`
+    deleteButton.addEventListener('click', function(ev){
+        const postToDelete = document.getElementById(ev.currentTarget.className)
+        postToDelete.remove()
+    })
+    
+    user.append(userPicture, userName, deleteButton)
 
     const content = document.createElement('div')
     content.className = 'content'
@@ -47,6 +57,8 @@ function createPost(){
 
     post.append(user, content, postDate)
     postsSection.appendChild(post)
+
+    postOrder++
 }
 
 function changeUserName(){
@@ -67,3 +79,8 @@ function changeUserPhoto(){
         alert('Insira algum link!')
     }
 }
+
+// function deletePost(ev){
+//     const postToDelete = document.getElementById('posts')
+//     postToDelete.remove(ev.current)
+// }

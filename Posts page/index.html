@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Posts page</title>
 </head>
@@ -15,16 +16,14 @@
             <!-- profile name -->
             <h2 onclick="changeUserName()" id="username">Anônimo</h2>
         </div>
-        <!-- <div class="logo">
 
-        </div> -->
         <div class="add-post">
             <button class="new-post" onclick="createPost()">+</button>
         </div>
     </header>
     <main>
-        <section class="posts">
-            <div class="post">
+        <section class="posts" id="posts">
+            <div class="post" id="post">
                 <div class="user">
                     <img width="20" src="https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png" alt="profile-picture">
                     <h4>Anônimo</h4>
@@ -74,7 +73,5 @@
             </div>
         </section>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
