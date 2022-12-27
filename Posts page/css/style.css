@@ -74,14 +74,28 @@ header .new-post:hover {
   flex-direction: column;
   justify-content: space-between;
 }
-.posts .post .user {
+.posts .post .header {
+  display: flex;
+  justify-content: space-between;
+}
+.posts .post .header button {
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.posts .post .header .user {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 5px;
   margin-bottom: 15px;
   font-family: "Hanken Grotesk";
 }
-.posts .post .user img {
+.posts .post .header .user img {
   border-radius: 50%;
 }
 .posts .post .content {

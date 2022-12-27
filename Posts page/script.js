@@ -8,6 +8,9 @@ function createPost(){
     post.className = 'post'
     post.id = `post-${postOrder}`
 
+    const top = document.createElement('div')
+    top.className = 'header'
+
     const user = document.createElement('div')
     user.className = 'user'
 
@@ -16,15 +19,19 @@ function createPost(){
     userPicture.width = 20
     const userName = document.createElement('h4')
     userName.innerText = profileName
+    user.append(userPicture, userName)
+    top.appendChild(user)
 
     const deleteButton = document.createElement('button')
-    deleteButton.className = `post-${postOrder}`
+    deleteButton.className = 'delete-button'
+    deleteButton.id = `post-${postOrder}`
+    deleteButton.innerText = 'x'
     deleteButton.addEventListener('click', function(ev){
-        const postToDelete = document.getElementById(ev.currentTarget.className)
+        const postToDelete = document.getElementById(ev.currentTarget.id)
         postToDelete.remove()
     })
     
-    user.append(userPicture, userName, deleteButton)
+    top.appendChild(deleteButton)
 
     const content = document.createElement('div')
     content.className = 'content'
@@ -55,7 +62,7 @@ function createPost(){
     postDate.className = 'date'
     postDate.innerText = `${postDay}/${postMonth}, ${postHour}:${postMinutes}`
 
-    post.append(user, content, postDate)
+    post.append(top, content, postDate)
     postsSection.appendChild(post)
 
     postOrder++
@@ -79,8 +86,3 @@ function changeUserPhoto(){
         alert('Insira algum link!')
     }
 }
-
-// function deletePost(ev){
-//     const postToDelete = document.getElementById('posts')
-//     postToDelete.remove(ev.current)
-// }

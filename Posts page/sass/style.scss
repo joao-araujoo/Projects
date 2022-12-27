@@ -83,17 +83,34 @@ header {
         flex-direction: column;
         justify-content: space-between;
 
-        .user {
+        .header {
             display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-bottom: 15px;
-            font-family: $user-font;
+            justify-content: space-between;
 
-            img {
-                border-radius: 50%;
+            button {
+                border: none;
+                background-color: transparent;
+                color: #000;
+                font-size: 15px;
+                font-weight: 700;
+                margin-bottom: 15px;
+                cursor: pointer;
+            }
+        
+            .user {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5px;
+                margin-bottom: 15px;
+                font-family: $user-font;
+    
+                img {
+                    border-radius: 50%;
+                }
             }
         }
+
         .content {
             margin-bottom: 15px;
             font-family: $content-font;
