@@ -25,6 +25,7 @@ header {
         gap: 10px;
 
         img {
+            height: 50px;
             background-color: #fff;
             border-radius: 50%;
             cursor: pointer;
@@ -54,14 +55,17 @@ header {
         border-radius: 50%;
         border: none;
         font-size: 20px;
-        background-color: #0e402d;
+        background-color: #d83dff;
         color: #fff;
         cursor: pointer;
         transition: 0.3s;
+        box-shadow: 1px 1px 3px #fff;
 
         &:hover {
             color: rgb(172, 172, 172);
-            background-color: #07251a;
+            background-color:rgb(131, 22, 158);
+            box-shadow: 2px 2px 3px #000;
+            transform: translate(1px, 1px);
         }
     }
 }
