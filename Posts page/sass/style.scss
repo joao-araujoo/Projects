@@ -10,7 +10,7 @@ $content-font: 'Noto Sans KR';
 }
 
 body {
-    background-color: #000;
+    background-color: #141414;
 }
 
 header {
@@ -55,16 +55,16 @@ header {
         border-radius: 50%;
         border: none;
         font-size: 20px;
-        background-color: #d83dff;
+        background-color: #c589e8;
         color: #fff;
         cursor: pointer;
         transition: 0.3s;
-        box-shadow: 1px 1px 3px #fff;
+        box-shadow: 2px 2px 3px #000;
 
         &:hover {
             color: rgb(172, 172, 172);
-            background-color:rgb(131, 22, 158);
-            box-shadow: 2px 2px 3px #000;
+            background-color: #9265ac;
+            box-shadow: none;
             transform: translate(1px, 1px);
         }
     }
