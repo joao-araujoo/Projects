@@ -19,6 +19,10 @@ function createPost(){
     const content = document.createElement('div')
     content.className = 'content'
     content.innerText = prompt('Insira o conteúdo do post:')
+    if(content.innerText === ''){
+        alert('Insira algum conteúdo para o post!')
+        return
+    }
 
     const date = new Date()
     let postDay = date.getDate()
@@ -56,6 +60,10 @@ function changeUserName(){
 
 function changeUserPhoto(){
     profilePicture = prompt('Insira o link da imagem:')
-    document.getElementById('user-picture').src = profilePicture
-    document.getElementById('user-picture').width = 50
+    if(profilePicture){
+        document.getElementById('user-picture').src = profilePicture
+        document.getElementById('user-picture').width = 50
+    } else {
+        alert('Insira algum link!')
+    }
 }
