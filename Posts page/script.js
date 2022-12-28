@@ -51,8 +51,31 @@ function createPost(){
         postDay = `0${postDay}`
     }
     let postMonth = date.getMonth() + 1
-    if(postMonth < 10){
-        postMonth = `0${postMonth}`
+    switch(postMonth){
+        case 1:
+            postMonth = 'jan'
+        case 2:
+            postMonth = 'fev'
+        case 3:
+            postMonth = 'mar'
+        case 4:
+            postMonth = 'abr'
+        case 5:
+            postMonth = 'mai'
+        case 6:
+            postMonth = 'jun'
+        case 7:
+            postMonth = 'jul'
+        case 8:
+            postMonth = 'ago'
+        case 9:
+            postMonth = 'set'
+        case 10:
+            postMonth = 'out'
+        case 11:
+            postMonth = 'nov'
+        case 12:
+            postMonth = 'dez'
     }
     let postHour = date.getHours()
     if(postHour < 10){
@@ -62,9 +85,11 @@ function createPost(){
     if(postMinutes < 10){
         postMinutes = `0${postMinutes}`
     }
+    let postYear = date.getFullYear()
+
     const postDate = document.createElement('div')
     postDate.className = 'date'
-    postDate.innerText = `${postDay}/${postMonth}, ${postHour}:${postMinutes}`
+    postDate.innerText = `${postHour}:${postMinutes} · ${postDay} de ${postMonth} de ${postYear}`
 
     post.append(top, content, postDate)
     postsSection.appendChild(post)
