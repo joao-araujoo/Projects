@@ -89,14 +89,15 @@ header .new-post:hover {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 15px;
-  transition: 0.3s;
   cursor: pointer;
 }
 .posts .post .header button:hover {
+  transition: 0.3s;
   color: rgb(255, 0, 0);
 }
 .posts .post .header button:active {
-  font-size: 13px;
+  transition: 0s;
+  color: rgb(253, 128, 128);
 }
 .posts .post .header .user {
   display: flex;
