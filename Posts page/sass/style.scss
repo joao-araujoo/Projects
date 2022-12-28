@@ -102,8 +102,10 @@ header {
                 cursor: pointer;
                 
                 &:hover {
-                    transform: rotate(360deg) translate(0px, -1px);
                     color: rgb(255, 0, 0);
+                }
+                &:active {
+                    font-size: 13px;
                 }
             }
         

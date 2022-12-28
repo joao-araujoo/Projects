@@ -93,8 +93,10 @@ header .new-post:hover {
   cursor: pointer;
 }
 .posts .post .header button:hover {
-  transform: rotate(360deg) translate(0px, -1px);
   color: rgb(255, 0, 0);
+}
+.posts .post .header button:active {
+  font-size: 13px;
 }
 .posts .post .header .user {
   display: flex;
