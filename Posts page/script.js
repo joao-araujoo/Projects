@@ -18,6 +18,7 @@ function createPost(){
     const userPicture = document.createElement('img')
     userPicture.src = profilePicture
     userPicture.width = 20
+    userPicture.height = 20
     const userName = document.createElement('h4')
     userName.innerText = profileName
     user.append(userPicture, userName)
