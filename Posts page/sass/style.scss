@@ -127,6 +127,14 @@ header {
         }
         .date {
             color: rgb(141, 141, 141);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .heart {
+                margin-bottom: 1px;
+                cursor: pointer;
+            }
         }
     }
 }

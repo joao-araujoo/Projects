@@ -77,6 +77,7 @@ function createPost(){
         case 12:
             postMonth = 'dez'
     }
+
     let postHour = date.getHours()
     if(postHour < 10){
         postHour = `0${postHour}`
@@ -91,6 +92,20 @@ function createPost(){
     postDate.className = 'date'
     postDate.innerText = `${postHour}:${postMinutes} · ${postDay} de ${postMonth} de ${postYear}`
 
+    const heartButton = document.createElement('img')
+    heartButton.src = 'https://cdn-icons-png.flaticon.com/512/833/833300.png'
+    heartButton.width = 15
+    heartButton.alt = 'heart button'
+    heartButton.className = 'heart'
+    heartButton.addEventListener('click', function(){
+        if(heartButton.src === 'https://cdn-icons-png.flaticon.com/512/833/833300.png'){
+            heartButton.src = 'https://cdn-icons-png.flaticon.com/512/833/833472.png'
+        } else {
+            heartButton.src = 'https://cdn-icons-png.flaticon.com/512/833/833300.png'
+        }
+    })
+
+    postDate.appendChild(heartButton)
     post.append(top, content, postDate)
     postsSection.appendChild(post)
 

@@ -113,6 +113,13 @@ header .new-post:hover {
 }
 .posts .post .date {
   color: rgb(141, 141, 141);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.posts .post .date .heart {
+  margin-bottom: 1px;
+  cursor: pointer;
 }
 
 @media (max-width: 820px) {
