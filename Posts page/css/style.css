@@ -1,4 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Noto+Sans+KR&display=swap");
+.posts {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.posts .post {
+  width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.posts .post .header {
+  display: flex;
+  justify-content: space-between;
+}
+.posts .post .header button {
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.posts .post .header button:hover {
+  transition: 0.3s;
+  color: rgb(255, 0, 0);
+}
+.posts .post .header button:active {
+  transition: 0s;
+  color: rgb(253, 128, 128);
+}
+.posts .post .header .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-family: "Hanken Grotesk";
+}
+.posts .post .header .user img {
+  border-radius: 50%;
+}
+.posts .post .content {
+  margin-bottom: 15px;
+  font-family: "Noto Sans KR";
+}
+.posts .post .date {
+  color: rgb(141, 141, 141);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.posts .post .date .heart {
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -63,70 +127,6 @@ header .new-post:hover {
   background-color: #9265ac;
   box-shadow: none;
   transform: translate(1px, 1px);
-}
-
-.posts {
-  width: 100%;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 50px;
-}
-.posts .post {
-  width: 800px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.posts .post .header {
-  display: flex;
-  justify-content: space-between;
-}
-.posts .post .header button {
-  border: none;
-  background-color: transparent;
-  color: #000;
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-.posts .post .header button:hover {
-  transition: 0.3s;
-  color: rgb(255, 0, 0);
-}
-.posts .post .header button:active {
-  transition: 0s;
-  color: rgb(253, 128, 128);
-}
-.posts .post .header .user {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  margin-bottom: 15px;
-  font-family: "Hanken Grotesk";
-}
-.posts .post .header .user img {
-  border-radius: 50%;
-}
-.posts .post .content {
-  margin-bottom: 15px;
-  font-family: "Noto Sans KR";
-}
-.posts .post .date {
-  color: rgb(141, 141, 141);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.posts .post .date .heart {
-  margin-bottom: 1px;
-  cursor: pointer;
 }
 
 footer {
