@@ -211,6 +211,9 @@ header .new-post:hover {
   box-shadow: none;
   transform: translate(2px, 2px);
 }
+.modal button:hover {
+  background-color: #b883d6;
+}
 
 footer {
   width: 100%;

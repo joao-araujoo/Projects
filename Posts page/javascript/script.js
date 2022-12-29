@@ -181,11 +181,40 @@ function changeUserName(){
 }
         
 function changeUserPhoto(){
-    profilePicture = prompt('Insira o link da imagem:')
-    if(profilePicture){
-        document.getElementById('user-picture').src = profilePicture
-        document.getElementById('user-picture').width = 50
-    } else {
-        alert('Insira algum link!')
-    }
+    document.getElementById('modal').style.top = '0'
+    
+    const newPhotoTitle = document.createElement('p')
+    newPhotoTitle.innerText = 'Insira a URL da imagem:'
+    newPhotoTitle.id = 'new-photo-title'
+    
+    const newPhoto = document.createElement('input')
+    newPhoto.id = 'new-photo-input'
+    
+    const changeButton = document.createElement('button')
+    changeButton.innerText = 'Done'
+    changeButton.id = 'new-photo-button'
+
+    const modal = document.querySelector('div.modal')
+    modal.append(newPhotoTitle, newPhoto, changeButton)
+    
+    
+    changeButton.addEventListener('click', function(){
+        
+        if(document.querySelector('#new-photo-input').value == ''){
+            alert('Insira algo antes de concluir!')
+            return
+        } else {
+            profilePicture = document.querySelector('#new-photo-input').value
+            document.getElementById('user-picture').src = profilePicture
+            document.getElementById('modal').style.top = '-100%'
+        }
+        document.getElementById('new-photo-title').remove()
+        document.getElementById('new-photo-input').remove()
+        document.getElementById('new-photo-button').remove()
+    })
+    document.getElementById('close-modal').addEventListener('click', function(){
+        document.getElementById('new-photo-title').remove()
+        document.getElementById('new-photo-input').remove()
+        document.getElementById('new-photo-button').remove()
+    })
 }
