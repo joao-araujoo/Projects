@@ -154,10 +154,20 @@ footer {
     align-items: center;
     background-color: #fff;
     margin-top: 50px;
-    
+
     a {
         color: #000;
         margin-right: 10px;
+        transition: 0.3s;
+        font-size: 15px;
+
+        &:hover {
+            color: rgb(85, 85, 85);
+        }
+        &:active {
+            color: rgb(167, 167, 167);
+            transform: translate(1px, 1px);
+        }
     }
 }
 
