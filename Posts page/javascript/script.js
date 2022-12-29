@@ -9,6 +9,13 @@ function createPost(){
     const post = document.createElement('div')
     post.className = 'post'
     post.id = `post-${postOrder}`
+    post.addEventListener('dblclick', function(){
+        if(heartButton.src === 'https://cdn-icons-png.flaticon.com/512/833/833300.png'){
+            heartButton.src = 'https://cdn-icons-png.flaticon.com/512/833/833472.png'
+        } else {
+            heartButton.src = 'https://cdn-icons-png.flaticon.com/512/833/833300.png'
+        }
+    })
 
     const top = document.createElement('div')
     top.className = 'header'
