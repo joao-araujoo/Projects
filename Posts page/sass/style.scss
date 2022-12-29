@@ -114,13 +114,18 @@ header {
     }
     textarea {
         width: 80%;
-        height: 100px;
+        height: 120px;
         padding: 5px;
         align-self: center;
         resize: none;
         font-size: 12px;
         border: 2px solid #808080;
         border-radius: 5px;
+    }
+    input {
+        width: 80%;
+        height: 30px;
+        align-self: center;
     }
     button {
         width: 70px;

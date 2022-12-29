@@ -140,12 +140,44 @@ function createPost(){
 
         
 function changeUserName(){
-    profileName = prompt('Digite o novo nome de perfil:')
-    if(profileName){
-        document.getElementById('username').innerText = profileName
-    } else {
-        alert('Digite um nome válido!')
-    }
+    
+    document.getElementById('modal').style.top = '0'
+    
+    const newNameTitle = document.createElement('p')
+    newNameTitle.innerText = 'Digite o novo nome:'
+    newNameTitle.id = 'new-name-title'
+    
+    const newName = document.createElement('input')
+    newName.maxLength = 30
+    newName.id = 'new-name-input'
+    
+    const changeButton = document.createElement('button')
+    changeButton.innerText = 'Done'
+    changeButton.id = 'new-name-button'
+
+    const modal = document.querySelector('div.modal')
+    modal.append(newNameTitle, newName, changeButton)
+    
+    
+    changeButton.addEventListener('click', function(){
+        
+        if(document.querySelector('#new-name-input').value == ''){
+            alert('Digite algo antes de concluir!')
+            return
+        } else {
+            profileName = document.querySelector('#new-name-input').value
+            document.getElementById('username').innerText = profileName
+            document.getElementById('modal').style.top = '-100%'
+        }
+        document.getElementById('new-name-title').remove()
+        document.getElementById('new-name-input').remove()
+        document.getElementById('new-name-button').remove()
+    })
+    document.getElementById('close-modal').addEventListener('click', function(){
+        document.getElementById('new-name-title').remove()
+        document.getElementById('new-name-input').remove()
+        document.getElementById('new-name-button').remove()
+    })
 }
         
 function changeUserPhoto(){
