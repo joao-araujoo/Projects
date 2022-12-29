@@ -175,6 +175,8 @@ header .new-post:hover {
   align-self: center;
   resize: none;
   font-size: 12px;
+  border: 2px solid #808080;
+  border-radius: 5px;
 }
 .modal button {
   width: 70px;
@@ -185,7 +187,7 @@ header .new-post:hover {
   border: none;
   background: #c589e8;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
   transition: 0.2s;
   cursor: pointer;
