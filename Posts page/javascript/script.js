@@ -28,7 +28,7 @@ function createPost(){
     const deleteButton = document.createElement('button')
     deleteButton.className = 'delete-button'
     deleteButton.id = `post-${postOrder}`
-    deleteButton.innerText = 'x'
+    deleteButton.innerText = '×'
     deleteButton.addEventListener('click', function(ev){
         if(confirm('Tem certeza de que deseja apagar este post?')){
             const postToDelete = document.getElementById(ev.currentTarget.id)
