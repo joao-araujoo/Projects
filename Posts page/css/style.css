@@ -148,9 +148,11 @@ header .new-post:hover {
   background-color: #fff;
   border-radius: 10px;
   margin: 80px auto 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .modal span {
-  float: right;
+  align-self: flex-end;
   font-size: 23px;
   color: #000;
   margin: 20px 20px;
@@ -160,6 +162,37 @@ header .new-post:hover {
 .modal span:hover {
   color: rgb(255, 0, 0);
   transition: 0.3s;
+}
+.modal p {
+  margin-left: 10%;
+  font-family: "Noto Sans KR";
+  margin-bottom: 5px;
+}
+.modal textarea {
+  width: 80%;
+  height: 100px;
+  padding: 5px;
+  align-self: center;
+  resize: none;
+}
+.modal button {
+  width: 70px;
+  height: 30px;
+  margin-right: 10%;
+  align-self: flex-end;
+  margin-top: 10px;
+  border: none;
+  background: #c589e8;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.modal button:active {
+  background-color: #9265ac;
+  box-shadow: none;
+  transform: translate(2px, 2px);
 }
 
 footer {

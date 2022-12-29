@@ -4,6 +4,7 @@ let postOrder = 1
 let easterEggCount = 0
 
 function createPost(){
+
     const postsSection = document.querySelector('section.posts')
     const post = document.createElement('div')
     post.className = 'post'
