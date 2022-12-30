@@ -108,6 +108,18 @@ function createPost(){
             heartButton.src = 'https://cdn-icons-png.flaticon.com/512/833/833300.png'
         }
     })
+
+    const copyButton = document.createElement('img')
+    copyButton.src = 'https://cdn-icons-png.flaticon.com/512/4288/4288159.png'
+    copyButton.width = 14
+    copyButton.alt = 'copy button'
+    copyButton.className = 'copy-button'
+    copyButton.addEventListener('click', function(){setTimeout(function(){
+        copyButton.src = 'https://cdn-icons-png.flaticon.com/512/4288/4288159.png'
+    }, 100)
+        copyButton.src = 'https://cdn-icons-png.flaticon.com/512/4280/4280618.png' 
+        navigator.clipboard.writeText(content.innerText)
+    })
     
     document.getElementById('modal').style.top = '0'
     
@@ -133,7 +145,7 @@ function createPost(){
             alert('Digite algo antes de postar!')
             return
         } else {
-            postDate.appendChild(heartButton)
+            postDate.append(heartButton, copyButton)
             post.append(top, content, postDate)
             postsSection.appendChild(post)
             postOrder++
