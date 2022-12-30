@@ -132,6 +132,8 @@ header .new-post {
 header .new-post:hover {
   color: rgb(172, 172, 172);
   background-color: #9265ac;
+}
+header .new-post:active {
   box-shadow: none;
   transform: translate(1px, 1px);
 }

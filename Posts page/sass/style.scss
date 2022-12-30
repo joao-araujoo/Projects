@@ -69,6 +69,8 @@ header {
         &:hover {
             color: rgb(172, 172, 172);
             background-color: #9265ac;
+        }
+        &:active {
             box-shadow: none;
             transform: translate(1px, 1px);
         }
