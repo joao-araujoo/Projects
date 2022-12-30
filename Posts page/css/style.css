@@ -181,6 +181,7 @@ header .new-post:hover {
   resize: none;
   font-size: 12px;
   border-radius: 5px;
+  font-family: "Noto Sans KR";
 }
 .modal input {
   width: 80%;
