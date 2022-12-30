@@ -41,3 +41,10 @@ document.getElementById('post').addEventListener('dblclick', function(){
         document.getElementById('jamal-heart').src = 'https://cdn-icons-png.flaticon.com/512/833/833300.png'
     }
 })
+
+function copyText(){
+    const content = document.querySelector('div#easterEggContent')
+    navigator.clipboard.writeText(content.innerText).then(() => {
+        alert('copied to clipboard')
+    })
+}
