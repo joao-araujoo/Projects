@@ -62,6 +62,10 @@
   margin-bottom: 1px;
   cursor: pointer;
 }
+.posts .post .date .copy-button {
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 * {
   padding: 0;

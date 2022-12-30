@@ -66,6 +66,10 @@
                 margin-bottom: 1px;
                 cursor: pointer;
             }
+            .copy-button {
+                cursor: pointer;
+                transition: 0.3s;
+            }
         }
     }
 }
