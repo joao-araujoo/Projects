@@ -51,7 +51,6 @@
 .posts .post .content {
   margin-bottom: 15px;
   font-family: "Noto Sans KR";
-  user-select: all;
 }
 .posts .post .date {
   color: rgb(141, 141, 141);
