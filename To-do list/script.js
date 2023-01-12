@@ -14,6 +14,7 @@ function addTask(){
     
         const taskParagraph = document.createElement('p')
         taskParagraph.innerText = taskText
+        taskParagraph.className = 'taskParagraph'
     
         const doneButton = document.createElement('button')
         doneButton.innerText = '✔️'
@@ -28,6 +29,7 @@ function addTask(){
         task.appendChild(task2)
         tasksSection.appendChild(task)
         document.querySelector('input#taskText').value = ''
+
     } else {
         alert('Insira alguma tarefa!')
     }
