@@ -12,7 +12,11 @@ body {
 }
 
 .tasks-menu {
-    padding: 50px;
+    padding: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 
     .input-group {
         position: relative;
@@ -40,15 +44,42 @@ body {
     
     .input:focus, input:valid {
         outline: none;
-        border: 1.5px solid #1a73e8;
+        border: 1.5px solid #c589e8;
     }
     
     .input:focus ~ label, input:valid ~ label {
         transform: translateY(-50%) scale(0.8);
         background-color: #212121;
         padding: 0 .2em;
-        color: #2196f3;
+        color: #b07bcf;
     }
+
+    #add {
+        position: relative;
+        display: inline-block;
+        padding: 4px;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #c589e8;
+        background: transparent;
+        cursor: pointer;
+        transition: ease-out 0.3s;
+        border: 2px solid #c589e8;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 0 #c589e8;
+
+        &:hover {
+            color: white;
+            box-shadow: inset 0 -100px 0 0 #c589e8;
+        }
+            
+        &:active {
+            transform: scale(0.92);
+        }
+    }
+        
 }
 
 .task {
