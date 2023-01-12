@@ -10,8 +10,10 @@
 </head>
 <body>
     <div class="tasks-menu">
-        <label for="task">Tarefa:</label>
-        <input type="text" name="taskText" id="taskText">
+        <div class="input-group">
+            <input type="text" name="taskText" id="taskText" autocomplete="off" class="input" required="">
+            <label for="task" class="task-label">Digite algo</label>
+        </div>
         <input type="button" name="add" id="add" value="Adicionar">
     </div>
 
