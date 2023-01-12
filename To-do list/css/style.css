@@ -38,5 +38,15 @@ body {
   transform: scale(0.98);
   border-radius: 20px;
 }
+.task2 .taskParagraph {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.task2 button {
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */
