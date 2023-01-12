@@ -8,6 +8,9 @@ function addTask(){
     
         const task = document.createElement('div')
         task.className = 'task'
+
+        const task2 = document.createElement('div')
+        task2.className = 'task2'
     
         const taskParagraph = document.createElement('p')
         taskParagraph.innerText = taskText
@@ -21,7 +24,8 @@ function addTask(){
             task.remove()
         })
     
-        task.append(taskParagraph, doneButton, removeButton)
+        task2.append(taskParagraph, doneButton, removeButton)
+        task.appendChild(task2)
         tasksSection.appendChild(task)
         document.querySelector('input#taskText').value = ''
     } else {
