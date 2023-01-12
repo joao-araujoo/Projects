@@ -16,6 +16,9 @@ function addTask(){
 
     const removeButton = document.createElement('button')
     removeButton.innerText = '❌'
+    removeButton.addEventListener('click', function(){
+        task.remove()
+    })
 
     task.append(taskParagraph, doneButton, removeButton)
     tasksSection.appendChild(task)
