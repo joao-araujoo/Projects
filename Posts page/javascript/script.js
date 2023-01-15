@@ -137,7 +137,7 @@ function createPost(){
     modalProfile.append(modalProfilePicture, modalUsername)
     
     const contentInput = document.createElement('textarea')
-    contentInput.maxLength = 500
+    contentInput.maxLength = 530
     contentInput.id = 'modal-content-input'
     
     const postButton = document.createElement('button')

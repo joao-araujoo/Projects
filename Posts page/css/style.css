@@ -170,6 +170,10 @@ header .new-post:active {
   color: rgb(255, 0, 0);
   transition: 0.3s;
 }
+.modal #new-name-title, .modal #new-photo-title {
+  font-family: "Noto Sans KR";
+  margin-left: 10%;
+}
 .modal #modal-profile {
   margin-left: 10%;
   margin-bottom: 7px;
@@ -213,7 +217,7 @@ header .new-post:active {
   height: 30px;
   margin-right: 10%;
   align-self: flex-end;
-  margin-top: 10px;
+  margin-top: 15px;
   border: none;
   background: #c589e8;
   color: #fff;

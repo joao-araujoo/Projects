@@ -110,6 +110,11 @@ header {
             transition: 0.3s;
         }
     }
+    
+    #new-name-title, #new-photo-title {
+        font-family: $content-font;
+        margin-left: 10%;
+    }
     #modal-profile {
         margin-left: 10%;
         margin-bottom: 7px;
@@ -156,7 +161,7 @@ header {
         height: 30px;
         margin-right: 10%;
         align-self: flex-end;
-        margin-top: 10px;
+        margin-top: 15px;
         border: none;
         background: #c589e8;
         color: #fff;
