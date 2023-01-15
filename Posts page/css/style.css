@@ -201,7 +201,7 @@ header .new-post:active {
   background-color: #dfdfdf;
 }
 .modal button {
-  width: 70px;
+  width: 100px;
   height: 30px;
   margin-right: 10%;
   align-self: flex-end;
@@ -218,6 +218,7 @@ header .new-post:active {
   background-color: #9265ac;
   box-shadow: none;
   transform: translate(2px, 2px);
+  color: rgb(224, 224, 224);
 }
 .modal button:hover {
   background-color: #b883d6;

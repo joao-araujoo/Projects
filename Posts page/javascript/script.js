@@ -123,9 +123,17 @@ function createPost(){
     
     document.getElementById('modal').style.top = '0'
     
-    const inputTitle = document.createElement('p')
-    inputTitle.innerText = 'Digite aqui:'
-    inputTitle.id = 'modal-input-title'
+    const modalProfile = document.createElement('div')
+
+    const modalProfilePicture = document.createElement('img')
+    modalProfilePicture.src = profilePicture
+    modalProfilePicture.width = '30'
+    modalProfilePicture.height = '30'
+
+    const modalUsername = document.createElement('p')
+    modalUsername.innerText = profileName
+
+    modalProfile.append(modalProfilePicture, modalUsername)
     
     const contentInput = document.createElement('textarea')
     contentInput.maxLength = 500
@@ -136,7 +144,7 @@ function createPost(){
     postButton.id = 'modal-post-button'
     
     const modal = document.querySelector('div.modal')
-    modal.append(inputTitle, contentInput, postButton)
+    modal.append(modalProfile, contentInput, postButton)
     
     
     postButton.addEventListener('click', function(){
