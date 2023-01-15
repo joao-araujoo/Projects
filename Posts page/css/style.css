@@ -170,17 +170,17 @@ header .new-post:active {
   color: rgb(255, 0, 0);
   transition: 0.3s;
 }
-.modal .modal-profile {
+.modal #modal-profile {
   margin-left: 10%;
   margin-bottom: 7px;
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.modal .modal-profile img {
+.modal #modal-profile img {
   border-radius: 50%;
 }
-.modal .modal-profile p {
+.modal #modal-profile p {
   font-family: "Noto Sans KR";
 }
 .modal textarea {
