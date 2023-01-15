@@ -124,6 +124,7 @@ function createPost(){
     document.getElementById('modal').style.top = '0'
     
     const modalProfile = document.createElement('div')
+    modalProfile.className = 'modal-profile'
 
     const modalProfilePicture = document.createElement('img')
     modalProfilePicture.src = profilePicture

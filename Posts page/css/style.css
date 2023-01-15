@@ -170,10 +170,18 @@ header .new-post:active {
   color: rgb(255, 0, 0);
   transition: 0.3s;
 }
-.modal p {
+.modal .modal-profile {
   margin-left: 10%;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.modal .modal-profile img {
+  border-radius: 50%;
+}
+.modal .modal-profile p {
   font-family: "Noto Sans KR";
-  margin-bottom: 5px;
 }
 .modal textarea {
   width: 80%;

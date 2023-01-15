@@ -110,10 +110,20 @@ header {
             transition: 0.3s;
         }
     }
-    p {
+    .modal-profile {
         margin-left: 10%;
-        font-family: $content-font;
-        margin-bottom: 5px;
+        margin-bottom: 7px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+            border-radius: 50%;
+        }
+
+        p {
+            font-family: $content-font;
+        }
     }
     textarea {
         width: 80%;
