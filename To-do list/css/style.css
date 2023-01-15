@@ -75,14 +75,14 @@ body {
 
 .task {
   width: 300px;
-  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  background: #c589e8;
   border-radius: 20px;
   transition: all 0.3s;
   margin: 20px;
   font-family: sans-serif;
 }
 .task:hover {
-  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+  box-shadow: 0px 0px 30px 1px rgba(169, 104, 255, 0.3);
 }
 
 .task2 {
