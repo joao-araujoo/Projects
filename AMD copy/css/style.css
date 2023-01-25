@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@font-face {
+  font-family: "Klavika";
+  src: url("../fonts/Klavika Web Medium Condensed.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+}
+
+header {
+  background-color: #000;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Noto Sans";
+}
+header .left-items {
+  display: flex;
+  align-items: center;
+}
+header .left-items #hamburger-btn {
+  background-color: transparent;
+  font-size: 27px;
+  border: none;
+  color: #fff;
+  padding-right: 20px;
+  display: none;
+  cursor: pointer;
+}
+header .left-items img {
+  margin-right: 50px;
+  cursor: pointer;
+}
+header .left-items .links {
+  display: flex;
+  gap: 50px;
+}
+header .left-items a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+header .left-items a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  background-color: #fff;
+  width: 0;
+  height: 2px;
+  transition: width 0.2s linear;
+}
+header .left-items a:hover::after {
+  width: 100%;
+}
+header .right-items a {
+  color: #fff;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+header .right-items a:hover {
+  background-color: rgb(43, 43, 43);
+}
+
+.hamburger-menu {
+  height: 100vh;
+  width: 60%;
+  position: fixed;
+  background-color: #1a1a1b;
+  left: 100%;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.hamburger-menu a {
+  padding: 12px 19.5px;
+  font-size: 12px;
+  font-family: "Noto Sans";
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #27282b;
+  display: flex;
+  justify-content: space-between;
+}
+.hamburger-menu span {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+main .main-content {
+  padding: 20px;
+  background-image: url("https://www.amd.com/system/files/2022-10/1678052-rdna-background-1920x600_0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main .main-content .main-content-image {
+  width: 50%;
+}
+main .main-content .main-content-image img {
+  width: 100%;
+}
+main .main-content .main-content-items {
+  color: #fff;
+  font-family: "Noto Sans";
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+main .main-content .main-content-items h1 {
+  font-size: 40px;
+  font-family: "Klavika";
+  font-weight: 200;
+}
+main .main-content .main-content-items p {
+  font-size: 14px;
+}
+main .main-content .main-content-items img {
+  width: 173px;
+}
+main .main-content .main-content-items button {
+  margin-top: 20px;
+  margin-right: 5px;
+  min-width: 200px;
+  padding: 15px 15px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+main .main-content .main-content-items button:hover {
+  border-color: #000;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.products {
+  width: 100%;
+  padding: 50px 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: "Noto Sans";
+}
+.products .processor, .products .play, .products .performance {
+  width: 33%;
+  padding: 0px 15px;
+}
+.products .products-image {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.products .products-title {
+  font-size: 28px;
+  margin-bottom: 5px;
+  width: 100%;
+  font-family: "Klavika";
+  font-weight: 200;
+}
+.products .products-text {
+  font-size: 14px;
+  width: 100%;
+}
+.products .products-button {
+  min-width: 200px;
+  padding: 10px 15px;
+  margin-top: 30px;
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.products .products-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.products .processor .products-text, .products .performance .link {
+  color: #0070C9;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.products .processor .products-text:hover, .products .performance .link:hover {
+  color: rgb(99, 99, 99);
+}
+
+.visual-effects {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px;
+  background-image: url("	https://www.amd.com/system/files/2022-12/1790950-amd-privacyvsprogress-herofilm-1920x600.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.visual-effects .visual-effects-content {
+  padding: 20px;
+  font-family: "Klavika";
+  color: #fff;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.7019607843);
+}
+.visual-effects .visual-effects-content .visual-effects-title {
+  font-size: 40px;
+  margin: 22px 0px 5px;
+  font-weight: 100;
+}
+.visual-effects .visual-effects-content .visual-effects-text {
+  font-size: 18px;
+  font-family: "Noto Sans";
+  margin-bottom: 15px;
+}
+.visual-effects .visual-effects-content .visual-effects-btn {
+  margin-top: 30px;
+  font-size: 16px;
+  font-family: "Noto Sans";
+  padding: 10px 15px;
+  min-width: 200px;
+  max-width: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.visual-effects .visual-effects-content .visual-effects-btn:hover {
+  border-color: #000;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 20px !important;
+  }
+  .right-items {
+    padding: 5px !important;
+  }
+  .links {
+    display: none !important;
+  }
+  #hamburger-btn {
+    display: block !important;
+  }
+}
+@media (max-width: 1040px) {
+  .main-content {
+    padding: 10px 50px !important;
+  }
+  .main-content-items {
+    width: 100% !important;
+  }
+  .main-content-image {
+    width: 100% !important;
+  }
+  .visual-effects-content {
+    width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .products {
+    flex-direction: column;
+    gap: 70px;
+    padding: 50px 8px;
+  }
+  .products .processor, .products .play, .products .performance {
+    width: 100% !important;
+  }
+  .products .products-button {
+    width: auto;
+  }
+  .hamburger-menu {
+    width: 100% !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
