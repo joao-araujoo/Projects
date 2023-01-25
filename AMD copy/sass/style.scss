@@ -113,7 +113,7 @@ header {
 
 main {
     .main-content {
-        padding: 20px;
+        padding: 20px 4%;
         background-image: url('https://www.amd.com/system/files/2022-10/1678052-rdna-background-1920x600_0.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -281,6 +281,50 @@ main {
     }
 }
 
+.technologies {
+    width: 100%;
+    padding: 50px 60px;
+    display: flex;
+    gap: 30px;
+
+    img {
+        width: 100%;
+        margin-bottom: 22px;
+    }
+
+    .server-processors, .exascale-technologies {
+        width: 50%;
+    }
+
+    .technologies-title {
+        font-family: 'Klavika';
+        font-weight: 100;
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .technologies-paragraph {
+        font-family: 'Noto Sans';
+        font-size: 18px;
+        margin-bottom: 45px;
+    }
+
+    .technologies-button {
+        min-width: 200px;
+        padding: 10px 15px;
+        font-size: 16px;
+        background-color: transparent;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
 @media (max-width: 1200px){
     header {
         padding: 20px !important;
@@ -300,9 +344,6 @@ main {
 }
 
 @media (max-width: 1040px){
-    .main-content {
-        padding: 10px 50px !important;
-    }
 
     .main-content-items {
         width: 100% !important; 
@@ -333,5 +374,27 @@ main {
     
     .hamburger-menu {
         width: 100% !important;
+    }
+
+    .visual-effects {
+        padding: 50px 15px !important;
+
+        .visual-effects-title {
+            font-size: 28px !important;
+        }
+    }
+
+    .technologies {
+        padding-left: 4% !important;
+        padding-right: 4% !important;
+        flex-direction: column !important;
+
+        .server-processors, .exascale-technologies {
+            width: 100%;
+        }
+
+        .technologies-button {
+            min-width: auto;
+        }
     }
 }

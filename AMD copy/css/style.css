@@ -96,7 +96,7 @@ header .right-items a:hover {
 }
 
 main .main-content {
-  padding: 20px;
+  padding: 20px 4%;
   background-image: url("https://www.amd.com/system/files/2022-10/1678052-rdna-background-1920x600_0.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -243,6 +243,44 @@ main .main-content .main-content-items button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.technologies {
+  width: 100%;
+  padding: 50px 60px;
+  display: flex;
+  gap: 30px;
+}
+.technologies img {
+  width: 100%;
+  margin-bottom: 22px;
+}
+.technologies .server-processors, .technologies .exascale-technologies {
+  width: 50%;
+}
+.technologies .technologies-title {
+  font-family: "Klavika";
+  font-weight: 100;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.technologies .technologies-paragraph {
+  font-family: "Noto Sans";
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+.technologies .technologies-button {
+  min-width: 200px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.technologies .technologies-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 @media (max-width: 1200px) {
   header {
     padding: 20px !important;
@@ -258,9 +296,6 @@ main .main-content .main-content-items button:hover {
   }
 }
 @media (max-width: 1040px) {
-  .main-content {
-    padding: 10px 50px !important;
-  }
   .main-content-items {
     width: 100% !important;
   }
@@ -285,6 +320,23 @@ main .main-content .main-content-items button:hover {
   }
   .hamburger-menu {
     width: 100% !important;
+  }
+  .visual-effects {
+    padding: 50px 15px !important;
+  }
+  .visual-effects .visual-effects-title {
+    font-size: 28px !important;
+  }
+  .technologies {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+    flex-direction: column !important;
+  }
+  .technologies .server-processors, .technologies .exascale-technologies {
+    width: 100%;
+  }
+  .technologies .technologies-button {
+    min-width: auto;
   }
 }
 
