@@ -100,6 +100,7 @@ main .main-content {
   background-image: url("https://www.amd.com/system/files/2022-10/1678052-rdna-background-1920x600_0.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -281,6 +282,61 @@ main .main-content .main-content-items button:hover {
   color: #fff;
 }
 
+.games {
+  width: 100%;
+  background-image: url("	https://www.amd.com/system/files/2022-10/1678052-rdna-background-1920x600_0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.games .games-background {
+  width: 100%;
+  background-image: url("	https://www.amd.com/system/files/10286-xfxrx550-background-1920x600.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 4%;
+  color: #fff;
+  font-family: "Noto Sans";
+}
+.games .games-background .uncharted, .games .games-background .forspoken, .games .games-background .callisto {
+  width: 33%;
+}
+.games .games-background img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.games .games-background .games-title {
+  font-family: "Klavika";
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 8px;
+}
+.games .games-background .games-paragraph {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.games .games-background .games-button {
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 10px 15px;
+  min-width: 200px;
+  max-width: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.games .games-background .games-button:hover {
+  border-color: #000;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 @media (max-width: 1200px) {
   header {
     padding: 20px !important;
@@ -336,6 +392,25 @@ main .main-content .main-content-items button:hover {
     width: 100%;
   }
   .technologies .technologies-button {
+    min-width: auto;
+  }
+  .games {
+    padding: 0px 15px;
+  }
+  .games .games-background {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .games .games-background .uncharted, .games .games-background .callisto, .games .games-background .forspoken {
+    width: 100% !important;
+  }
+  .games .games-background .games-title {
+    font-size: 28px;
+  }
+  .games .games-background .games-paragraph {
+    font-size: 16px;
+  }
+  .games .games-background .games-button {
     min-width: auto;
   }
 }
