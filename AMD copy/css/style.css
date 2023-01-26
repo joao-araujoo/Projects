@@ -337,6 +337,26 @@ main .main-content .main-content-items button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+footer {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #000;
+}
+footer a {
+  font-size: 30px;
+  color: #fff;
+  transition: 0.3s;
+}
+footer a:hover {
+  color: rgb(114, 114, 114);
+}
+footer a:active {
+  transform: translate(1px, 1px);
+}
+
 @media (max-width: 1200px) {
   header {
     padding: 20px !important;
