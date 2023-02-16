@@ -56,30 +56,42 @@ function createPost(){
 
     let postMonth = date.getMonth() + 1
     switch(postMonth){
-    case 1:
-        postMonth = 'jan'
-    case 2:
-        postMonth = 'fev'
-    case 3:
-        postMonth = 'mar'
-    case 4:
-        postMonth = 'abr'
-    case 5:
-        postMonth = 'mai'
-    case 6:
-        postMonth = 'jun'
-    case 7:
-        postMonth = 'jul'
-    case 8:
-        postMonth = 'ago'
-    case 9:
-        postMonth = 'set'
-    case 10:
-        postMonth = 'out'
-    case 11:
-        postMonth = 'nov'
-    case 12:
-        postMonth = 'dez'
+        case 1:
+            postMonth = 'jan'
+            break
+        case 2:
+            postMonth = 'fev'
+            break
+        case 3:
+            postMonth = 'mar'
+            break
+        case 4:
+            postMonth = 'abr'
+            break
+        case 5:
+            postMonth = 'mai'
+            break
+        case 6:
+            postMonth = 'jun'
+            break
+        case 7:
+            postMonth = 'jul'
+            break
+        case 8:
+            postMonth = 'ago'
+            break
+        case 9:
+            postMonth = 'set'
+            break
+        case 10:
+            postMonth = 'out'
+            break
+        case 11:
+            postMonth = 'nov'
+            break
+        case 12:
+            postMonth = 'dez'
+            break
     }
     
     let postHour = date.getHours()
