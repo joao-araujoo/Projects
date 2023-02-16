@@ -128,7 +128,7 @@ function createPost(){
     copyButton.className = 'copy-button'
     copyButton.addEventListener('click', function(){setTimeout(function(){
         copyButton.src = 'https://cdn-icons-png.flaticon.com/512/4288/4288159.png'
-    }, 100)
+    }, 50)
         copyButton.src = 'https://cdn-icons-png.flaticon.com/512/4280/4280618.png' 
         navigator.clipboard.writeText(content.innerText)
     })
