@@ -173,6 +173,7 @@ header .new-post:active {
 .modal #new-name-title, .modal #new-photo-title {
   font-family: "Noto Sans KR";
   margin-left: 10%;
+  margin-bottom: 20px;
 }
 .modal #modal-profile {
   margin-left: 10%;
