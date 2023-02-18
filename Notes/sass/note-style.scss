@@ -1,3 +1,7 @@
+[contenteditable] {
+    outline: none;
+}
+
 .note {
     width: 250px;
     min-height: 250px;
@@ -8,6 +12,10 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+
+    .paragraph {
+        user-select: text;
+    }
 
     .footer {
         display: flex;

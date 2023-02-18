@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+[contenteditable] {
+  outline: none;
+}
+
 .note {
   width: 250px;
   min-height: 250px;
@@ -9,6 +13,9 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+}
+.note .paragraph {
+  user-select: text;
 }
 .note .footer {
   display: flex;
@@ -62,6 +69,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
