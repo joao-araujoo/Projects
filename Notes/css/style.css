@@ -1,4 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap");
+.note {
+  width: 250px;
+  min-height: 250px;
+  border-radius: 20px;
+  padding: 25px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.note .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.note .footer .data {
+  color: #464646;
+}
+.note .footer .edit-btn {
+  width: 30px;
+  height: 30px;
+  transform: scale(-1, 1);
+  padding: 3px;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.orange {
+  background-color: #FEC872;
+}
+
+.red {
+  background-color: #FD9C71;
+}
+
+.green {
+  background-color: #E4ED90;
+}
+
+.purple {
+  background-color: #B490FA;
+}
+
+.blue {
+  background-color: #01D4FF;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,31 +69,37 @@ body {
   display: flex;
 }
 .main-container .add-notes {
-  width: 15%;
+  width: 120px;
   border-radius: 20px 0 0 20px;
   display: flex;
   justify-content: center;
 }
 .main-container .add-notes #add-notes-btn {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   margin-top: 100px;
   border-radius: 50%;
   font-family: "Roboto";
-  font-size: 37px;
+  font-size: 30px;
   font-weight: 100;
   background-color: #000;
   color: #fff;
 }
 .main-container .notes-section {
-  width: 85%;
+  width: calc(100% - 120px);
   border-radius: 0 20px 20px 0;
   border-left: 1px solid #e6e6e6;
 }
 .main-container .notes-section #title {
-  margin: 100px 50px;
+  margin: 95px 50px;
   font-weight: 500;
   font-size: 50px;
+}
+.main-container .notes-section .notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 50px 50px 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

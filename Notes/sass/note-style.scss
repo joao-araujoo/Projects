@@ -1,0 +1,52 @@
+.note {
+    width: 250px;
+    min-height: 250px;
+    border-radius: 20px;
+    padding: 25px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .data {
+            color: #464646;
+        }
+
+        .edit-btn {
+            width: 30px;
+            height: 30px;
+            transform: scale(-1, 1);
+            padding: 3px;
+            font-size: 14px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 50%;
+        }
+    }
+}
+
+.orange {
+    background-color: #FEC872;
+}
+
+.red {
+    background-color: #FD9C71;
+}
+
+.green {
+    background-color: #E4ED90;
+}
+
+.purple {
+    background-color: #B490FA;
+}
+
+.blue {
+    background-color: #01D4FF;
+}

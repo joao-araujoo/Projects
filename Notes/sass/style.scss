@@ -21,32 +21,39 @@ body {
     display: flex;
 
     .add-notes {
-        width: 15%;
+        width: 120px;
         border-radius: 20px 0 0 20px;
         display: flex;
         justify-content: center;
 
         #add-notes-btn {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             margin-top: 100px;
             border-radius: 50%;
             font-family: 'Roboto';
-            font-size: 37px;
+            font-size: 30px;
             font-weight: 100;
             background-color: #000;
             color: #fff;
         }
     }
     .notes-section {
-        width: 85%;
+        width: calc(100% - 120px);
         border-radius: 0 20px 20px 0;
         border-left: 1px solid #e6e6e6;
 
         #title {
-            margin: 100px 50px;
+            margin: 95px 50px;
             font-weight: 500;
             font-size: 50px;
+        }
+
+        .notes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 0 50px 50px 50px;
         }
     }
 }
