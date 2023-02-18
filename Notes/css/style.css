@@ -24,9 +24,18 @@
   transform: scale(-1, 1);
   padding: 3px;
   font-size: 14px;
+  border: none;
   background-color: #000;
   color: #fff;
   border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.note .footer .edit-btn:hover {
+  background-color: #2b2b2b;
+}
+.note .footer .edit-btn:active {
+  background-color: #4e4e4e;
 }
 
 .orange {
@@ -82,8 +91,18 @@ body {
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 100;
+  border: none;
   background-color: #000;
   color: #fff;
+  cursor: pointer;
+  transition: 0.1s;
+}
+.main-container .add-notes #add-notes-btn:hover {
+  background-color: #2b2b2b;
+}
+.main-container .add-notes #add-notes-btn:active {
+  background-color: #444444;
+  transform: scale(0.93);
 }
 .main-container .notes-section {
   width: calc(100% - 120px);
