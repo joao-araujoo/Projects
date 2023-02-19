@@ -35,3 +35,31 @@
   ![nike-page](https://user-images.githubusercontent.com/113838517/206879628-a8666903-2b25-4330-b07a-62fd4aa5ab9a.gif)
 
 </div>
+
+<br><br>
+
+<div align="center">
+  <h2>Lamborghini Page</h2>
+  <a href="https://lamborghini-page.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Lamborghini%20pagee">Repository</a>
+  <br><br>
+  
+  
+![image](https://user-images.githubusercontent.com/113838517/204114418-260233c6-56af-4946-99a9-2c6fcc64a2d6.png)
+
+![image](https://user-images.githubusercontent.com/113838517/204114465-bb5df3dc-4227-40a0-b570-4ba8be85fe04.png)
+
+
+</div>
+
+<br><br>
+
+<div align="center">
+  <h2>Calculadora</h2>
+  <a href="https://calculator-joao-araujo.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Calculadora">Repository</a>
+  <br><br>
+  
+  ![calculator](https://user-images.githubusercontent.com/113838517/206602182-661daa23-c33f-4038-992e-7990ed989847.gif)
+
+</div>
+
+
