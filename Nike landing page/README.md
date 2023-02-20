@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Nike landing page</h1>
   <p><em>Projeto minimalista responsivo com animações</em></p>
-  <h3><a href="https://google.com](https://nike-modern-landing-page.netlify.app">Acesso ao projeto</a></h3>
+  <h3><a href="https://nike-modern-landing-page.netlify.app">Acesso ao projeto</a></h3>
 </div>
 
 ## Preview
