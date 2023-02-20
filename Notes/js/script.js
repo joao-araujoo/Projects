@@ -5,6 +5,60 @@ let newColor
 //Select a random color from the array 'Colors'
 const randomColor = () => colors[Math.floor(Math.random() * 5)]
 
+//Gets the real date
+const getDate = function(){
+    const date = new Date()
+    
+    let day = date.getDate()
+    if(day < 10){
+        day = `0${day}`
+    }
+
+    let month = date.getMonth() + 1
+    switch(month){
+        case 1:
+            month = 'jan'
+            break
+        case 2:
+            month = 'fev'
+            break
+        case 3:
+            month = 'mar'
+            break
+        case 4:
+            month = 'abr'
+            break
+        case 5:
+            month = 'mai'
+            break
+        case 6:
+            month = 'jun'
+            break
+        case 7:
+            month = 'jul'
+            break
+        case 8:
+            month = 'ago'
+            break
+        case 9:
+            month = 'set'
+            break
+        case 10:
+            month = 'out'
+            break
+        case 11:
+            month = 'nov'
+            break
+        case 12:
+            month = 'dez'
+            break
+    }
+    
+    let year = date.getFullYear()
+
+    return `${month} ${day}, ${year}`
+}
+
 //when clicking the "+" button
 document.getElementById('add-notes-btn').addEventListener('click', function(){
     //notes section
@@ -38,7 +92,8 @@ document.getElementById('add-notes-btn').addEventListener('click', function(){
     //elements inside 'footer' div
     const data = document.createElement('p')
     data.className = 'data'
-    data.innerText = 'Fev 18, 2023'
+    data.innerText = getDate()
+    
 
     const editBtn = document.createElement('button')
     editBtn.className = 'edit-btn'
