@@ -118,9 +118,9 @@ body {
   border-left: 1px solid #e6e6e6;
 }
 .main-container .notes-section #title {
-  margin: 95px 50px;
+  margin: 95px 0px 40px 50px;
   font-weight: 500;
-  font-size: 50px;
+  font-size: 60px;
 }
 .main-container .notes-section .notes {
   display: flex;
