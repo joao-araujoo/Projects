@@ -70,3 +70,29 @@ body {
         }
     }
 }
+
+@media (max-width: 600px){
+    body {
+        padding: 0;
+    }
+
+    .main-container {
+        min-height: 100vh;
+    }
+
+    .add-notes {
+        width: 80px !important;
+    }
+
+    #add-notes-btn {
+        margin-top: 50px !important;
+    }
+
+    #title {
+        margin: 40px 0px 40px 30px !important;
+    }
+
+    .notes {
+        padding: 0px 0px 30px 30px !important;    
+    }
+}
