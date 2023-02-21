@@ -61,52 +61,83 @@ const getDate = function(){
 
 //when clicking the "+" button
 document.getElementById('add-notes-btn').addEventListener('click', function(){
-    //notes section
-    const notesContainer = document.querySelector('.notes')
 
-    //main div 'note'
-    const note = document.createElement('div')
-    note.className = 'note'
+    //Open the modal to the user write his text
+    document.querySelector('.modal-background').style.bottom = 0
 
-    //gives a random background-color to the note
-    do {
-        newColor = randomColor()
-    } while(newColor === lastColor)
-    lastColor = newColor
-    note.style.backgroundColor = newColor
+})
 
-    //div 'text'
-    const text = document.createElement('div')
-    text.className = 'text'
+document.querySelector('.save-button').addEventListener('click', function(){
 
-    //paragraph inside the 'text' div
-    const paragraph = document.createElement('p')
-    paragraph.className = 'paragraph'
-    paragraph.innerText = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, blanditiis?'
-    paragraph.contentEditable = false
+    let textarea = document.querySelector('#textarea').value
 
-    //div 'footer'
-    const footer = document.createElement('div')
-    footer.className = 'footer'
+    //Verify if the textarea input has something 
+    if(textarea != ''){
 
-    //elements inside 'footer' div
-    const data = document.createElement('p')
-    data.className = 'data'
-    data.innerText = getDate()
+        //notes section
+        const notesContainer = document.querySelector('.notes')
     
+        //main div 'note'
+        const note = document.createElement('div')
+        note.className = 'note'
+    
+        //gives a random background-color to the note
+        do {
+            newColor = randomColor()
+        } while(newColor === lastColor)
+        lastColor = newColor
+        note.style.backgroundColor = newColor
+    
+        //div 'text'
+        const text = document.createElement('div')
+        text.className = 'text'
+    
+        //paragraph inside the 'text' div
+        const paragraph = document.createElement('p')
+        paragraph.className = 'paragraph'
+        paragraph.innerText = textarea
+        paragraph.contentEditable = false
+    
+        //div 'footer'
+        const footer = document.createElement('div')
+        footer.className = 'footer'
+    
+        //elements inside 'footer' div
+        const data = document.createElement('p')
+        data.className = 'data'
+        data.innerText = getDate()
+        
+    
+        const editBtn = document.createElement('button')
+        editBtn.className = 'edit-btn'
+        editBtn.innerText = '✎'
+        editBtn.addEventListener('click', function(){
+            paragraph.contentEditable = true
+            paragraph.focus()
+            note.addEventListener('dblclick', () => paragraph.contentEditable = false)
+            notesContainer.addEventListener('dblclick', () => paragraph.contentEditable = false)
+        })
+    
+        notesContainer.appendChild(note)
+        note.append(text, footer)
+        text.appendChild(paragraph)
+        footer.append(data, editBtn)
 
-    const editBtn = document.createElement('button')
-    editBtn.className = 'edit-btn'
-    editBtn.innerText = '✎'
-    editBtn.addEventListener('click', function(){
-        paragraph.contentEditable = true
-        paragraph.focus()
-        note.addEventListener('dblclick', () => paragraph.contentEditable = false)
-        notesContainer.addEventListener('dblclick', () => paragraph.contentEditable = false)
-    })
+        document.querySelector('.modal-background').style.bottom = '100%'
+        document.querySelector('#textarea').value = ''
+    } else {
+        alert('Type something!')
+        document.querySelector('.modal-background').style.bottom = '100%'
+    }
+})
 
-    notesContainer.appendChild(note)
-    note.append(text, footer)
-    text.appendChild(paragraph)
-    footer.append(data, editBtn)
+//Close the modal when clicked
+document.getElementById('close-modal').addEventListener('click', function(){
+    document.querySelector('.modal-background').style.bottom = '100%'
+    document.querySelector('#textarea').value = ''
+})
+
+document.querySelector('.cancel-button').addEventListener('click', function(){
+    document.querySelector('.modal-background').style.bottom = '100%'
+    document.querySelector('#textarea').value = ''
 })
