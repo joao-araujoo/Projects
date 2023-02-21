@@ -15,6 +15,8 @@
 
     .paragraph {
         user-select: text;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .footer {
@@ -23,7 +25,7 @@
         align-items: center;
 
         .data {
-            color: #464646;
+            color: #585858;
         }
 
         .edit-btn {

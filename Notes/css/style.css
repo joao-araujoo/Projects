@@ -17,6 +17,8 @@
 }
 .note .paragraph {
   user-select: text;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .note .footer {
   display: flex;
@@ -24,7 +26,7 @@
   align-items: center;
 }
 .note .footer .data {
-  color: #464646;
+  color: #585858;
 }
 .note .footer .edit-btn {
   width: 30px;
@@ -188,7 +190,7 @@ body {
 .main-container {
   background-color: #FFFAFD;
   width: 100%;
-  min-height: 85vh;
+  min-height: 89vh;
   border-radius: 20px;
   display: flex;
 }
