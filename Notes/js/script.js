@@ -1,6 +1,6 @@
 const colors = ['#FEC872', '#FD9C71', '#E4ED90', '#B490FA', '#01D4FF']
-let lastColor
-let newColor
+let lastColor = ''
+let newColor = ''
 
 //Select a random color from the array 'Colors'
 const randomColor = () => colors[Math.floor(Math.random() * 5)]
@@ -61,31 +61,55 @@ const getDate = function(){
 
 //when clicking the "+" button
 document.getElementById('add-notes-btn').addEventListener('click', function(){
-
     //Open the modal to the user write his text
     document.querySelector('.modal-background').style.bottom = 0
-
+    document.getElementById('orange').addEventListener('click', function(){
+        newColor = '#FEC872' 
+        document.querySelector('.modal').style.backgroundColor = '#FEC872'
+    })
+    document.getElementById('red').addEventListener('click', function(){
+        newColor = '#FD9C71' 
+        document.querySelector('.modal').style.backgroundColor = '#FD9C71'
+    })
+    document.getElementById('green').addEventListener('click', function(){
+        newColor = '#E4ED90' 
+        document.querySelector('.modal').style.backgroundColor = '#E4ED90'
+    })
+    document.getElementById('purple').addEventListener('click', function(){
+        newColor = '#B490FA' 
+        document.querySelector('.modal').style.backgroundColor = '#B490FA'
+    })
+    document.getElementById('blue').addEventListener('click', function(){
+        newColor = '#01D4FF' 
+        document.querySelector('.modal').style.backgroundColor = '#01D4FF'
+    })
+    document.getElementById('random').addEventListener('click', function(){
+        newColor = ''
+        document.querySelector('.modal').style.backgroundColor = '#f1f1f1'
+    })
 })
 
 document.querySelector('.save-button').addEventListener('click', function(){
-
+    
     let textarea = document.querySelector('#textarea').value
-
+    
     //Verify if the textarea input has something 
     if(textarea != ''){
-
+        
         //notes section
         const notesContainer = document.querySelector('.notes')
-    
+        
         //main div 'note'
         const note = document.createElement('div')
         note.className = 'note'
-    
-        //gives a random background-color to the note
-        do {
-            newColor = randomColor()
-        } while(newColor === lastColor)
-        lastColor = newColor
+        
+        //gives a random background-color to the note or use the selected by the user
+        if(newColor == ''){
+            do {
+                newColor = randomColor()
+            } while(newColor === lastColor)
+            lastColor = newColor
+        }
         note.style.backgroundColor = newColor
     
         //div 'text'
@@ -125,9 +149,13 @@ document.querySelector('.save-button').addEventListener('click', function(){
 
         document.querySelector('.modal-background').style.bottom = '100%'
         document.querySelector('#textarea').value = ''
+        document.querySelector('.modal').style.backgroundColor = '#fff'
+        newColor = ''
     } else {
         alert('Type something!')
         document.querySelector('.modal-background').style.bottom = '100%'
+        document.querySelector('.modal').style.backgroundColor = '#fff'
+        newColor = ''
     }
 })
 
@@ -135,9 +163,13 @@ document.querySelector('.save-button').addEventListener('click', function(){
 document.getElementById('close-modal').addEventListener('click', function(){
     document.querySelector('.modal-background').style.bottom = '100%'
     document.querySelector('#textarea').value = ''
+    document.querySelector('.modal').style.backgroundColor = '#fff'
+    newColor = ''
 })
 
 document.querySelector('.cancel-button').addEventListener('click', function(){
     document.querySelector('.modal-background').style.bottom = '100%'
     document.querySelector('#textarea').value = ''
+    document.querySelector('.modal').style.backgroundColor = '#fff'
+    newColor = ''
 })

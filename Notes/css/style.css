@@ -101,11 +101,9 @@
   cursor: pointer;
   transition: 0.2s;
 }
-
 .close-button:hover {
   color: #ff0000;
 }
-
 .close-button:active {
   color: #ff7b7b;
   transform: scale(0.95);
@@ -121,16 +119,46 @@ textarea {
   border: 1px solid #b9b9b9;
   border-radius: 5px;
 }
-
 textarea:focus {
   border: 1px solid #000;
 }
 
 .buttons {
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.buttons button {
+.buttons .colors button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: transparent;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.buttons .colors button:hover {
+  transform: scale(1.1);
+}
+.buttons .colors button:active {
+  transform: scale(0.95);
+}
+.buttons #orange {
+  background-color: #FEC872;
+}
+.buttons #red {
+  background-color: #FD9C71;
+}
+.buttons #green {
+  background-color: #E4ED90;
+}
+.buttons #purple {
+  background-color: #B490FA;
+}
+.buttons #blue {
+  background-color: #01D4FF;
+}
+.buttons .inputs button {
   padding: 7px;
   border-radius: 3px;
   border: none;
@@ -140,31 +168,25 @@ textarea:focus {
   cursor: pointer;
   transition: 0.2s;
 }
-
-.cancel-button {
+.buttons .cancel-button {
   background-color: transparent;
 }
-
-.cancel-button:hover {
+.buttons .cancel-button:hover {
   background-color: #ff0000;
   color: #fff;
 }
-
-.cancel-button:active {
+.buttons .cancel-button:active {
   background-color: rgb(255, 91, 91);
   transform: scale(0.95);
 }
-
-.save-button {
+.buttons .save-button {
   background-color: #000;
   color: #fff;
 }
-
-.save-button:hover {
+.buttons .save-button:hover {
   background-color: #3a3a3a;
 }
-
-.save-button:active {
+.buttons .save-button:active {
   background-color: #747474;
   transform: scale(0.95);
 }

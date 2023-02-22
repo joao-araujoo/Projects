@@ -32,15 +32,15 @@
     margin-bottom: 20px;
     cursor: pointer;
     transition: .2s;
-}
 
-.close-button:hover {
-    color: #ff0000;
-}
-
-.close-button:active {
-    color: #ff7b7b;
-    transform: scale(.95);
+    &:hover {
+        color: #ff0000;
+    }
+    
+    &:active {
+        color: #ff7b7b;
+        transform: scale(.95);
+    }
 }
 
 textarea {
@@ -52,54 +52,96 @@ textarea {
     padding: 5px;
     border: 1px solid #b9b9b9;
     border-radius: 5px;
-}
 
-textarea:focus {
-    border: 1px solid #000;
+    &:focus {
+        border: 1px solid #000;
+    }
 }
 
 .buttons {
-    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .colors button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: transparent;
+        margin-right: 5px;
+        cursor: pointer;
+        transition: .2s;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(.95);
+        }
+    }
+
+    #orange {
+        background-color: #FEC872;
+    }
+
+    #red {
+        background-color: #FD9C71;
+    }
+
+    #green {
+        background-color: #E4ED90;
+    }
+
+    #purple {
+        background-color: #B490FA;
+    }
+
+    #blue {
+        background-color: #01D4FF;
+    }
+
+    .inputs button {
+        padding: 7px;
+        border-radius: 3px;
+        border: none;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .cancel-button {
+        background-color: transparent;
+    
+        &:hover {
+            background-color: #ff0000;
+            color: #fff;
+        }
+    
+        &:active {
+            background-color: rgb(255, 91, 91);
+            transform: scale(.95);
+        }
+    }
+    
+    .save-button {
+        background-color: #000;
+        color: #fff;
+    
+        &:hover {
+            background-color: #3a3a3a;
+        }
+    
+        &:active {
+            background-color: #747474;
+            transform: scale(.95);
+        }
+    }
 }
 
-.buttons button {
-    padding: 7px;
-    border-radius: 3px;
-    border: none;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-left: 5px;
-    cursor: pointer;
-    transition: .2s;
-}
 
-.cancel-button {
-    background-color: transparent;
-}
-
-.cancel-button:hover {
-    background-color: #ff0000;
-    color: #fff;
-}
-
-.cancel-button:active {
-    background-color: rgb(255, 91, 91);
-    transform: scale(.95);
-}
-
-.save-button {
-    background-color: #000;
-    color: #fff;
-}
-
-.save-button:hover {
-    background-color: #3a3a3a;
-}
-
-.save-button:active {
-    background-color: #747474;
-    transform: scale(.95);
-}
 
 @media (max-width: 768px){
     .modal {
