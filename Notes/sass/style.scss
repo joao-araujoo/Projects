@@ -41,6 +41,9 @@ body {
             color: #fff;
             cursor: pointer;
             transition: .1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             &:hover {
                 background-color: #2b2b2b;
@@ -57,7 +60,7 @@ body {
         border-left: 1px solid #e6e6e6;
 
         #title {
-            margin: 95px 0px 40px 50px;
+            margin: 90px 0px 40px 50px;
             font-weight: 500;
             font-size: 60px;
         }
