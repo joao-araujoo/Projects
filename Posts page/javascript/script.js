@@ -3,6 +3,7 @@ let profileName = 'Anônimo'
 let postOrder = 1
 let easterEggCount = 0
 
+//!create post
 function createPost(){
 
     const postsSection = document.querySelector('section.posts')
@@ -178,7 +179,7 @@ function createPost(){
     })
 }
 
-        
+//!change username
 function changeUserName(){
     
     document.getElementById('modal').style.top = '0'
@@ -220,6 +221,7 @@ function changeUserName(){
     })
 }
         
+//! change photo
 function changeUserPhoto(){
     document.getElementById('modal').style.top = '0'
     
