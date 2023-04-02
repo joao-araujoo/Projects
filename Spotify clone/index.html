@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Spotify</title>
+</head>
+<body>
+    <div class="main-content">
+        <div class="navigation-bar">
+            <nav>
+                <img width="130" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="">
+                <div class="nav-buttons">
+                    <a href=""><img width="25" src="./assets/home-icon.svg" alt="home-icon">Início</a>
+                    <a href=""><img width="23" src="./assets/search-icon.png" alt="search-icon">Buscar</a>
+                    <a href=""><img width="25" src="./assets/library-icon.png" alt="library-icon">Sua Biblioteca</a>
+                    <a href="" class="new-playlist-link"><span id="new-playlist"></span>Criar playlist</a>
+                    <a href=""><span id="liked-musics">❤</span>Músicas Curtidas</a>
+                </div>
+                <div class="playlists">
+                    <a href="">Minha playlist n°1</a>
+                    <a href="">Minha playlist n°2</a>
+                    <a href="">Minha playlist n°3</a>
+                    <a href="">Minha playlist n°4</a>
+                    <a href="">Minha playlist n°5</a>
+                    <a href="">Minha playlist n°6</a>
+                </div>
+                <div class="app-download">
+                    <a href=""><img width="25" src="./assets/download-icon.png" alt="download-icon">Instalar aplicativo</a>
+                </div>
+            </nav>
+        </div>
+        <div class="musics-section">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <div class="music-player">
+        <div class="music-stats">
+            <div class="music">
+                <div class="music-cover">
+                    <img width="56" src="https://upload.wikimedia.org/wikipedia/pt/3/36/Sobrevivendo_no_Inferno.jpg" alt="music-cover">
+                </div>
+                <div class="music-text">
+                    <h1 class="music-name">Diário de um Detento</h1>
+                    <p class="music-artist">Racionais MC's</p>
+                </div>
+            </div>
+            <div class="heart-button">
+                <img width="20" src="./assets/heart-icon.png" alt="heart-icon">
+            </div>
+        </div>
+        <div class="controls">
+            <div class="controls-buttons">
+                <img width="20" src="./assets/random-icon.png" alt="random-icon">
+                <img width="22" src="./assets/back-icon.png" alt="back-icon">
+                <img width="40" src="./assets/pause-icon.png" alt="pause-icon">
+                <img width="22" src="./assets/next-icon.png" alt="next-icon">
+                <img width="20" src="./assets/repeat-icon.png" alt="repeat-icon">
+            </div>
+            <div class="controls-timebar">
+                <div class="slider-container">
+                    <span class="bar"><span class="fill"></span></span>
+                    <input id="slider" class="slider" type="range" min="0" max="100" value="33">
+                </div>
+            </div>
+        </div>
+        <div class="extra-buttons">
+            <img width="20" src="./assets/mic-icon.png" alt="mic-icon">
+            <img width="20" src="./assets/menu-icon.png" alt="menu-icon">
+            <img width="20" src="./assets/notebook-icon.png" alt="notebook-icon">
+            <img width="20" src="./assets/volume-icon.png" alt="volume-icon">
+            <div class="slider-container">
+                <span class="bar"><span class="fill"></span></span>
+                <input class="slider" type="range" min="0" max="100" value="80">
+            </div>
+            <img width="15" src="./assets/zoom-icon.png" alt="zoom-icon">
+        </div>
+    </div>
+</body>
+</html>

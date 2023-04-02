@@ -1,3 +1,225 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "circularSP";
+  src: url("../fonts/CircularSpotifyText-Light.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
 
+.main-content {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+}
+
+.main-content .navigation-bar {
+  width: 270px;
+  height: 100%;
+  background-color: #000;
+  padding: 24px;
+  position: relative;
+}
+
+.main-content .navigation-bar a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+
+.main-content .navigation-bar a:hover {
+  opacity: 1;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #282828;
+}
+
+.nav-buttons a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "CircularSP";
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.new-playlist-link {
+  margin-top: 25px;
+}
+
+#new-playlist {
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  padding: 0px 2px;
+  opacity: 0.9;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+}
+
+#new-playlist::after {
+  content: "＋";
+  position: relative;
+  bottom: 1px;
+  left: 0.5px;
+}
+
+#liked-musics {
+  padding: 5px 7px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #450af5, #c4efd9);
+}
+
+.playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  font-family: "CircularSP";
+  font-size: 10px;
+}
+
+.app-download {
+  position: absolute;
+  bottom: 5px;
+}
+
+.app-download a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 10px;
+  font-family: "CircularSP";
+  letter-spacing: 0.5px;
+}
+
+.main-content .musics-section {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(17, 52, 75) 0%, rgb(18, 18, 18) 30%);
+  overflow: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.main-content .musics-section::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.main-content .musics-section::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main-content .musics-section::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: aqua;
+  margin: 50px;
+}
+
+.music-player {
+  width: 100%;
+  height: 10vh;
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.music-player .music-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.music-player .music-stats .music {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.music-player .music-stats .music .music-text {
+  font-family: "CircularSP";
+}
+
+.music-player .music-stats .music .music-text .music-name {
+  color: #fff;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.music-player .music-stats .music .music-text .music-artist {
+  color: #b3b3b3;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider-container .bar {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 6px;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.slider-container .bar .fill {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: #1ED760;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-container .slider {
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  outline: none;
+  background-color: transparent;
+}
+
+.slider-container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
 
 /*# sourceMappingURL=style.css.map */
