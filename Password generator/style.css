@@ -4,17 +4,9 @@
     padding: 0;
 }
 
-:root {
-    --bg-color: #212529;
-    --border-color: #666;
-    --font-color: #f1f5f9;
-    --primary-color: #4dff91;
-    --error-color: #ff0043;
-}
-
 body {
-    background-color: var(--bg-color);
-    color: var(--font-color);
+    background-color: #212529;
+    color: #f1f5f9;
     font-family: "Ubuntu", sans-serif;
     padding: 200px 200px;
 }
@@ -26,7 +18,7 @@ body {
 
 .title .underline {
     text-decoration: underline;
-    color: var(--primary-color);
+    color: #4dff91;
 }
 
 .result {
@@ -35,14 +27,25 @@ body {
 
 #copyToClipboard {
     background-color: transparent;
-    border: solid var(--border-color);
+    border: solid #666;
     border-width: 2px;
     border-radius: .5rem 0 0 .5rem;
-    color: var(--font-color);
+    color: #f1f5f9;
     cursor: pointer;
     display: block;
     height: 4.26rem;
     width: 6rem;
+    font-weight: 700;
+}
+
+input {
+    background-color: #212529;
+    border: 2px solid #666;
+    border-radius: .5rem;
+    color: #f1f5f9;
+    display: block;
+    font-size: 1.75rem;
+    padding: 1rem;
 }
 
 #result {
@@ -52,39 +55,33 @@ body {
     width: 100%;
 }
 
-button {
-    background-color: var(--primary-color);
+#generatePassword {
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px 2px #000;
+    transition: .2s;
+    background-color: #4dff91;
     border: none;
     border-radius: .25rem;
     font-weight: 700;
-    padding: .5rem 1rem;
-    transition: .15s;
+    padding: 1rem 3rem;
+    transition: .15s ease-in-out;
+    font-size: 1rem;
 }
 
-input {
-    background-color: var(--bg-color);
-    border: 2px solid var(--border-color);
-    border-radius: .5rem;
-    color: var(--font-color);
-    display: block;
-    font-size: 1.75rem;
-    padding: 1rem;
-    text-align: end;
-}
-
-#generate-password {
-    margin-top: 30px;
-    box-shadow: 2px 2px 2px 2px black;
-    transition: .2s;
-}
-
-#generate-password:hover {
+#generatePassword:hover {
+    background-color: #47d37d;
     cursor: pointer;
 }
 
-#generate-password:active {
+#generatePassword:active {
+    background-color: #2a814b;
     transform: translate(2px, 2px);
     box-shadow: none;
+}
+
+.success {
+    border-color: #4dff91 !important;
+    color: #4dff91 !important;
 }
 
 @media (max-width: 800px){
