@@ -17,6 +17,17 @@
 <br><br>
 
 <div align="center">
+  <h2>Advice Generator</h2>
+  <a href="https://pretty-advice.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Advice%20generator">Repository</a>
+  <br><br>
+  
+  ![advice](https://github.com/joao-araujoo/Projects/assets/113838517/166f4ed3-2d38-4252-8a8f-4e849d2378c6)
+
+</div>
+
+<br><br>
+
+<div align="center">
   <h2>Notes</h2>
   <a href="https://minimalist-notes.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Notes">Repository</a>
   <br><br>
