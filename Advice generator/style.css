@@ -20,8 +20,8 @@
 
 .card {
     width: 90%;
-    max-width: 250px;
-    height: 300px;
+    max-width: 500px;
+    height: 600px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
 }
 
 .card q {
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .card #quote {
