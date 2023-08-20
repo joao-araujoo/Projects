@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4201/4201611.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Advice generator</title>
+    <title>Advice Generator</title>
 </head>
 <body>
     <div class="container">
@@ -16,7 +17,12 @@
                 <q id="advice-quote"></q>
             </div>
             <div class="generator-button">
-                <button class="generate-advice" onclick="generateAdvice()">another advice</button>
+                <button class="advice-button generate-advice" onclick="generateAdvice()">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">another advice</span>
+                  </button>
             </div>
         </div>
     </div>
