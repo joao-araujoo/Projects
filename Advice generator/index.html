@@ -10,13 +10,13 @@
 <body>
     <div class="container">
         <div class="card" data-tilt>
+            <img id="quote" src="./assets/quote.png" alt="quote" width="30">
             <div class="content">
-                <img id="quote" src="./assets/quote.png" alt="quote" width="30">
-                <!-- the advice goes in this p tag -->
-                <p id="advice-paragraph">Lorem ipsum dolor elit. Distinctio rem, nisi ?</p>
+                <!-- the advice goes in this quote tag -->
+                <q id="advice-quote"></q>
             </div>
             <div class="generator-button">
-                <button class="generate-advice">another advice</button>
+                <button class="generate-advice" onclick="generateAdvice()">another advice</button>
             </div>
         </div>
     </div>
@@ -25,4 +25,3 @@
 </body>
 </html>
 
-<!-- projeto feito para praticar o uso das apis, alem de contar com o vanilla tilt para o card e o uso dos conceitos de estilização com glassmorphism -->

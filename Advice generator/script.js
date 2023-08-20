@@ -1,3 +1,5 @@
+const adviceQuote = document.getElementById('advice-quote')
+
 async function getAdvice(){
     const response = await fetch('https://api.adviceslip.com/advice')
     const advice = await response.json()
@@ -5,7 +7,9 @@ async function getAdvice(){
     return advice
 }
 
-async function showAdvice(){
+async function generateAdvice(){
     const advice = await getAdvice()
-    document.body.append(advice.slip.advice)
+    adviceQuote.innerText = advice.slip.advice
 }
+
+generateAdvice()
