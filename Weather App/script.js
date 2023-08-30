@@ -47,7 +47,7 @@ async function getWeather() {
     document.querySelector('.date .day-month').innerText = `${day} ${month}`
 
     // weather icon
-    document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`
+    document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
 
     // location
     document.querySelector('.location').innerText = `${weatherData.name}, ${weatherData.sys.country}`

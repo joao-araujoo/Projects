@@ -107,6 +107,10 @@ html {
 
 /*! forecast cast */
 
+.forecast-card {
+    gap: 5px;
+}
+
 /*? header */
 .forecast-card .header {
     width: 100%;
@@ -131,20 +135,28 @@ html {
 .forecast-card .main-stats {
     display: flex;
     width: 100%;
+    height: auto;
+    font-size: 2rem;
+    
 }
 
-.forecast-card .main-stats .left-side {
+.forecast-card .main-stats .left-side,
+.forecast-card .main-stats .right-side {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .forecast-card .main-stats .left-side .temp {
     font-size: 4rem;
+    margin-top: 3rem;
 }
 
-.forecast-card .main-stats .right-side {
-    width: 50%;
+.forecast-card .main-stats .right-side .weather-icon {
+    width: 150px;
+    align-self: center;
 }
-
 
 
 @media (max-width: 450px){
