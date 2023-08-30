@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --buttons-color: #0BAE81;
+    --font-color: #666;
+    --secondary-font-color: #B0B0B0; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #492de4;
+    display: grid;
+    place-items: center;
+    font-family: 'Poppins';
+}
+
+/*! common classes */
+
+.card {
+    max-width: 45rem; 
+    width: 90%;
+    height: 50rem;
+    padding: 5rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/*! search card */
+
+.search-card {
+    justify-content: space-between;
+    animation: change-card linear .3s;
+}
+
+.search-card input {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    font-size: 2rem;
+    border-radius: 2rem;
+    border: 1px solid #bdbdbd;
+}
+
+.search-card input:hover {
+    border-color: #000;
+}
+
+.search-card button {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #0BAE81;
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+/*! skeleton loading */
+
+.skeleton {
+    position: relative;
+}
+
+.skeleton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+    background-size: 200%;
+    animation: skeleton 1s infinite reverse;
+}
+
+@keyframes skeleton {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/*! forecast cast */
+
+/*? header */
+.forecast-card .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.forecast-card .header .back-arrow {
+    width: 3rem;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+}
+
+.forecast-card .header .back-arrow img {
+    width: 100%;
+    transform: rotateZ(180deg);
+}
+
+/*? main stats  */
+.forecast-card .main-stats {
+    display: flex;
+    width: 100%;
+}
+
+.forecast-card .main-stats .left-side {
+    width: 50%;
+}
+
+.forecast-card .main-stats .left-side .temp {
+    font-size: 4rem;
+}
+
+.forecast-card .main-stats .right-side {
+    width: 50%;
+}
+
+
+
+@media (max-width: 450px){
+    .card {
+        padding: 30px;
+    }
+}
+
+/* SKELETON */
+
+

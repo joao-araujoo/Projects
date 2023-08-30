@@ -4,12 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
 <body>
-    <img src="" alt="condição meteorológica" id="weather-icon">
-    <img src="" alt="imagem pais" id="country-flag">
+    
+    <!-- this container will be hidden when click to search a city -->
+    
+    <div class="container">
+        <div class="search-card card">
+            <div class="city-form">
+                <h1 class="title">Enter the name of a city</h1>
+                <input type="search" name="city-input" id="city-input">
+            </div>
+            <button onclick="getWeather()">Search</button>
+        </div>
+    
+        <!-- this container will appear when the city is found -->
+        <div class="forecast-card card hidden">
+            <div class="header skeleton">
+                <div class="back-arrow">
+                    <img src="back-arrow.png" alt="green arrow" onclick="changeCard()">
+                </div>
+                <div>
+                    <h2 class="title">Weather</h2>
+                </div>
+            </div>
 
-    <div class="stats"></div>
+            <div class="main-stats skeleton">
+                <div class="left-side">
+                    <div class="temp">
+                        <h2>25°</h2>
+                    </div>
+                    <div class="date">
+                        <div class="day-of-week"></div>
+                        <div class="day-month"></div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="weather-image">
+                        <img class="weather-icon" src="" alt="weather-conditions">
+                    </div>
+                    <div class="location">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="extra-stats skeleton">
+                <div class="wind">
+                    12 km/h
+                </div>
+                <div class="humidity">
+                    87%
+                </div>
+                <div class="cloudiness">
+                    3,17%
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
