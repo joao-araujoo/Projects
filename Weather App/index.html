@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
     <!-- this container will be hidden when click to search a city -->
     
     <div class="container">
+
         <div class="search-card card">
             <div class="city-form">
                 <h1 class="title">Enter the name of a city</h1>
@@ -24,7 +25,7 @@
         <div class="forecast-card card hidden">
             <div class="header skeleton">
                 <div class="back-arrow">
-                    <img src="back-arrow.png" alt="green arrow" onclick="changeCard()">
+                    <img src="img/back-arrow.png" alt="arrow" onclick="changeCard()">
                 </div>
                 <div>
                     <h2 class="title">Weather</h2>
@@ -43,26 +44,28 @@
                 </div>
                 <div class="right-side">
                     <div class="weather-image">
-                        <img class="weather-icon" src="" alt="weather-conditions">
+                        <img class="weather-icon" alt="weather-conditions">
                     </div>
-                    <div class="location">
-                        
-                    </div>
+                    <div class="location"></div>
                 </div>
             </div>
 
             <div class="extra-stats skeleton">
                 <div class="wind">
+                    <img src="img/wind-icon.png" alt="wind icon">
                     12 km/h
                 </div>
                 <div class="humidity">
+                    <img src="img/drop-icon.png" alt="wind icon">
                     87%
                 </div>
                 <div class="cloudiness">
+                    <img src="img/cloud-icon.png" alt="wind icon">
                     3,17%
                 </div>
             </div>
         </div>
+
     </div>
 
 </body>

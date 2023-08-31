@@ -31,8 +31,8 @@ html {
     max-width: 45rem; 
     width: 90%;
     height: 50rem;
-    padding: 5rem;
-    background-color: #fff;
+    padding: 4rem 5rem;
+    background-color: #fffafa;
     border-radius: 3rem;
     display: flex;
     flex-direction: column;
@@ -105,7 +105,7 @@ html {
     }
 }
 
-/*! forecast cast */
+/*! forecast card */
 
 .forecast-card {
     gap: 5px;
@@ -137,7 +137,6 @@ html {
     width: 100%;
     height: auto;
     font-size: 2rem;
-    
 }
 
 .forecast-card .main-stats .left-side,
@@ -146,6 +145,10 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.forecast-card .main-stats .right-side {
+    align-items: center;
 }
 
 .forecast-card .main-stats .left-side .temp {
@@ -158,13 +161,30 @@ html {
     align-self: center;
 }
 
-
-@media (max-width: 450px){
-    .card {
-        padding: 30px;
-    }
+/*? extra stats */
+.forecast-card .extra-stats {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.8rem;
 }
 
-/* SKELETON */
+.forecast-card .extra-stats img {
+    width: 25px;
+}
 
+.forecast-card .extra-stats .wind,
+.forecast-card .extra-stats .humidity,
+.forecast-card .extra-stats .cloudiness {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
 
+@media (max-width: 375px){
+    .card {
+        padding: 3rem;
+    }
+}
