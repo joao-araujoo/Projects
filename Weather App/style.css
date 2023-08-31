@@ -24,7 +24,7 @@ html {
 .card {
     max-width: 45rem; 
     width: 90%;
-    height: 50rem;
+    min-height: 50rem;
     padding: 4rem 5rem;
     background-color: #fffafa;
     border-radius: 3rem;

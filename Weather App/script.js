@@ -50,7 +50,8 @@ async function getWeather() {
     document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
 
     // location
-    document.querySelector('.location').innerText = weatherData.name
+    document.querySelector('.city').innerText = weatherData.name 
+    document.querySelector('.country-flag').src = `https://flagsapi.com/${weatherData.sys.country}/flat/16.png`
 
     // wind
     document.querySelector('.wind p').innerText = `${weatherData.wind.speed} km/h`
