@@ -50,7 +50,16 @@ async function getWeather() {
     document.querySelector('.weather-icon').src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
 
     // location
-    document.querySelector('.location').innerText = `${weatherData.name}, ${weatherData.sys.country}`
+    document.querySelector('.location').innerText = weatherData.name
+
+    // wind
+    document.querySelector('.wind p').innerText = `${weatherData.wind.speed} km/h`
+
+    // humidity
+    document.querySelector('.humidity p').innerText = `${weatherData.main.humidity}%`
+
+    // cloudiness
+    document.querySelector('.cloudiness p').innerText = `${weatherData.clouds.all}%`
 
     changeCard()
 }

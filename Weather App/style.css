@@ -6,12 +6,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --buttons-color: #0BAE81;
-    --font-color: #666;
-    --secondary-font-color: #B0B0B0; 
-}
-
 html {
     font-size: 62.5%;
 }
@@ -19,7 +13,7 @@ html {
 .container {
     width: 100%;
     height: 100vh;
-    background-color: #492de4;
+    background-color: #000;
     display: grid;
     place-items: center;
     font-family: 'Poppins';
@@ -44,6 +38,11 @@ html {
 
 .hidden {
     display: none;
+}
+
+.stats {
+    font-weight: bold;
+    color: #424242;
 }
 
 /*! search card */
@@ -154,6 +153,10 @@ html {
 .forecast-card .main-stats .left-side .temp {
     font-size: 4rem;
     margin-top: 3rem;
+}
+
+.forecast-card .main-stats .left-side .date .day-of-week {
+    color: #838383;
 }
 
 .forecast-card .main-stats .right-side .weather-icon {
