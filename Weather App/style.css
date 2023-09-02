@@ -8,6 +8,7 @@
 
 html {
     font-size: 62.5%;
+    user-select: none;
 }
 
 .container {
@@ -52,28 +53,109 @@ html {
     animation: change-card linear .3s;
 }
 
-.search-card input {
-    margin-top: 1.5rem;
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+.search-input {
     width: 100%;
-    padding: 1rem;
+    height: 40px;
+    line-height: 28px;
+    padding: 1rem 1.5rem 1rem 3rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
     outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
     font-size: 2rem;
-    border-radius: 2rem;
-    border: 1px solid #bdbdbd;
 }
 
-.search-card input:hover {
-    border-color: #000;
+.search-input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(11, 174, 129, .4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(11 174 129 / 10%);
 }
 
-.search-card button {
-    padding: 1.5rem;
-    border-radius: 2rem;
-    border: none;
-    background-color: #0BAE81;
-    color: #fff;
-    font-size: 1.7rem;
+.search-input::-webkit-search-cancel-button {
     cursor: pointer;
+}
+
+.group .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.search-button {
+    width: 100%;
+    position: relative;
+    align-self: flex-end;
+    padding: 12px 18px;
+    transition: all .2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #0BAE81;
+    width: 45px;
+    height: 45px;
+    transition: all .3s ease;
+}
+
+.search-button span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    color: #424242;
+    transition: .3s;
+}
+
+.search-button svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #424242;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all .3s ease;
+}
+
+.search-button:hover span {
+    color: #fff;
+    letter-spacing: .3rem;
+}
+
+.search-button:hover:before {
+    width: 100%;
+    background: #0BAE81;
+}
+
+.search-button:hover svg {
+    transform: translateX(0);
+    stroke: #fff;
 }
 
 /*! skeleton loading */
