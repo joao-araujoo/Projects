@@ -28,6 +28,17 @@
 <br><br>
 
 <div align="center">
+  <h2>Weather App</h2>
+  <a href="https://pretty-dailyweather.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Weather%20App">Repository</a>
+  <br><br>
+  
+  ![weather](https://github.com/joao-araujoo/Projects/assets/113838517/5372d55b-c452-4408-bd70-ca25c08ff274)
+
+</div>
+
+<br><br>
+
+<div align="center">
   <h2>Notes</h2>
   <a href="https://minimalist-notes.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Notes">Repository</a>
   <br><br>
