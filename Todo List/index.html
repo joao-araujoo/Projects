@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-Do List</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+            
+            body {
+                font-family: 'Arial';
+            }
+
+            .title {
+                font-family: 'Poiret One';
+                font-size: 7rem;
+                color: #EAD7D7;
+            }
+
+            /* Estilize os botões de rádio ocultando os inputs reais e removendo a borda */
+            input[type="radio"] {
+                display: none;
+                border: none;
+            }
+
+            /* Estilize os textos dentro dos rótulos como botões de rádio sem borda */
+            label.radio-button {
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                /* font-family: 'Arial'; */
+                border: 1px solid transparent;
+                color: #777;
+            }
+
+            /* Estilize o botão de rádio selecionado com borda */
+            input[type="radio"]:checked+label.radio-button {
+                border: 1px solid #ccc;
+                /* Cor da borda quando selecionado */
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 class="title">todos</h1>
+        <div class="todo-container">
+            <div class="add-task-container">
+                <input type="text" aria-label="add task input">
+            </div>
+            <div class="tasks-container">
+                <div class="task">
+                    <input type="checkbox" name="complete-task" id="checkbox-task-1">
+                    <p class="task-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, earum!</p>
+                    <button class="remove-task">✕</button>
+                </div>
+            </div>
+            <div class="menu-container">
+                <!-- cada container desse deve ter 33% de tamanho, mesmo que não haja conteudo o tamanho deve permanecer 33% -->
+                <div class="items-left-container">
+                    <p id="items-left">2 items left</p>
+                </div>
+
+                <div class="filter-options-container">
+                    <input type="radio" id="all-tasks" name="filter-options" checked>
+                    <label for="all-tasks" class="radio-button">All</label>
+
+                    <input type="radio" id="active-tasks" name="filter-options">
+                    <label for="active-tasks" class="radio-button">Active</label>
+
+                    <input type="radio" id="completed-tasks" name="filter-options">
+                    <label for="completed-tasks" class="radio-button">Completed</label>
+                </div>
+
+                <div class="clear-completed-container">
+                    <button id="clear-completed">Clear completed [1]</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
