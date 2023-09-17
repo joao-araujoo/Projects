@@ -39,6 +39,17 @@
 <br><br>
 
 <div align="center">
+  <h2>Todo List</h2>
+  <a href="https://pretty-todo-list.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Todo%20List">Repository</a>
+  <br><br>
+  
+  ![todo-list (1)](https://github.com/joao-araujoo/Projects/assets/113838517/521ee2e5-11be-4b39-84ba-f85d55690b6d)
+
+</div>
+
+<br><br>
+
+<div align="center">
   <h2>Notes</h2>
   <a href="https://minimalist-notes.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Notes">Repository</a>
   <br><br>
