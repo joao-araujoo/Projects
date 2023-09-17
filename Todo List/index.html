@@ -13,60 +13,38 @@
         <div class="todo-container">
 
             <div class="add-task-container">
-                <input type="text" aria-label="add task input" placeholder="What needs to be done?">
+                <input id="add-task" type="text" aria-label="add task input" placeholder="What needs to be done?">
             </div>
 
             <div class="tasks-container">
-                <div class="task">
-                    <label>
-                        <input type="checkbox" name="complete-task" id="checkbox-task-1" class="complete-task">
-                        <span></span>
-                    </label>
-                    <p class="task-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, nisi.</p>
-                    <button class="remove-task">✕</button>
-                </div>
-                <div class="task">
-                    <label>
-                        <input type="checkbox" name="complete-task" id="checkbox-task-1" class="complete-task">
-                        <span></span>
-                    </label>
-                    <p class="task-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, vero?</p>
-                    <button class="remove-task">✕</button>
-                </div>
-                <div class="task">
-                    <label>
-                        <input type="checkbox" name="complete-task" id="checkbox-task-1" class="complete-task">
-                        <span></span>
-                    </label>
-                    <p class="task-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, velit?</p>
-                    <button class="remove-task">✕</button>
-                </div>
+                
             </div>
 
             <div class="menu-container">
                 <!-- cada container desse deve ter 33% de tamanho, mesmo que não haja conteudo o tamanho deve permanecer 33% -->
                 <div class="items-left-container">
-                    <p id="items-left">2 items left</p>
+                    <p id="items-left"><span id="qty-items-left">0</span> items left</p>
                 </div>
 
                 <div class="filter-options-container">
-                    <input type="radio" id="all-tasks" name="filter-options" checked>
+                    <input type="radio" id="all-tasks" name="filter-options" onclick="loadTasks()" checked>
                     <label for="all-tasks" class="radio-button">All</label>
 
-                    <input type="radio" id="active-tasks" name="filter-options">
+                    <input type="radio" id="active-tasks" name="filter-options" onclick="loadActiveTasks()">
                     <label for="active-tasks" class="radio-button">Active</label>
 
-                    <input type="radio" id="completed-tasks" name="filter-options">
+                    <input type="radio" id="completed-tasks" name="filter-options" onclick="loadCompletedTasks()">
                     <label for="completed-tasks" class="radio-button">Completed</label>
                 </div>
 
                 <div class="clear-completed-container">
-                    <button id="clear-completed">Clear completed [1]</button>
+                    <button id="clear-completed" onclick="clearCompleted()">Clear completed [<span id="qty-completed">0</span>]</button>
                 </div>
 
             </div>
 
         </div>
 
+        <script src="script.js"></script>
     </body>
 </html>

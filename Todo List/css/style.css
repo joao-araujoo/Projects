@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 html {
   font-size: 62.5%;
+  user-select: none;
 }
 
 * {
@@ -17,11 +18,25 @@ body {
   padding: 2rem;
 }
 
+[contenteditable=true] {
+  border: none;
+  outline: none;
+  background-color: #EAD7D7;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+}
+
 .title {
   font-family: "Poiret One";
   font-size: 12rem;
   color: #EAD7D7;
   margin-bottom: 2rem;
+}
+
+.task-completed {
+  text-decoration: line-through;
+  color: #adadad !important;
 }
 
 .todo-container {
