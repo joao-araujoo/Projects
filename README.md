@@ -50,22 +50,33 @@
 <br><br>
 
 <div align="center">
-  <h2>Notes</h2>
-  <a href="https://minimalist-notes.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Notes">Repository</a>
+  <h2>AMD Website Clone</h2>
+  <a href="https://amd-copy.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/AMD%20copy">Repository</a>
   <br><br>
   
-  ![notes](https://user-images.githubusercontent.com/113838517/221418393-c97917a9-9886-4406-8106-6a82e7cbeced.gif)
+  ![amd-hover](https://user-images.githubusercontent.com/113838517/219908491-4204818e-df4a-456e-a22f-2b1e761f2f8e.gif)
 
 </div>
 
 <br><br>
 
 <div align="center">
-  <h2>AMD Website Clone</h2>
-  <a href="https://amd-copy.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/AMD%20copy">Repository</a>
+  <h2>Breaking Bad</h2>
+  <a href="https://breaking-bad-elements.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Breaking%20Bad">Repository</a>
   <br><br>
   
-  ![amd-hover](https://user-images.githubusercontent.com/113838517/219908491-4204818e-df4a-456e-a22f-2b1e761f2f8e.gif)
+  ![breaking bad](https://github.com/joao-araujoo/Projects/assets/113838517/7a24278e-15dc-4ac8-82a7-f163d5fae261)
+
+</div>
+
+<br><br>
+
+<div align="center">
+  <h2>Notes</h2>
+  <a href="https://minimalist-notes.netlify.app">Project access</a> - <a href="https://github.com/joao-araujoo/Projects/tree/main/Notes">Repository</a>
+  <br><br>
+  
+  ![notes](https://user-images.githubusercontent.com/113838517/221418393-c97917a9-9886-4406-8106-6a82e7cbeced.gif)
 
 </div>
 
