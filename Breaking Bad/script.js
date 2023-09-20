@@ -26,7 +26,7 @@ const findChemicalElement = (title) => {
     return htmlTitleElement || false;
 }
 
-document.getElementById('breakify-button').addEventListener('click', () => {
+const execute = () => {
     const title = document.querySelector('.title')
     title.innerHTML = ''
 
@@ -46,4 +46,11 @@ document.getElementById('breakify-button').addEventListener('click', () => {
 
     title.innerHTML += firstTitleFormated
     title.innerHTML += secondTitleFormated
+}
+
+document.getElementById('breakify-button').addEventListener('click', execute)
+window.addEventListener('keydown', (event) => {
+    if (event.code === 'Enter') {
+      execute()
+    }
 })
