@@ -1,4 +1,4 @@
-const colors = ['#FEC872', '#FD9C71', '#E4ED90', '#B490FA', '#01D4FF']
+const colors = ['#F5E3B5', '#FAC4BE', '#c4edc2', '#CCB8E0', '#DFF1F7']
 let lastColor = ''
 let newColor = ''
 
@@ -64,24 +64,24 @@ document.getElementById('add-notes-btn').addEventListener('click', function(){
     //Open the modal to the user write his text
     document.querySelector('.modal-background').style.bottom = 0
     document.getElementById('orange').addEventListener('click', function(){
-        newColor = '#FEC872' 
-        document.querySelector('.modal').style.backgroundColor = '#FEC872'
+        newColor = colors[0] 
+        document.querySelector('.modal').style.backgroundColor = colors[0]
     })
     document.getElementById('red').addEventListener('click', function(){
-        newColor = '#FD9C71' 
-        document.querySelector('.modal').style.backgroundColor = '#FD9C71'
+        newColor = colors[1] 
+        document.querySelector('.modal').style.backgroundColor = colors[1]
     })
     document.getElementById('green').addEventListener('click', function(){
-        newColor = '#E4ED90' 
-        document.querySelector('.modal').style.backgroundColor = '#E4ED90'
+        newColor = colors[2] 
+        document.querySelector('.modal').style.backgroundColor = colors[2]
     })
     document.getElementById('purple').addEventListener('click', function(){
-        newColor = '#B490FA' 
-        document.querySelector('.modal').style.backgroundColor = '#B490FA'
+        newColor = colors[3] 
+        document.querySelector('.modal').style.backgroundColor = colors[3]
     })
     document.getElementById('blue').addEventListener('click', function(){
-        newColor = '#01D4FF' 
-        document.querySelector('.modal').style.backgroundColor = '#01D4FF'
+        newColor = colors[4] 
+        document.querySelector('.modal').style.backgroundColor = colors[4]
     })
     document.getElementById('random').addEventListener('click', function(){
         newColor = ''
