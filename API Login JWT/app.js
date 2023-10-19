@@ -18,7 +18,7 @@ const User = require('./src/models/User')
 function checkToken(req, res, next) {
     const authHeader = req.headers['authorization']
     // check if header exists and split the "Bearer" from the token
-    const token = authHeader && authHeader.split(' ')
+    const token = authHeader && authHeader.split(' ')[1]
 
     if (!token) {
         return res.status(401).json({ msg: 'Acesso negado!' })
