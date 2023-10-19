@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo à Minha Aplicação</title>
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Bem-vindo à Minha Aplicação</h1>
+        </header>
+        <main>
+            <section class="feature">
+                <img src="image1.jpg" alt="Imagem 1">
+                <h2>Recursos Incríveis</h2>
+                <p>Explore uma variedade de recursos incríveis que nossa aplicação tem a oferecer.</p>
+            </section>
+            <section class="feature">
+                <img src="image2.jpg" alt="Imagem 2">
+                <h2>Usabilidade Intuitiva</h2>
+                <p>Nossa aplicação é projetada para ser fácil de usar, proporcionando uma experiência intuitiva.</p>
+            </section>
+            <section class="feature">
+                <img src="image3.jpg" alt="Imagem 3">
+                <h2>Segurança em Primeiro Lugar</h2>
+                <p>Garantimos a segurança dos seus dados para que você possa usar nossa aplicação com confiança.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Minha Aplicação. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // TODO verificar token
+        const token = localStorage.getItem('token');
+
+        if (!token) {
+            window.location.href = 'index.html';
+        } else {
+            console.log('Usuário está logado!');
+        }
+    </script>
+</body>
+
+</html>

@@ -4,12 +4,14 @@ const express = require('express')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const connectToDatabase = require('./src/database/connect')
+const cors = require('cors')
 
 const PORT = 3000
 
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 // models
 const User = require('./src/models/User')
@@ -35,6 +37,8 @@ function checkToken(req, res, next) {
     }
 }
 
+// TODO separar rotas em arquivo router
+
 // public route
 app.get('/', (req, res) => {
     res.status(200).json({ msg: "Bem vindo a nossa API!" })
@@ -59,6 +63,8 @@ app.get('/users/:id', checkToken, async (req, res) => {
         res.status(500).json({ msg: 'Aconteceu um erro no servidor, tente novamente mais tarde!' })
     }
 })
+
+// TODO separar rotas auth em uma pasta auth
 
 // register user
 app.post('/auth/register', async (req, res) => {
