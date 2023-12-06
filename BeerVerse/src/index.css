@@ -49,12 +49,12 @@ header {
   object-fit: contain;
 }
 
-.beer-container .top-content .beer-stats h4 {
+.beer-container .top-content .beer-characteristics h4 {
   font-style: italic;
   margin: .5rem 0 1.5rem 0;
 }
 
-.beer-container .top-content .beer-stats p {
+.beer-container .top-content .beer-characteristics p {
   margin-bottom: 1rem;
   line-height: 1.5rem;
 }
