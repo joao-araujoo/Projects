@@ -19,7 +19,18 @@ export default function App() {
       </header>
       <main>
         {beer ? (
-          <BeerContainer beer={beer} />
+          <>
+            <BeerContainer beer={beer} />
+            <button
+              onClick={() => {
+                fetchRandomBeer().then((randomBeer) => {
+                  setBeer(randomBeer[0]);
+                });
+              }}
+            >
+              Another beer
+            </button>
+          </>
         ) : (
           <Oval
             height={100}

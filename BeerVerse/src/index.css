@@ -17,13 +17,18 @@ header {
   text-decoration: underline;
 }
 
+main {
+  display: grid;
+  place-content: center;
+}
+
 .beer-container {
   max-width: 600px;
   width: 100%;
   height: auto;
   padding: 3rem;
-  margin: 3rem auto 5rem auto;
-  border-radius: 10px;
+  margin: 3rem auto 0 auto;
+  border-radius: 1rem 1rem 0 0;
   background-color: #141414;
   display: flex;
   flex-direction: column;
@@ -67,17 +72,37 @@ hr {
 }
 
 .beer-container .bottom-content p {
-  background-color: #535bf2;
-  display: inline;
+  text-decoration: underline;
 }
 
 .beer-container .bottom-content div {
   margin-top: 1rem;
 }
 
-main {
-  display: grid;
-  place-content: center;
+button {
+  width: 100%;
+  margin: 0 auto 5rem auto;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #535bf2;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  -webkit-box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: .1s ease-in-out;
+}
+
+button:hover {
+  background-color: #656dff;
+}
+
+button:active {
+  background-color: #3a3faa;
+  box-shadow: none;
 }
 
 @media (max-width: 500px) {
