@@ -15,7 +15,10 @@ export default function App() {
   return (
     <>
       <header>
-        <h1>BeerVerse</h1>
+        <h1 className="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Deus_Beer.png" width="50" alt="" />
+          BeerVerse
+        </h1>
       </header>
       <main>
         {beer ? (
