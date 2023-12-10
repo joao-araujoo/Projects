@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: .5rem;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  font-weight: 400;
+  text-decoration: none;
+  overflow: hidden;
+  border-top: 1px solid #7667ff;
+}
+
+.wrapper:hover {
+  background-color: #7667ff !important;
+}
+
+.wrapper span {
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate .5s linear;
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: .5;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
