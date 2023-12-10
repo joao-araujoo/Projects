@@ -8,13 +8,11 @@ ExamsContextProvider.propTypes = {
 }
 
 export function ExamsContextProvider({ children }) {
-  // states
   const [exams, setExams] = useState(() => {
     const storedExams = localStorage.getItem('prepvest-lib')
     return storedExams ? JSON.parse(storedExams) : []
   });
 
-  // funções de crud
   const addExam = (exam) => {
     setExams((currentState) => {
       const updatedItems = [exam, ...currentState];
@@ -26,15 +24,21 @@ export function ExamsContextProvider({ children }) {
   const getExam = (examId) => {
     return exams.find((exam) => exam.id === +examId);
   };
-  // adicionar ao local-storage
-  // retornar state de exames e funções num objeto
+
+  const deleteExam = (examId) => { 
+    setExams((currentState) => {
+      const updatedItems = currentState.filter((exam) => exam.id !== +examId);
+      localStorage.setItem("prepvest-lib", JSON.stringify(updatedItems));
+      return updatedItems;
+    })
+  };
 
   const values = {
     exams,
     addExam,
     getExam,
+    deleteExam
     // updateExam,
-    // deleteExam
   };
 
   return (

@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="app">
       <ExamsContextProvider>
-        <RouterProvider router={router} />
+        <RouterProvider router={router} />  
       </ExamsContextProvider>
     </div>
   );

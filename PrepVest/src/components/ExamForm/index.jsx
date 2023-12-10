@@ -1,6 +1,9 @@
 import { useState } from "react";
-import useExam from "../hooks/useExams";
-import { Exam } from "../Models/Exam";
+import { Exam } from "../../Models/Exam";
+import styles from "./styles.module.css";
+import useExam from "../../hooks/useExams";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function ExamForm() {
   const defaultExam = {
@@ -10,11 +13,11 @@ export default function ExamForm() {
     correctQuestions: 0,
     madeAt: "",
   };
-
+  
   const [exam, setExam] = useState(defaultExam);
-
-  const { exams, addExam } = useExam();
-
+  
+  const { addExam } = useExam();
+  
   const handleChange = (ev) => {
     setExam((currentState) => {
       return {
@@ -24,24 +27,48 @@ export default function ExamForm() {
     });
   };
 
+  const notifySuccessSubmit = () =>
+    toast.success("Prova adicionada com sucesso!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    }
+  );
+
+  const notifyErrorSubmit = () =>
+    toast.error("Não foi possível adicionar a prova!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    }
+  );
+  
   const handleSubmit = (ev) => {
     ev.preventDefault();
 
     try {
-      console.log(exam);
       const newExam = new Exam(exam);
       addExam(newExam);
-      console.log(exams);
 
       setExam(defaultExam);
-      alert("Prova adicionada com sucesso!");
-    } catch (error) {
-      alert(error.message)
+      notifySuccessSubmit();
+    } catch {
+      notifyErrorSubmit();
     }
   };
 
   return (
-    <form onSubmit={(ev) => handleSubmit(ev)}>
+    <form className={styles.wrapper} onSubmit={(ev) => handleSubmit(ev)}>
       <label htmlFor="title">Título: </label>
       <input
         type="text"
@@ -52,7 +79,6 @@ export default function ExamForm() {
         required
       />
 
-      <label htmlFor="subject">Matéria: </label>
       <select
         name="subject"
         id="subject"
@@ -60,7 +86,8 @@ export default function ExamForm() {
         onChange={handleChange}
         required
       >
-        <option value="Matemática" selected>Matemática</option>
+        <option value="" disabled>Matérias</option>
+        <option value="Matemática">Matemática</option>
         <option value="Linguagens">Linguagens</option>
         <option value="Ciências Humanas">Ciências Humanas</option>
         <option value="Ciências da Natureza">Ciências da Natureza</option>

@@ -3,8 +3,8 @@ export class Exam {
     this.id = Math.floor(Math.random() * 1000000000000000); // TODO Gerar um ID de uma maneira melhor
     this.title = title;
     this.subject = subject;
-    this.qtyOfQuestions = qtyOfQuestions;
-    this.correctQuestions = correctQuestions;
+    this.qtyOfQuestions = +qtyOfQuestions;
+    this.correctQuestions = +correctQuestions;
     this.madeAt = madeAt;
     this.wrongQuestions = [];
     this.score = this.calculateScore();
@@ -36,7 +36,7 @@ export class Exam {
     const validCorrectQuestions = typeof this.correctQuestions === 'number' && Number.isInteger(this.correctQuestions) && this.correctQuestions > 0
     const validDate = this.madeAt !== "";
 
-    if (!(validTitle || validSubject || validQtyOfQuestions || validCorrectQuestions || validDate)) {
+    if (!(validTitle && validSubject && validQtyOfQuestions && validCorrectQuestions && validDate)) {
       throw new Error("Invalid Exam!");
     }
   }

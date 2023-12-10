@@ -1,0 +1,17 @@
+.wrapper {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.wrapper th,
+.wrapper td {
+  padding: 10px;
+  border: 1px solid #5340FF;
+  text-align: left;
+}
+
+.wrapper th {
+  background-color: #5340FF;
+  color: #fff;
+}
