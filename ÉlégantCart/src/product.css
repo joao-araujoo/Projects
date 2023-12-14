@@ -46,6 +46,7 @@ header button:nth-child(2) {
 .product-section img {
   width: 100%;
   border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .product-characteristics {
@@ -83,7 +84,7 @@ hr {
 
 .description p {
   margin-top: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 130px;
   text-align: justify;
 }
 

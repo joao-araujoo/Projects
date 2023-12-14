@@ -14,6 +14,7 @@ export default function App() {
     fetchProducts().then((response) => {
       setProducts(response);
       setLoading(false);
+      document.title = "ÉlégantCart";
     });
   }, []);
 

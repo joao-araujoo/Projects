@@ -102,12 +102,18 @@ section {
 .product {
   width: auto;
   cursor: pointer;
+  transition: 200ms;
+}
+
+.product:hover {
+  transform: translateY(-10px);
 }
 
 .product img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 5px;
+  box-shadow: 2px 2px 2px #ddd;
 }
 
 .product h3,
