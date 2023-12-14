@@ -8,6 +8,7 @@ import "../product.css";
 
 export default function Product() {
   const [product, setProduct] = useState({});
+  const [productQuantity, setProductQuantity] = useState(0);
   const { productId } = useParams();
 
   const conditions = {
@@ -20,10 +21,12 @@ export default function Product() {
     const fetchData = async () => {
       const response = await fetchProductById(productId);
       setProduct(response);
+      document.title = response.title ? response.title : "ÉlégantCart";
     }
-
+    
     fetchData();
   }, [productId]);
+  
 
   return (
     <>
@@ -68,7 +71,7 @@ export default function Product() {
               <hr />
               <div className="description">
                 <h3>Product Description</h3>
-                <p>{product.description}</p>
+                <p>{product.description ? product.description : "Oops... Ainda não há uma descrição para este produto."}</p>
               </div>
               <div className="container__add-cart">
                 <h2>
@@ -80,9 +83,23 @@ export default function Product() {
                 </h2>
                 <div className="add-cart__buttons">
                   <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
+                    <button
+                      onClick={() =>
+                        setProductQuantity((currentState) =>
+                          currentState > 0 ? currentState - 1 : 0
+                        )
+                      }
+                    >
+                      -
+                    </button>
+                    <span>{productQuantity}</span>
+                    <button
+                      onClick={() =>
+                        setProductQuantity((currentState) => currentState + 1)
+                      }
+                    >
+                      +
+                    </button>
                   </div>
                   <button className="addToCart-button">Cart</button>
                 </div>
