@@ -78,6 +78,7 @@ export default function App() {
                       <img
                         src={product.thumbnail.replace(/\w\.jpg/gi, "W.jpg")}
                         alt={product.title}
+                        loading="lazy"
                       />
                       <h3>{product.title}</h3>
                       <p>{product.seller.nickname}</p>
