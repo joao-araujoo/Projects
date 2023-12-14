@@ -97,6 +97,7 @@ section {
 
 .product {
   width: auto;
+  cursor: pointer;
 }
 
 .product img {
@@ -110,7 +111,7 @@ section {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} 
 
 .product p {
   margin: 5px 0 10px 0;
