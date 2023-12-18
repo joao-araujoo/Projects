@@ -1,7 +1,7 @@
 export default function Register() {
   return (
     <>
-      <main>
+      <main className="container">
         <div className="form-container">
           <h1>Register</h1>
           <form>

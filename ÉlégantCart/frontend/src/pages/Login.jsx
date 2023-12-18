@@ -4,7 +4,7 @@ import "../login.css";
 export default function Login() {
   return (
     <>
-      <main>
+      <main className="container">
         <div className="form-container">
           <h1>Login</h1>
           <form>
