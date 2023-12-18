@@ -4,12 +4,14 @@ import { AiOutlineLoading } from "react-icons/ai";
 import { useEffect, useRef, useState } from "react";
 import { fetchProducts } from "../api/fetchProducts";
 import { Link } from "react-router-dom";
+import useCart from "../hooks/useCart";
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const cartMenu = useRef(null);
+  const { cart } = useCart();
 
   useEffect(() => {
     fetchProducts().then((response) => {
@@ -57,312 +59,97 @@ export default function App() {
           <h2>My Cart</h2>
         </header>
         <div className="cart-items">
-
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
+          {cart.length > 0 ? (
+            cart.map((product) => (
+              <div className="cart-item" key={product.id}>
+                <input type="checkbox" name="checkItem" id={product.id} />
+                <div className="cart-item__characteristics">
+                  <div className="cart-item__image">
+                    <img src={product.thumbnail} alt={product.title} />
+                  </div>
+                  <div className="cart-item__specifications">
+                    <div>
+                      <Link to={`/products/${product.id}`}>
+                        <h3>{product.title}</h3>
+                      </Link>
+                      <p>
+                        {product.attributes && product.attributes.length > 0
+                          ? product.attributes.find((att) => att.id === "BRAND")
+                            ? product.attributes.find(
+                                (att) => att.id === "BRAND"
+                              ).value_name
+                            : "N/A"
+                          : "N/A"}
+                      </p>
+                    </div>
+                    <div className="cart-item__options">
+                      <h2>
+                        {product.price &&
+                          product.price.toLocaleString("pt-br", {
+                            style: "currency",
+                            currency: product.currency_id,
+                          })}
+                      </h2>
+                      <div className="product-quantity">
+                        <button>-</button>
+                        <span>{product.quantity}</span>
+                        <button>+</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cart-item">
-            <input type="checkbox" name="checkItem" id="checkItemID" />
-            <div className="cart-item__characteristics">
-              <div className="cart-item__image">
-                <img src="https://emporiodacerveja.vtexassets.com/arquivos/ids/179456/modelo_355.jpg?v=637564194244030000" />
-              </div>
-              <div className="cart-item__specifications">
-                <div>
-                  <Link to="/products/MLB3023681649">
-                    <h3>Modelo Especial</h3>
-                  </Link>
-                  <p>Size: 35.5 cl / 355ml</p>
-                </div>
-                <div className="cart-item__options">
-                  <h2>$3.55</h2>
-                  <div className="product-quantity">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+            ))
+          ) : (
+            <h2>Carrinho Vazio =(</h2>
+          )}
         </div>
         <div className="payment-items">
-            <div className="sub-total">
-              <span>Sub Total: </span>
-              <span>$ 10.93</span>
-            </div>
-            <div className="shipping">
-              <span>Shipping: </span>
-              <span>$ 2.99 </span>
-            </div>
+          <div className="sub-total">
+            <span>Sub Total: </span>
+            <span>
+              {cart
+                .reduce(
+                  (acc, product) => acc + product.price * product.quantity,
+                  0
+                )
+                .toLocaleString("pt-br", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
+            </span>
+          </div>
+          <div className="shipping">
+            <span>Shipping: </span>
+            <span>
+              {(
+                cart.reduce(
+                  (acc, product) => acc + product.price * product.quantity,
+                  0
+                ) / 300
+              ).toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              })}
+            </span>
+          </div>
         </div>
         <hr className="cart-menu-bar" />
         <div className="checkout-container">
           <div>
-            <p>Total: <span>(2 Items)</span></p>
-            <h2>$ 13.92</h2>
+            <p>
+              Total:{" "}
+              <span>
+                ({cart.length} {cart.length === 1 ? "Item" : "Items"})
+              </span>
+            </p>
+            <h2>
+              ${" "}
+              {cart.reduce(
+                (acc, product) => acc + product.price * product.quantity,
+                0
+              )}
+            </h2>
           </div>
           <div>
             <button>Proceed To Checkout</button>

@@ -82,7 +82,7 @@ header .cart {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 60px;
+  width: 30px;
   height: 15px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -103,6 +103,7 @@ header .cart {
 }
 
 .cart-menu .cart-items .cart-item .cart-item__characteristics {
+  width: 500px;
   display: flex;
   gap: 10px;
   padding: 5px;
@@ -136,7 +137,7 @@ header .cart {
 
 .cart-menu .cart-items .cart-item .cart-item__characteristics .cart-item__specifications h3,
 .cart-menu .cart-items .cart-item .cart-item__characteristics .cart-item__specifications p {
-  max-width: 100%;
+  max-width: 130px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -152,6 +153,7 @@ header .cart {
   background: radial-gradient(circle, #1b2585, #171f6d, #030958);
   -webkit-background-clip: text;
   color: transparent;
+  font-size: 15px;
 }
 
 .cart-menu .cart-items .cart-item .cart-item__characteristics .cart-item__specifications .cart-item__options .product-quantity {

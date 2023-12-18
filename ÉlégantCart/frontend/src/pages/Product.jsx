@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchProductById } from "../api/fetchProductByID";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import useCart from "../hooks/useCart";
 
 import "../product.css";
 
@@ -10,6 +11,7 @@ export default function Product() {
   const [product, setProduct] = useState({});
   const [productQuantity, setProductQuantity] = useState(0);
   const { productId } = useParams();
+  const { addToCart } = useCart();
 
   const conditions = {
     new: "Novo",
@@ -27,6 +29,13 @@ export default function Product() {
     fetchData();
   }, [productId]);
   
+  const handleAddToCart = (productId)  => {
+    if (productQuantity > 0) {
+      addToCart(productId, productQuantity);
+      alert("Adicionado ao carrinho com sucesso!")
+      setProductQuantity(0);
+    }
+  }
 
   return (
     <>
@@ -71,7 +80,11 @@ export default function Product() {
               <hr />
               <div className="description">
                 <h3>Product Description</h3>
-                <p>{product.description ? product.description : "Oops... Ainda não há uma descrição para este produto."}</p>
+                <p>
+                  {product.description
+                    ? product.description
+                    : "Oops... Ainda não há uma descrição para este produto."}
+                </p>
               </div>
               <div className="container__add-cart">
                 <h2>
@@ -101,7 +114,12 @@ export default function Product() {
                       +
                     </button>
                   </div>
-                  <button className="addToCart-button">Cart</button>
+                  <button
+                    className="addToCart-button"
+                    onClick={() => handleAddToCart(product.id)}
+                  >
+                    Cart
+                  </button>
                 </div>
               </div>
             </div>
