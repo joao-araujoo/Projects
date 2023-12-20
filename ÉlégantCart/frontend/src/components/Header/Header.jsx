@@ -4,9 +4,10 @@ import "./styles.css";
 
 Header.propTypes = {
   handleFunction: PropTypes.func,
+  hamburgerRef: PropTypes.object
 };
 
-export default function Header({ handleFunction }) {
+export default function Header({ handleFunction, hamburgerRef }) {
   return (
     <header className="home-header">
         <div className="user-profile">
@@ -19,8 +20,7 @@ export default function Header({ handleFunction }) {
             <h3>Tarantino</h3>
           </div>
         </div>
-        {/* TODO quando clicar e o carrinho estiver aberto, mudar para position fixed para acompanhar o carrinho */}
-        <div className="cart" onClick={handleFunction}>
+        <div className="cart" onClick={handleFunction} ref={hamburgerRef}>
           <HiOutlineBars3BottomRight />
         </div>
       </header>

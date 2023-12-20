@@ -13,6 +13,9 @@
 }
 
 .home-header .cart {
+  position: initial;
+  top: 30px;
+  right: 20px;
   font-size: 25px;
   cursor: pointer;
   z-index: 999;

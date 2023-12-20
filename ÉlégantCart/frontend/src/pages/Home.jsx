@@ -10,6 +10,7 @@ export default function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const cartMenu = useRef(null);
+  const hamburgerButton = useRef(null);
 
   useEffect(() => {
     fetchProducts().then((response) => {
@@ -31,12 +32,17 @@ export default function App() {
   }
 
   const handleCartMenuClick = () => {
-    cartMenu.current.style.right = cartMenu.current.style.right === "0px" ? "-350px" : "0px"
+    const newRightValue = cartMenu.current.style.right === "0px" ? "-350px" : "0px";
+  cartMenu.current.style.right = newRightValue;
+
+  // Ajuste para garantir que o ícone do carrinho permaneça visível
+  hamburgerButton.current.style.position = newRightValue === "0px" ? "fixed" : "initial";
+  hamburgerButton.current.style.zIndex = newRightValue === "0px" ? "1000" : "initial";
   }
 
   return (
     <>
-      <Header handleFunction={handleCartMenuClick} />
+      <Header handleFunction={handleCartMenuClick} hamburgerRef={hamburgerButton} />
       <Cart menuRef={cartMenu} />
       <SearchBar
         handleFunction={handleSubmit}
