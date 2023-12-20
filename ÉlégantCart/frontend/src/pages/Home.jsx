@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { fetchProducts } from "../api/fetchProducts";
-import Header from "../components/Header/Header";
+import Header from "../components/Home/Header/Header";
 import Cart from "../components/Cart/Cart";
-import SearchBar from "../components/SearchBar/SearchBar";
-import ProductsSection from "../components/ProductsSection/ProductsSection";
+import SearchBar from "../components/Home/SearchBar/SearchBar";
+import ProductsSection from "../components/Home/ProductsSection/ProductsSection";
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -25,24 +25,29 @@ export default function App() {
 
     setLoading(true);
     fetchProducts(searchValue).then((response) => {
-      setProducts(response)
+      setProducts(response);
       setLoading(false);
     });
     setSearchValue("");
-  }
+  };
 
   const handleCartMenuClick = () => {
-    const newRightValue = cartMenu.current.style.right === "0px" ? "-350px" : "0px";
-  cartMenu.current.style.right = newRightValue;
+    const newRightValue =
+      cartMenu.current.style.right === "0px" ? "-350px" : "0px";
+    cartMenu.current.style.right = newRightValue;
 
-  // Ajuste para garantir que o ícone do carrinho permaneça visível
-  hamburgerButton.current.style.position = newRightValue === "0px" ? "fixed" : "initial";
-  hamburgerButton.current.style.zIndex = newRightValue === "0px" ? "1000" : "initial";
-  }
+    hamburgerButton.current.style.position =
+      newRightValue === "0px" ? "fixed" : "initial";
+    hamburgerButton.current.style.zIndex =
+      newRightValue === "0px" ? "1000" : "initial";
+  };
 
   return (
     <>
-      <Header handleFunction={handleCartMenuClick} hamburgerRef={hamburgerButton} />
+      <Header
+        handleFunction={handleCartMenuClick}
+        hamburgerRef={hamburgerButton}
+      />
       <Cart menuRef={cartMenu} />
       <SearchBar
         handleFunction={handleSubmit}

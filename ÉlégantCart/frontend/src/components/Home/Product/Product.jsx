@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import formatCurrency from "../../utils/formatCurrency";
+import formatCurrency from "../../../utils/formatCurrency";
 import PropTypes from "prop-types";
 import "./styles.css";
 

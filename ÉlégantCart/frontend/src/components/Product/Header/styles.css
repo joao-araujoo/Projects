@@ -1,0 +1,43 @@
+header button {
+  background: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.arrow-left {
+  font-size: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.back-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transform: translate(-20px);
+  transition: all 200ms ease-in-out;
+}
+
+.back-button:hover {
+  transform: translate(0px);
+}
+
+.back-button:hover .arrow-left {
+  visibility: visible;
+  opacity: 1;
+}
+
+header button:nth-child(2) {
+  position: initial;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 999;
+}
