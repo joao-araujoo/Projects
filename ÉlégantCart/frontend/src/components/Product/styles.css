@@ -1,0 +1,37 @@
+.product {
+  width: auto;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-shadow: 2px 2px 2px #ddd;
+}
+
+.product h3,
+.product p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
+
+.product p {
+  margin: 5px 0 10px 0;
+  color: rgba(0, 0, 0, .7);
+}
+
+.product h2 {
+  background: radial-gradient(circle, #1b2585, #171f6d, #030958);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 20px;
+}

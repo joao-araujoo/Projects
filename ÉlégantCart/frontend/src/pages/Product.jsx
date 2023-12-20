@@ -4,7 +4,6 @@ import { fetchProductById } from "../api/fetchProductByID";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import useCart from "../hooks/useCart";
-
 import "../product.css";
 
 export default function Product() {

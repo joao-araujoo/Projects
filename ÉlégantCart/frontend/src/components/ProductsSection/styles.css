@@ -1,0 +1,26 @@
+.loading {
+  font-size: 5rem;
+  margin: 0 auto;
+  animation: spin .5s infinite;
+}
+
+.products h2 {
+  font-weight: 800;
+  user-select: none;
+}
+
+.products__container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
