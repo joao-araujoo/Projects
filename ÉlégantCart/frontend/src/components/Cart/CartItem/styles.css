@@ -3,6 +3,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .cart-menu .cart-items .cart-item input[type="checkbox"] {
@@ -110,4 +111,30 @@
   width: 33%;
   font-size: 15px;
   text-align: center;
+}
+
+.removeFromCart-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ddd;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.removeFromCart-button:hover {
+  background-color: #db5050;
+}
+
+.removeFromCart-button:active {
+  transform: scale(0.9);
 }

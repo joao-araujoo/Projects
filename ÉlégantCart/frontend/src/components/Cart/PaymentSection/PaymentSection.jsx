@@ -3,7 +3,7 @@ import formatCurrency from "../../../utils/formatCurrency";
 import "./styles.css";
 
 PaymentSection.propTypes = {
-  cart: PropTypes.object.isRequired,
+  cart: PropTypes.array.isRequired,
 };
 
 export default function PaymentSection({ cart }) {

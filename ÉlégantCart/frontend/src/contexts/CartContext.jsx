@@ -9,13 +9,20 @@ CartContextProvider.propTypes = {
 };
 
 export default function CartContextProvider({ children }) {
+  // const [cartToBuy, setCartToBuy] = useState(() => {
+  //   const storedProducts = localStorage.getItem("elegantcart-cartToBuy");
+  //   return storedProducts ? JSON.parse(storedProducts) : [];
+  // });
+
   const [cart, setCart] = useState(() => {
-    const storedProducts = localStorage.getItem('elegantcart-cart')
-    return storedProducts ? JSON.parse(storedProducts) : []
+    const storedProducts = localStorage.getItem("elegantcart-cart");
+    return storedProducts ? JSON.parse(storedProducts) : [];
   });
-  
+
   const addToCart = async (productId, quantity) => {
-    const existingProductIndex = cart.findIndex(product => product.id === productId);
+    const existingProductIndex = cart.findIndex(
+      (product) => product.id === productId
+    );
 
     if (existingProductIndex !== -1) {
       setCart((currentState) => {
@@ -31,22 +38,29 @@ export default function CartContextProvider({ children }) {
       });
     } else {
       const newProduct = await fetchProductById(productId);
-      setCart(currentState => {
+      setCart((currentState) => {
         const updatedCart = [{ ...newProduct, quantity }, ...currentState];
         localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
         return updatedCart;
       });
     }
+  };
+
+  const removeFromCart = (productId) => {
+    setCart((currentState) => {
+      const updatedCart = currentState.filter(
+        (product) => product.id !== productId
+      );
+      localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
+      return updatedCart;
+    });
   }
 
   const items = {
-    cart, 
-    addToCart
-  }
+    cart,
+    addToCart,
+    removeFromCart
+  };
 
-  return (
-    <CartContext.Provider value={items}>
-      {children}
-    </CartContext.Provider>
-  )
+  return <CartContext.Provider value={items}>{children}</CartContext.Provider>;
 }
