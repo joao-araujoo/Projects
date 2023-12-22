@@ -46,6 +46,7 @@ hr {
 .description p {
   margin-top: 10px;
   text-align: justify;
+  padding-bottom: 130px;
 }
 
 .description p::-webkit-scrollbar {

@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import formatCurrency from "../../../utils/formatCurrency";
 import "./styles.css";
-import { useRef, useState } from "react";
 import useCart from "../../../hooks/useCart";
 
 CartItem.propTypes = {
@@ -10,10 +9,19 @@ CartItem.propTypes = {
 }
 
 export default function CartItem({ productObject }) {
-  const [itemCheckboxIsChecked, setItemCheckboxIsChecked] = useState(false);
-  const itemCheckboxRef = useRef(null);
+  const { cart, changeQuantityFromCart, removeFromCart, addToCartToBuy, cartToBuy } = useCart();
 
-  const { removeFromCart } = useCart();
+  const product = cart.find(product => product.id === productObject.id);
+
+  const handleDecreaseQuantity = () => {
+    const newQuantity = Math.max(product.quantity - 1, 0);
+    changeQuantityFromCart(productObject.id, newQuantity);
+  };
+
+  const handleIncreaseQuantity = () => {
+    const newQuantity = product.quantity + 1;
+    changeQuantityFromCart(productObject.id, newQuantity);
+  };
 
   return (
     <div className="cart-item">
@@ -21,11 +29,8 @@ export default function CartItem({ productObject }) {
         type="checkbox"
         name="checkItem"
         id={productObject.id}
-        ref={itemCheckboxRef}
-        value={itemCheckboxIsChecked}
-        onChange={() =>
-          setItemCheckboxIsChecked((currentState) => !currentState)
-        }
+        onChange={() => addToCartToBuy(productObject.id)}
+        checked={cartToBuy.some((product) => product.id === productObject.id)}
       />
       <div className="cart-item__characteristics">
         <div className="cart-item__image">
@@ -51,9 +56,9 @@ export default function CartItem({ productObject }) {
                 formatCurrency(productObject.price, productObject.currency_id)}
             </h2>
             <div className="product-quantity">
-              <button>-</button>
-              <span>{productObject.quantity}</span>
-              <button>+</button>
+              <button onClick={handleDecreaseQuantity}>-</button>
+              <span>{product.quantity}</span>
+              <button onClick={handleIncreaseQuantity}>+</button>
             </div>
           </div>
         </div>

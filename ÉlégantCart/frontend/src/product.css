@@ -16,7 +16,7 @@
   }
 
   .description p {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
     max-height: 180px;
     overflow-y: scroll;
   }

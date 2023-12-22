@@ -7,7 +7,7 @@ import "./styles.css";
 
 export default function ProductSection() {
   const [product, setProduct] = useState({});
-  const [productQuantity, setProductQuantity] = useState(0);
+  const [productQuantity, setProductQuantity] = useState(1);
   const { productId } = useParams();
   const { addToCart } = useCart();
 
@@ -25,7 +25,7 @@ export default function ProductSection() {
     if (productQuantity > 0) {
       addToCart(productId, productQuantity);
       alert("Adicionado ao carrinho com sucesso!");
-      setProductQuantity(0);
+      setProductQuantity(1);
     }
   };
 

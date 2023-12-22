@@ -6,7 +6,7 @@ import CheckoutContainer from "./CheckoutContainer/CheckoutContainer";
 
 // eslint-disable-next-line react/prop-types
 export default function Cart({ menuRef }) {
-  const { cart } = useCart();
+  const { cart, cartToBuy } = useCart();
 
   return (
     <div className="cart-menu" ref={menuRef}>
@@ -23,10 +23,10 @@ export default function Cart({ menuRef }) {
         )}
       </div>
 
-      <PaymentSection cart={cart} />
+      <PaymentSection cart={cartToBuy} />
       <hr className="cart-menu-bar" />
 
-      <CheckoutContainer cart={cart} />
+      <CheckoutContainer cart={cartToBuy} />
     </div>
   );
 }

@@ -27,7 +27,7 @@ export default function PaymentSection({ cart }) {
             cart.reduce(
               (acc, product) => acc + product.price * product.quantity,
               0
-            ) / 300
+            ) / 130
           )}
         </span>
       </div>
