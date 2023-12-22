@@ -2,6 +2,7 @@
   width: auto;
   cursor: pointer;
   transition: 200ms;
+  user-select: none;
 }
 
 .product:hover {

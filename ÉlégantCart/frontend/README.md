@@ -1,11 +1,9 @@
-## Todo
+### Todo
 
-- Manipular a quantidade de itens pelo carrinho
-- Selecionar somente os itens com o checkbox marcado
-- Calcular o total apenas desses itens
-
-### Features
-
+- Botão de adicionar ao carrinho em cada produto
 - Redirecionar para tela de login
 - Verificar login
+- Cadastrar usuários
 - Salvar itens do carrinho do usuário no backend
+- Criar páginas de produtos
+- Gerar pdf ou algo do tipo com o carrinho final

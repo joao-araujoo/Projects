@@ -10,6 +10,7 @@
   z-index: 99;
   border-radius: 20px;
   transition: 200ms ease-in-out;
+  user-select: none;
 }
 
 .cart-menu header {

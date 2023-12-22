@@ -7,18 +7,23 @@ CheckoutContainer.propTypes = {
 };
 
 export default function CheckoutContainer({ cart }) {
+  const toBuyProducts = cart.filter(
+    (product) => product.toBuy && product.quantity > 0
+  );
+
   return (
     <div className="checkout-container">
       <div>
         <p>
           Total:{" "}
           <span>
-            ({cart.length} {cart.length === 1 ? "Item" : "Items"})
+            ({toBuyProducts.length}{" "}
+            {toBuyProducts.length === 1 ? "Item" : "Items"})
           </span>
         </p>
         <h2>
           {formatCurrency(
-            cart.reduce(
+            toBuyProducts.reduce(
               (acc, product) => acc + product.price * product.quantity,
               0
             )

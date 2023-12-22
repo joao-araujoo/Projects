@@ -9,7 +9,7 @@ CartItem.propTypes = {
 }
 
 export default function CartItem({ productObject }) {
-  const { cart, changeQuantityFromCart, removeFromCart, addToCartToBuy, cartToBuy } = useCart();
+  const { cart, changeQuantityFromCart, removeFromCart, toggleToBuy } = useCart();
 
   const product = cart.find(product => product.id === productObject.id);
 
@@ -23,14 +23,21 @@ export default function CartItem({ productObject }) {
     changeQuantityFromCart(productObject.id, newQuantity);
   };
 
+  const handleIsChecked = () => {
+    const product = cart.find(product => product.id === productObject.id);
+    if (product) {
+      return product.toBuy;
+    }
+  }
+
   return (
     <div className="cart-item">
       <input
         type="checkbox"
         name="checkItem"
         id={productObject.id}
-        onChange={() => addToCartToBuy(productObject.id)}
-        checked={cartToBuy.some((product) => product.id === productObject.id)}
+        onChange={() => toggleToBuy(productObject.id)}
+        checked={handleIsChecked()}
       />
       <div className="cart-item__characteristics">
         <div className="cart-item__image">

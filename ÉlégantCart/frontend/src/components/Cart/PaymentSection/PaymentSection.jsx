@@ -7,13 +7,15 @@ PaymentSection.propTypes = {
 };
 
 export default function PaymentSection({ cart }) {
+  const toBuyProducts = cart.filter((product) => product.toBuy);
+
   return (
     <div className="payment-items">
       <div className="sub-total">
         <span>Sub Total: </span>
         <span>
           {formatCurrency(
-            cart.reduce(
+            toBuyProducts.reduce(
               (acc, product) => acc + product.price * product.quantity,
               0
             )
@@ -24,7 +26,7 @@ export default function PaymentSection({ cart }) {
         <span>Shipping: </span>
         <span>
           {formatCurrency(
-            cart.reduce(
+            toBuyProducts.reduce(
               (acc, product) => acc + product.price * product.quantity,
               0
             ) / 130
