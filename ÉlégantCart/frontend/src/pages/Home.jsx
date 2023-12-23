@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { fetchProducts } from "../api/fetchProducts";
 import Header from "../components/Home/Header/Header";
 import Cart from "../components/Cart/Cart";
@@ -11,6 +12,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const cartMenu = useRef(null);
   const hamburgerButton = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchProducts().then((response) => {
@@ -41,6 +43,12 @@ export default function App() {
     hamburgerButton.current.style.zIndex =
       newRightValue === "0px" ? "1000" : "initial";
   };
+
+  // TODO verificar token
+  if (false) {
+    navigate('/login');
+    return;
+  }
 
   return (
     <>

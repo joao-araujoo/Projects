@@ -1,12 +1,44 @@
 .product {
   width: auto;
   cursor: pointer;
-  transition: 200ms;
+  transition: all 200ms;
   user-select: none;
+  position: relative;
 }
 
 .product:hover {
   transform: translateY(-10px);
+}
+
+.product:hover .addToCart {
+  visibility: visible;
+}
+
+.product .addToCart {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(220, 220, 220, 0.5);
+  backdrop-filter: blur(5px);
+  color: #00098a;
+  font-size: 15px;
+  display: grid;
+  visibility: hidden;
+  place-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+.product .addToCart:hover {
+  background-color: rgba(220, 220, 220, 0.8);
+}
+
+.product .addToCart:active {
+  transform: scale(0.9);
 }
 
 .product img {

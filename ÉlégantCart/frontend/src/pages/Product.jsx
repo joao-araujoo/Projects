@@ -21,11 +21,17 @@ export default function Product() {
 
   return (
     <>
-      <Header handleFunction={handleCartMenuClick} hamburgerRef={hamburgerButton} />
+      <Header
+        handleFunction={handleCartMenuClick}
+        hamburgerRef={hamburgerButton}
+      />
       <Cart menuRef={cartMenu} />
 
       <main>
-        <ProductSection />
+        <ProductSection 
+          menuRef={cartMenu} 
+          hamburgerRef={hamburgerButton} 
+        />
       </main>
     </>
   );

@@ -33,6 +33,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .product .addToCart {
+    visibility: visible;
+  }
+}
+
 @media (max-width: 425px) {
   .container__add-cart {
     padding: 25px 10px;
@@ -43,7 +49,7 @@
   }
 
   .container__add-cart ,.add-cart__buttons {
-    gap: 10px;
+    gap: 7px !important; 
   }
 
   .container__add-cart .add-cart__buttons .product-quantity {
