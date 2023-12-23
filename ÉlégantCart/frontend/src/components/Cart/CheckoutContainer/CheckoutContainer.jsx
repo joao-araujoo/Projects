@@ -11,14 +11,19 @@ export default function CheckoutContainer({ cart }) {
     (product) => product.toBuy && product.quantity > 0
   );
 
+  const totalItems = toBuyProducts.reduce(
+    (acc, product) => acc + product.quantity,
+    0
+  );
+
   return (
     <div className="checkout-container">
       <div>
         <p>
           Total:{" "}
           <span>
-            ({toBuyProducts.length}{" "}
-            {toBuyProducts.length === 1 ? "Item" : "Items"})
+            ({totalItems}{" "}
+            {totalItems === 1 ? "Item" : "Items"})
           </span>
         </p>
         <h2>
