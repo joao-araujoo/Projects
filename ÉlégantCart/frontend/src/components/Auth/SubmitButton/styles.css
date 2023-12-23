@@ -1,0 +1,43 @@
+#submit-button {
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  background: radial-gradient(circle, #1b2585, #171f6d, #030958);
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: .2s ease-in-out;
+  overflow: hidden;
+}
+
+#submit-button:active {
+  transform: scale(0.95);
+}
+
+#submit-button:hover {
+  background-color: #7667ff !important;
+}
+
+#submit-button span {
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate .5s linear;
+}
+
+@keyframes animate {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: .5;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

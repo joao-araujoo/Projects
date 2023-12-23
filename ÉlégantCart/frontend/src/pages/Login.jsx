@@ -2,15 +2,14 @@ import { Link, useNavigate } from "react-router-dom";
 import FormContainer from "../components/Auth/FormContainer/FormContainer";
 import InputField from "../components/Auth/InputField/InputField";
 import { useState } from "react";
+import SubmitButton from "../components/Auth/SubmitButton/SubmitButton";
 
 export default function Login() { 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-
+  const handleSubmit = () => {
     if (email === "admin@gmail.com" && password === "admin") {
       localStorage.setItem("elegantcart-token", "tokenjwt1234");
       navigate("/");
@@ -40,7 +39,7 @@ export default function Login() {
             value={password}
             onChange={(ev) => setPassword(ev.target.value)}
           />
-          <button type="submit" onClick={handleSubmit}>Login</button>
+          <SubmitButton text="Login" handleFunction={handleSubmit} />
         </form>
         <p>
           Don&apos;t have an account?

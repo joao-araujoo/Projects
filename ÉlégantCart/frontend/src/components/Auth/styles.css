@@ -57,16 +57,6 @@ input:-webkit-autofill:active {
   border-bottom-color: #030958;
 }
 
-.form-container form button {
-  font-size: 20px;
-  color: #fff;
-  border: none;
-  padding: 15px;
-  background: radial-gradient(circle, #1b2585, #171f6d, #030958);
-  border-radius: 10px;
-  cursor: pointer;
-}
-
 .form-container p {
   padding-top: 10px;
   color: rgba(0, 0, 0, 0.7);

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import FormContainer from "../components/Auth/FormContainer/FormContainer";
 import InputField from "../components/Auth/InputField/InputField";
+import SubmitButton from "../components/Auth/SubmitButton/SubmitButton";
 
 export default function Register() {
   return (
@@ -28,9 +29,7 @@ export default function Register() {
             id="password"
             style={{ marginBottom: "30px" }}
           />
-          <button type="submit" style={{ marginTop: "20px" }}>
-            Register
-          </button>
+          <SubmitButton text="Register" />
         </form>
         <p>
           Already have an account?
