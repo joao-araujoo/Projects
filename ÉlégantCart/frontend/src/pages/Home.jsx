@@ -45,7 +45,7 @@ export default function App() {
   };
 
   // TODO verificar token
-  if (false) {
+  if (!localStorage.getItem("elegantcart-token")) {
     navigate('/login');
     return;
   }

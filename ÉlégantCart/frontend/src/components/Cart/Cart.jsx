@@ -19,7 +19,7 @@ export default function Cart({ menuRef }) {
             <CartItem productObject={product} key={product.id} />
           ))
         ) : (
-          <h2>Carrinho Vazio =(</h2>
+          <h2>Empty Cart =(</h2>
         )}
       </div>
 
