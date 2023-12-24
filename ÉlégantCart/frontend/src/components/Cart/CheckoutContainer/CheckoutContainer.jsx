@@ -22,8 +22,7 @@ export default function CheckoutContainer({ cart }) {
         <p>
           Total:{" "}
           <span>
-            ({totalItems}{" "}
-            {totalItems === 1 ? "Item" : "Items"})
+            ({totalItems} {totalItems === 1 ? "Item" : "Items"})
           </span>
         </p>
         <h2>
@@ -31,7 +30,12 @@ export default function CheckoutContainer({ cart }) {
             toBuyProducts.reduce(
               (acc, product) => acc + product.price * product.quantity,
               0
-            )
+            ) +
+              toBuyProducts.reduce(
+                (acc, product) => acc + product.price * product.quantity,
+                0
+              ) /
+                130
           )}
         </h2>
       </div>

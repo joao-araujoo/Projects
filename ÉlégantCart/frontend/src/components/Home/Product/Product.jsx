@@ -4,17 +4,36 @@ import PropTypes from "prop-types";
 import { FaCartPlus } from "react-icons/fa";
 import "./styles.css";
 import useCart from "../../../hooks/useCart";
+import { useRef } from "react";
 
 Product.propTypes = {
   productObject: PropTypes.object,
 };
 
 export default function Product({ productObject }) {
+  const addToCartButton = useRef(null);
   const { addToCart } = useCart();
+  
+  const handleClick = () => {
+    addToCart(productObject.id, 1);
+    addToCartButton.current.style.backgroundColor = "#9FB9A1";
+    addToCartButton.current.style.color = "#fff";
+
+    const addToCartInterval = setInterval(() => {
+      addToCartButton.current.style.backgroundColor = "rgba(220, 220, 220, 0.5)";
+      addToCartButton.current.style.color = "#00098a";
+
+      clearInterval(addToCartInterval);
+    }, 500);
+  }
 
   return (
     <div className="product">
-      <button className="addToCart" onClick={() => addToCart(productObject.id, 1)}>
+      <button
+        className="addToCart"
+        onClick={handleClick}
+        ref={addToCartButton}
+      >
         <FaCartPlus />
       </button>
       <Link
