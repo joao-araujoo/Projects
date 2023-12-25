@@ -1,8 +1,8 @@
-import "../product.css";
-import Header from "../components/Product/Header/Header";
-import Cart from "../components/Cart/Cart";
-import ProductSection from "../components/Product/ProductSection/ProductSection";
 import { useRef } from "react";
+import Header from "../Product/Header/Header";
+import Cart from "../Cart/Cart";
+import ProductSection from "../Product/ProductSection/ProductSection";
+import "../../product.css";
 
 export default function Product() {
   const cartMenu = useRef(null);

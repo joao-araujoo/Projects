@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import FormContainer from "../components/Auth/FormContainer/FormContainer";
-import InputField from "../components/Auth/InputField/InputField";
-import SubmitButton from "../components/Auth/SubmitButton/SubmitButton";
+import FormContainer from "../Auth/FormContainer/FormContainer";
+import InputField from "../Auth/InputField/InputField";
+import SubmitButton from "../Auth/SubmitButton/SubmitButton";
 
 export default function Register() {
   return (

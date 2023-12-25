@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchProducts } from "../api/fetchProducts";
-import Header from "../components/Home/Header/Header";
-import Cart from "../components/Cart/Cart";
-import SearchBar from "../components/Home/SearchBar/SearchBar";
-import ProductsSection from "../components/Home/ProductsSection/ProductsSection";
+import { fetchProducts } from "../../api/fetchProducts";
+import Header from "../Home/Header/Header";
+import Cart from "../Cart/Cart";
+import SearchBar from "../Home/SearchBar/SearchBar";
+import ProductsSection from "../Home/ProductsSection/ProductsSection";
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
