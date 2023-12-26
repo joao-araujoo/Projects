@@ -33,7 +33,7 @@ export default function ProductSection() {
       } ao carrinho com sucesso =)`,
       {
         position: "top-center",
-        autoClose: 2000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,

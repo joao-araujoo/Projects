@@ -10,6 +10,7 @@
   box-sizing: border-box;
   font-family: 'Montserrat', system-ui, sans-serif;
   scrollbar-width: none;
+  outline: none;
 }
 
 body {
