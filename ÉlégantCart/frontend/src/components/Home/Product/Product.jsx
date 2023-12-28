@@ -16,7 +16,7 @@ export default function Product({ productObject }) {
   
   const handleClick = () => {
     addToCart(productObject.id, 1);
-    addToCartButton.current.style.backgroundColor = "#9FB9A1";
+    addToCartButton.current.style.backgroundColor = "#000fff";
     addToCartButton.current.style.color = "#fff";
 
     const addToCartInterval = setInterval(() => {
