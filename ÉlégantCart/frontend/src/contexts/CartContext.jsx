@@ -14,73 +14,47 @@ export default function CartContextProvider({ children }) {
     return storedProducts ? JSON.parse(storedProducts) : [];
   });
 
-  const changeQuantityFromCart = (productId, quantity) => {
-    setCart((currentState) => {
-      const updatedCart = currentState.map((product) => {
-        if (product.id === productId) {
-          return { ...product, quantity: quantity };
-        }
-        return product;
-      });
+  const updateCartAndLocalStorage = (updatedCart) => {
+    setCart(updatedCart);
+    localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
+  };
 
-      localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
+  const changeQuantityFromCart = (productId, quantity) => {
+    const updatedCart = cart.map((product) =>
+      product.id === productId ? { ...product, quantity: quantity } : product
+    );
+    updateCartAndLocalStorage(updatedCart);
   };
 
   const toggleToBuy = (productId) => {
-    setCart((currentState) => {
-      const updatedCart = currentState.map((product) => {
-        if (product.id === productId) {
-          return { ...product, toBuy: !product.toBuy };
-        }
-        return product;
-      });
-
-      localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
+    const updatedCart = cart.map((product) =>
+      product.id === productId ? { ...product, toBuy: !product.toBuy } : product
+    );
+    updateCartAndLocalStorage(updatedCart);
   };
 
-  // TODO refatorar depois função de ver se já existe
   const addToCart = async (productId, quantity) => {
     const existingProductIndex = cart.findIndex(
       (product) => product.id === productId
     );
 
     if (existingProductIndex !== -1) {
-      setCart((currentState) => {
-        const updatedCart = currentState.map((product, index) => {
-          if (index === existingProductIndex) {
-            return { ...product, quantity: product.quantity + quantity };
-          }
-          return product;
-        });
-
-        localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
-        return updatedCart;
-      });
+      const updatedCart = cart.map((product, index) =>
+        index === existingProductIndex
+          ? { ...product, quantity: product.quantity + quantity }
+          : product
+      );
+      updateCartAndLocalStorage(updatedCart);
     } else {
       const newProduct = await fetchProductById(productId);
-      setCart((currentState) => {
-        const updatedCart = [
-          { ...newProduct, quantity, toBuy: true },
-          ...currentState,
-        ];
-        localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
-        return updatedCart;
-      });
+      const updatedCart = [{ ...newProduct, quantity, toBuy: true }, ...cart];
+      updateCartAndLocalStorage(updatedCart);
     }
   };
 
   const removeFromCart = (productId) => {
-    setCart((currentState) => {
-      const updatedCart = currentState.filter(
-        (product) => product.id !== productId
-      );
-      localStorage.setItem("elegantcart-cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
+    const updatedCart = cart.filter((product) => product.id !== productId);
+    updateCartAndLocalStorage(updatedCart);
   };
 
   const items = {

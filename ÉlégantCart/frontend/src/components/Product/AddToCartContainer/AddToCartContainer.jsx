@@ -37,7 +37,6 @@ export default function AddToCartContainer({ product, productQuantityState, setP
             +
           </button>
         </div>
-        {/* TODO adicionar modal toastify para mostrar que foi ou não ao carrinho */}
         <button
           className="addToCart-button"
           onClick={() => handleFunction(product.id)}
