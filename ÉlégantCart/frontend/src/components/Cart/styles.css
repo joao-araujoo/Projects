@@ -27,3 +27,27 @@
 .cart-menu-bar {
   margin: 10px 0;
 }
+
+@media (max-height: 800px) {
+  .cart-menu .cart-items {
+    max-height: 60vh;
+  }
+}
+
+@media (max-height: 630px) {
+  .cart-menu .cart-items {
+    max-height: 50vh;
+  }
+}
+
+@media (max-height: 515px) {
+  .cart-menu .cart-items {
+    max-height: 40vh;
+  }
+}
+
+@media (max-height: 420px) {
+  .cart-menu .cart-items {
+    max-height: 30vh;
+  }
+}
