@@ -5,10 +5,10 @@ module.exports = async function updateUser(req, res) {
     try {
         const userID = req.params.id
 
-        const { username, email, password } = req.body
+        const { name, email, password } = req.body
 
-        if (!username || typeof username !== 'string') {
-            return res.status(400).json({ status: false, code: 400, error: 'Bad Request', message: '⚠ The username must not be empty or not a string' })
+        if (!name || typeof name !== 'string') {
+            return res.status(400).json({ status: false, code: 400, error: 'Bad Request', message: '⚠ The name must not be empty or not a string' })
         }
     
         if (!email || typeof email !== 'string') {
@@ -23,7 +23,7 @@ module.exports = async function updateUser(req, res) {
         const hashPassword = await bcrypt.hash(password, salt)
 
         const newUser = {
-            username,
+            name,
             email,
             password: hashPassword,
         }

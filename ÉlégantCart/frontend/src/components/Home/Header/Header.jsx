@@ -5,6 +5,8 @@ import "./styles.css";
 Header.propTypes = {
   handleFunction: PropTypes.func,
   hamburgerRef: PropTypes.object,
+  profilePicture: PropTypes.string,
+  username: PropTypes.string,
 };
 
 export default function Header({ handleFunction, hamburgerRef, profilePicture, username }) {

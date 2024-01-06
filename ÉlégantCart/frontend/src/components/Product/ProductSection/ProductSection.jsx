@@ -3,7 +3,7 @@ import AddToCartContainer from "../AddToCartContainer/AddToCartContainer";
 import useCart from "../../../hooks/useCart";
 import { useParams } from "react-router-dom";
 import { fetchProductById } from "../../../api/fetchProductByID";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles.css";
 
@@ -24,7 +24,7 @@ export default function ProductSection() {
   }, [productId]);
 
   const truncateString = (str, maxLength) =>
-  str.length > maxLength ? str.slice(0, maxLength - 3) + '...' : str;
+    str.length > maxLength ? str.slice(0, maxLength - 3) + "..." : str;
 
   const notify = () =>
     toast(

@@ -4,29 +4,54 @@ import InputField from "../Auth/InputField/InputField";
 import { useState } from "react";
 import SubmitButton from "../Auth/SubmitButton/SubmitButton";
 import useUser from "../../hooks/useUser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export default function Login() { 
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { login } = useUser();
 
-  const handleSubmit = async () => {
-    const loginResult = await login(email, password);
+  const notify = (message, type) =>
+    toast(message, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      type: type === "success" ? toast.TYPE.SUCCESS : toast.TYPE.ERROR,
+    });
 
-    if (loginResult.code === 200) {
-      localStorage.setItem("elegantcart-token", loginResult.token);
-      navigate("/");
+  const handleSubmit = async () => {
+    try {
+      const loginResult = await login(email, password);
+
+      if (loginResult.code === 200) {
+        notify(loginResult.message, "success");
+        setTimeout(() => {
+          localStorage.setItem("elegantcart-token", loginResult.token);
+          navigate("/");
+        }, 2000);
+      } else {
+        notify(loginResult.message, "error");
+      }
+    } catch (error) {
+      notify("An unexpected server error occurred. Please try again later.", "error");
     }
-  }
-  
+  };
+
   return (
     <>
+      <ToastContainer />
       <FormContainer title="Login">
         <form>
           <InputField
             labeltext="Email"
-            type="emal"
+            type="email"
             name="email"
             id="email"
             value={email}

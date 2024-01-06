@@ -3,10 +3,10 @@ const bcrypt = require('bcrypt')
 
 module.exports = async function createUser(req, res) {
     try {
-        const { username, email, password  } = req.body
+        const { name, profilePicture, email, password  } = req.body
     
-        if (!username || typeof username !== 'string') {
-            return res.status(400).json({ status: false, code: 400, error: 'Bad Request', message: '⚠ The username must not be empty or not a string' })
+        if (!name || typeof name !== 'string') {
+            return res.status(400).json({ status: false, code: 400, error: 'Bad Request', message: '⚠ The name must not be empty or not a string' })
         }
     
         if (!email || typeof email !== 'string') {
@@ -17,11 +17,22 @@ module.exports = async function createUser(req, res) {
             return res.status(400).json({ status: false, code: 400, error: 'Bad Request', message: '⚠ The password must not be empty or not a string' })
         }
 
+        const userExists = await userModel.findOne({ email });
+
+        if (userExists) {
+            return res.status(400).json({
+                status: false,
+                code: 400,
+                message: "⚠ User with this email already exists",
+            });
+        }
+
         const salt = await bcrypt.genSalt(12)
         const hashPassword = await bcrypt.hash(password, salt)
     
         const user = await userModel.create({
-            username, 
+            name, 
+            profilePicture,
             email,
             password: hashPassword
         })

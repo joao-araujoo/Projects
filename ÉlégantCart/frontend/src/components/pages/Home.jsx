@@ -17,7 +17,7 @@ export default function App() {
   const { user } = useUser();
 
   // TODO fazer validação por token
-  if (!user) {
+  if (!localStorage.getItem("elegantcart-token")) {
     navigate("/login");
   }
 
@@ -57,7 +57,7 @@ export default function App() {
         handleFunction={handleCartMenuClick}
         hamburgerRef={hamburgerButton}
         profilePicture={user.profilePicture}
-        username={user.username}
+        username={user.name}
       />
       <Cart menuRef={cartMenu} />
       <SearchBar
