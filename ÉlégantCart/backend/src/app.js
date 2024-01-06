@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/api", routes);
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 try {
   connectToDatabase();
