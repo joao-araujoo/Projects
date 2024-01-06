@@ -56,6 +56,7 @@ export default function Login() {
             id="email"
             value={email}
             onChange={(ev) => setEmail(ev.target.value)}
+            required="true"
           />
           <InputField
             labeltext="Password"
@@ -64,6 +65,7 @@ export default function Login() {
             id="password"
             value={password}
             onChange={(ev) => setPassword(ev.target.value)}
+            required="true"
           />
           <SubmitButton text="Login" handleFunction={handleSubmit} />
         </form>

@@ -10,3 +10,4 @@
 - Salvar itens do carrinho do usuário no backend
 - Criar páginas de produtos
 - Gerar pdf ou algo do tipo com o carrinho final
+- Subir imagens no backend para o perfil

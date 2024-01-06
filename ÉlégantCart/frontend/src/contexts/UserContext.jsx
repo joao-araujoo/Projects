@@ -32,9 +32,27 @@ export default function UserContextProvider({ children }) {
 
     return loginResult;
   };
+  
+  const register = async ({ name, profilePicture, email, password }) => {
+    const response = await fetch("http://localhost:8080/api/users", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        name, 
+        profilePicture,
+        email,
+        password
+      })
+    });
+
+    const registerResult = await response.json();
+    return registerResult
+  }
 
   return (
-    <UserContext.Provider value={{ user, login }}>
+    <UserContext.Provider value={{ user, login, register }}>
       {children}
     </UserContext.Provider>
   );
