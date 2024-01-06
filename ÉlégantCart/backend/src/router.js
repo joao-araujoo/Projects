@@ -9,6 +9,7 @@ const login = require('./auth/login')
 
 const router = express.Router()
 
+router.get("/", (req, res) => res.send("Hello World!"))
 router.post('/auth/login', login)
 router.get('/users', getUsers)
 router.get('/users/:id', getUserByID)
