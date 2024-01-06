@@ -3,20 +3,21 @@ import FormContainer from "../Auth/FormContainer/FormContainer";
 import InputField from "../Auth/InputField/InputField";
 import { useState } from "react";
 import SubmitButton from "../Auth/SubmitButton/SubmitButton";
+import useUser from "../../hooks/useUser";
 
 export default function Login() { 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const { login } = useUser();
 
-  const handleSubmit = () => {
-    if (email === "admin@gmail.com" && password === "admin") {
-      localStorage.setItem("elegantcart-token", "tokenjwt1234");
+  const handleSubmit = async () => {
+    const loginResult = await login(email, password);
+
+    if (loginResult.code === 200) {
+      localStorage.setItem("elegantcart-token", loginResult.token);
       navigate("/");
-      return;
     }
-
-    alert("Login inválido!");
   }
   
   return (

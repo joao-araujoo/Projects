@@ -7,17 +7,17 @@ Header.propTypes = {
   hamburgerRef: PropTypes.object,
 };
 
-export default function Header({ handleFunction, hamburgerRef }) {
+export default function Header({ handleFunction, hamburgerRef, profilePicture, username }) {
   return (
     <header className="home-header">
       <div className="user-profile">
         <img
-          src="https://br.web.img3.acsta.net/pictures/19/03/19/17/22/2985063.jpg"
+          src={profilePicture ? profilePicture : "profile.avif"}
           alt="Profile Picture"
         />
         <div className="greetings">
           <p>Hello,</p>
-          <h3>Tarantino</h3>
+          <h3>{username ? username : "Buddy =)"}</h3>
         </div>
       </div>
       <div className="cart" onClick={handleFunction} ref={hamburgerRef}>

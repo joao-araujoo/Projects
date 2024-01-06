@@ -1,18 +1,23 @@
-const express = require('express')
-const connectToDatabase = require('./database/connect')
-const routes = require('./router')
+const express = require("express");
+const cors = require("cors");
+const connectToDatabase = require("./database/connect");
+const routes = require("./router");
 
-const app = express()
+const app = express();
 
-app.use(express.json())
-app.use('/api', routes)
+// TODO adicionar middleware para tokenJWT
+app.use(express.json());
+app.use(cors());
+app.use("/api", routes);
 
-const PORT = 8080
+const PORT = 8080;
 
 try {
-    connectToDatabase()
+  connectToDatabase();
 
-    app.listen(PORT, () => console.log(`🎉 Listening on port ${PORT}!`))
+  app.listen(PORT, () => console.log(`🎉 Listening on port ${PORT}!`));
 } catch (error) {
-    console.error('⚠ An error occurred while starting the server! ' + error.message)
+  console.error(
+    "⚠ An error occurred while starting the server! " + error.message
+  );
 }

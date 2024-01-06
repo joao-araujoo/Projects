@@ -2,6 +2,7 @@
 
 - ~~Botão de adicionar ao carrinho em cada produto~~
 - ~~Redirecionar para tela de login~~
+- Mudar o título da página para o valor do input de busca
 - Passar o valor da barra de pesquisa pela url e sempre salva-lo no localstorage ou algo assim.
 - Verificar login
 - Cadastrar usuários

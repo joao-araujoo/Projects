@@ -28,7 +28,7 @@ module.exports = async function login(req, res) {
 
         const token = Token.generate(user)
 
-        res.status(200).json({ status: true,  code: 200, message: '🎉 Login successful!', token: token })
+        res.status(200).json({ status: true,  code: 200, message: '🎉 Login successful!', user, token: token })
     } catch (error) {
         res.status(500).json({ status: false, code: 500, error: '⚠ Server Error', message: error.message })
     } 

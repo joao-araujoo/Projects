@@ -5,6 +5,7 @@ import Header from "../Home/Header/Header";
 import Cart from "../Cart/Cart";
 import SearchBar from "../Home/SearchBar/SearchBar";
 import ProductsSection from "../Home/ProductsSection/ProductsSection";
+import useUser from "../../hooks/useUser";
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -13,6 +14,12 @@ export default function App() {
   const cartMenu = useRef(null);
   const hamburgerButton = useRef(null);
   const navigate = useNavigate();
+  const { user } = useUser();
+
+  // TODO fazer validação por token
+  if (!user) {
+    navigate("/login");
+  }
 
   useEffect(() => {
     fetchProducts().then((response) => {
@@ -44,17 +51,13 @@ export default function App() {
       newRightValue === "0px" ? "1000" : "initial";
   };
 
-  // TODO verificar token
-  if (!localStorage.getItem("elegantcart-token")) {
-    navigate('/login');
-    return;
-  }
-
   return (
     <>
       <Header
         handleFunction={handleCartMenuClick}
         hamburgerRef={hamburgerButton}
+        profilePicture={user.profilePicture}
+        username={user.username}
       />
       <Cart menuRef={cartMenu} />
       <SearchBar
