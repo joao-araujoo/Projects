@@ -32,12 +32,15 @@ export default function App() {
   const handleSubmit = (ev) => {
     ev.preventDefault();
 
-    setLoading(true);
-    fetchProducts(searchValue).then((response) => {
-      setProducts(response);
-      setLoading(false);
-    });
-    setSearchValue("");
+    if (searchValue !== "") {
+      setLoading(true);
+      fetchProducts(searchValue).then((response) => {
+        setProducts(response);
+        setLoading(false);
+        document.title = `${searchValue} - ÉlégantCart`;
+      });
+      setSearchValue("");
+    }
   };
 
   const handleCartMenuClick = () => {
