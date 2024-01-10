@@ -6,6 +6,7 @@ import Cart from "../Cart/Cart";
 import SearchBar from "../Home/SearchBar/SearchBar";
 import ProductsSection from "../Home/ProductsSection/ProductsSection";
 import useUser from "../../hooks/useUser";
+import { GoMoveToTop } from "react-icons/go";
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -13,6 +14,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const cartMenu = useRef(null);
   const hamburgerButton = useRef(null);
+  const scrollTopButton = useRef(null);
   const navigate = useNavigate();
   const { user } = useUser();
 
@@ -54,6 +56,27 @@ export default function App() {
       newRightValue === "0px" ? "1000" : "initial";
   };
 
+  function checkScrollPosition() {
+    if (scrollTopButton.current) {
+      scrollTopButton.current.style.opacity =
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+          ? "1"
+          : "0";
+    }
+  }
+
+  window.onscroll = () => {
+    checkScrollPosition();
+  };
+
+  const scrollTop = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <Header
@@ -72,6 +95,10 @@ export default function App() {
       <main>
         <ProductsSection loadingState={loading} productsState={products} />
       </main>
+
+      <button id="scroll-top-button" onClick={scrollTop} ref={scrollTopButton}>
+        <GoMoveToTop />
+      </button>
     </>
   );
 }

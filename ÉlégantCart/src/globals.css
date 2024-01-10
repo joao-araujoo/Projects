@@ -37,3 +37,26 @@ section {
   height: auto;
   padding: 10px 20px;
 }
+
+#scroll-top-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #030958;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+#scroll-top-button:hover {
+  background-color: #101780;
+  transform: translateY(-3px);
+}
