@@ -4,7 +4,7 @@ import Ripples from "./Ripples";
 import { useState } from "react";
 
 SubmitButton.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.any,
   handleFunction: PropTypes.func,
 };
 

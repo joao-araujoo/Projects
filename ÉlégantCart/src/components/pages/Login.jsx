@@ -6,12 +6,14 @@ import SubmitButton from "../Auth/SubmitButton/SubmitButton";
 import useUser from "../../hooks/useUser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { login } = useUser();
+  const [loading, setLoading] = useState(false);
 
   const notify = (message, type) =>
     toast(message, {
@@ -27,6 +29,8 @@ export default function Login() {
     });
 
   const handleSubmit = async () => {
+    setLoading(true);
+    
     try {
       const loginResult = await login(email, password);
 
@@ -41,6 +45,8 @@ export default function Login() {
       }
     } catch (error) {
       notify("An unexpected server error occurred. Please try again later.", "error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -56,7 +62,7 @@ export default function Login() {
             id="email"
             value={email}
             onChange={(ev) => setEmail(ev.target.value)}
-            required="true"
+            required={true}
           />
           <InputField
             labeltext="Password"
@@ -65,9 +71,9 @@ export default function Login() {
             id="password"
             value={password}
             onChange={(ev) => setPassword(ev.target.value)}
-            required="true"
+            required={true}
           />
-          <SubmitButton text="Login" handleFunction={handleSubmit} />
+          <SubmitButton text={loading ? <AiOutlineLoading className="loading" style={{ width: "20px", height: "20px" }} /> : "Login"} handleFunction={handleSubmit} />
         </form>
         <p>
           Don&apos;t have an account?

@@ -6,6 +6,7 @@ import useUser from "../../hooks/useUser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -14,6 +15,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { register } = useUser();
+  const [loading, setLoading] = useState(false);
 
   const notify = (message, type) =>
     toast(message, {
@@ -29,6 +31,8 @@ export default function Register() {
     });
 
   const handleSubmit = async () => {
+    setLoading(true);
+
     try {
       const registerResult = await register({ name, profilePicture, email, password });
 
@@ -42,8 +46,10 @@ export default function Register() {
       }
     } catch (error) {
       notify("An unexpected server error occurred. Please try again later.", "error");
+    } finally {
+      setLoading(false);
     }
-  };
+  }; 
 
   return (
     <>
@@ -85,7 +91,7 @@ export default function Register() {
             onChange={(ev) => setPassword(ev.target.value)}
             required="true"
           />
-          <SubmitButton text="Register" handleFunction={handleSubmit} />
+          <SubmitButton text={loading ? <AiOutlineLoading className="loading" style={{ width: "20px", height: "20px" }} /> : "Login"} handleFunction={handleSubmit} />
         </form>
         <p>
           Already have an account?
