@@ -33,8 +33,10 @@ export default function Register() {
   const handleSubmit = async () => {
     setLoading(true);
 
+    const user = { name, profilePicture, email, password };
+
     try {
-      const registerResult = await register({ name, profilePicture, email, password });
+      const registerResult = await register(user);
 
       if (registerResult.code === 201) {
         notify(registerResult.message, "success");
@@ -45,11 +47,15 @@ export default function Register() {
         notify(registerResult.message, "error");
       }
     } catch (error) {
-      notify("An unexpected server error occurred. Please try again later.", "error");
+      notify(
+        "An unexpected server error occurred. Please try again later.",
+        "error"
+      );
+      console.error(error.message);
     } finally {
       setLoading(false);
     }
-  }; 
+  };
 
   return (
     <>
@@ -63,7 +69,7 @@ export default function Register() {
             id="name"
             value={name}
             onChange={(ev) => setName(ev.target.value)}
-            required="true"
+            required={true}
           />
           <InputField
             labeltext="Profile Picture"
@@ -80,7 +86,7 @@ export default function Register() {
             id="email"
             value={email}
             onChange={(ev) => setEmail(ev.target.value)}
-            required="true"
+            required={true}
           />
           <InputField
             labeltext="Password"
@@ -89,9 +95,21 @@ export default function Register() {
             id="password"
             value={password}
             onChange={(ev) => setPassword(ev.target.value)}
-            required="true"
+            required={true}
           />
-          <SubmitButton text={loading ? <AiOutlineLoading className="loading" style={{ width: "20px", height: "20px" }} /> : "Login"} handleFunction={handleSubmit} />
+          <SubmitButton
+            text={
+              loading ? (
+                <AiOutlineLoading
+                  className="loading"
+                  style={{ width: "20px", height: "20px" }}
+                />
+              ) : (
+                "Login"
+              )
+            }
+            handleFunction={handleSubmit}
+          />
         </form>
         <p>
           Already have an account?

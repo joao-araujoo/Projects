@@ -5,7 +5,6 @@ import Header from "../Home/Header/Header";
 import Cart from "../Cart/Cart";
 import SearchBar from "../Home/SearchBar/SearchBar";
 import ProductsSection from "../Home/ProductsSection/ProductsSection";
-import useUser from "../../hooks/useUser";
 import { GoMoveToTop } from "react-icons/go";
 
 export default function App() {
@@ -16,13 +15,13 @@ export default function App() {
   const hamburgerButton = useRef(null);
   const scrollTopButton = useRef(null);
   const navigate = useNavigate();
-  const { user } = useUser();
-
+  const user = JSON.parse(localStorage.getItem("elegantcart-user"));
+  
   // TODO fazer validação por token
   if (!localStorage.getItem("elegantcart-token")) {
     navigate("/login");
   }
-
+  
   useEffect(() => {
     fetchProducts().then((response) => {
       setProducts(response);

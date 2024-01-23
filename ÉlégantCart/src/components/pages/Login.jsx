@@ -30,9 +30,11 @@ export default function Login() {
 
   const handleSubmit = async () => {
     setLoading(true);
-    
+    console.log(email)
+    console.log(password)
     try {
       const loginResult = await login(email, password);
+      console.log(loginResult)
 
       if (loginResult.code === 200) {
         notify(loginResult.message, "success");
@@ -45,6 +47,7 @@ export default function Login() {
       }
     } catch (error) {
       notify("An unexpected server error occurred. Please try again later.", "error");
+      console.error(error.message);
     } finally {
       setLoading(false);
     }
