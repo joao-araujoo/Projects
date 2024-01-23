@@ -81,8 +81,8 @@ export default function App() {
       <Header
         handleFunction={handleCartMenuClick}
         hamburgerRef={hamburgerButton}
-        profilePicture={user.profilePicture}
-        username={user.name}
+        profilePicture={user.profilePicture ? user.profilePicture : undefined}
+        username={user.name ? user.name : undefined}
       />
       <Cart menuRef={cartMenu} />
       <SearchBar
