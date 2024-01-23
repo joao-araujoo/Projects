@@ -16,12 +16,12 @@ export default function App() {
   const scrollTopButton = useRef(null);
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("elegantcart-user"));
-  
+
   // TODO fazer validação por token
   if (!localStorage.getItem("elegantcart-token")) {
     navigate("/login");
   }
-  
+
   useEffect(() => {
     fetchProducts().then((response) => {
       setProducts(response);
@@ -81,8 +81,8 @@ export default function App() {
       <Header
         handleFunction={handleCartMenuClick}
         hamburgerRef={hamburgerButton}
-        profilePicture={user.profilePicture ? user.profilePicture : undefined}
-        username={user.name ? user.name : undefined}
+        profilePicture={user?.profilePicture}
+        username={user?.name}
       />
       <Cart menuRef={cartMenu} />
       <SearchBar

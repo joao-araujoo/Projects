@@ -56,6 +56,7 @@ https://github.com/joao-araujoo/Projects/assets/113838517/c1f66d1e-161c-4976-bf7
 - [ ] Create product pages
 - [ ] Generate a PDF or similar with the final cart
 - [ ] Upload images to the backend for the profile
+- [ ] Add error and 404 pages
 
 ## Reference
 
