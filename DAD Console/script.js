@@ -188,7 +188,9 @@ const commands = {
       if (!args) {
         return "Usage: mkdir <directory_name>";
       }
-      const newDirectoryName = System.createDirectory(args);
+
+      const directoryName = args.replace(/['"]+/g, "");
+      const newDirectoryName = System.createDirectory(directoryName);
       return `Directory '${newDirectoryName}' created successfully.`;
     },
   },
@@ -222,7 +224,9 @@ const commands = {
         return "Usage: touch <file_name> [<file_name_2> ...]";
       }
 
-      const fileNames = args.split(" ");
+      const fileNames = args
+        .split(" ")
+        .map((fileName) => fileName.replace(/['"]+/g, ""));
       const createdFiles = [];
 
       fileNames.forEach((fileName) => {
@@ -247,15 +251,18 @@ const commands = {
       const [text, fileNamesString] = args.split(" > ");
       const fileNames = fileNamesString.split(/\s+/);
 
+      const cleanedFileNames = fileNames.map((fileName) =>
+        fileName.replace(/['"]+/g, "")
+      );
       const createdFiles = [];
 
-      fileNames.forEach((fileName) => {
+      cleanedFileNames.forEach((fileName) => {
         const targetFile = System.currentDirectory.files.find(
           (file) => file instanceof File && file.fileName === fileName
         );
 
         if (targetFile) {
-          targetFile.content = text.replace(/['"]+/g, ""); // Remover as aspas da string
+          targetFile.content = text.replace(/['"]+/g, "");
           createdFiles.push(fileName);
         } else {
           createdFiles.push(`(Error: ${fileName} does not exist)`);
@@ -275,7 +282,7 @@ const commands = {
         return "Usage: cat <file_name>";
       }
 
-      const fileName = args.trim();
+      const fileName = args.trim().replace(/['"]+/g, "");
       const targetFile = System.currentDirectory.files.find(
         (file) => file instanceof File && file.fileName === fileName
       );
@@ -305,7 +312,7 @@ const commands = {
         return "Usage: rm <file_name or directory_name>";
       }
 
-      const targetName = args.trim();
+      const targetName = args.trim().replace(/['"]+/g, "");
       return System.removeFileOrDirectory(targetName);
     },
   },
