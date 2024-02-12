@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/PhTerminalFill.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>DAD console</title>
+</head>
+<body>
+    <div id="console">
+      <header>
+        <div class="window-buttons">
+          <button class="window-button" id="red-window-button"></button>
+          <button class="window-button" id="yellow-window-button"></button>
+          <button class="window-button" id="green-window-button"></button>
+        </div>
+        <div id="current-directory" class="directory">
+          📁 /
+        </div>
+      </header>
+      <main>
+        <pre id="output"></pre>
+        <div class="command-input">
+          <span id="prompt">John@johns-air ~ %</span>
+          <input type="text" id="input">
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

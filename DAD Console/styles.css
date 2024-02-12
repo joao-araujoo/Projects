@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Menlo Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Menlo Regular'), url('fonts/Menlo-Regular.woff') format('woff');
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Menlo Regular', consolas;
+}
+
+body {
+  background-color: #1e1e1e;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#console {
+  background-color: #F6F6F6;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 15px;
+  box-shadow: -1px 4px 53px -7px rgba(100, 100, 100, 0.51);
+  overflow-y: scroll;
+  width: 600px;
+  height: 400px;
+}
+
+#console header {
+  width: 590px;
+  border-radius: 15px 15px 0 0;
+  position: fixed;
+  padding: 7px 5px;
+  display: flex;
+  align-items: center;
+  background-color: #EBEBEB;
+}
+
+#console header .window-button {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid #a1a1a1;
+}
+
+#console header .window-button:active {
+  opacity: 0.7;
+}
+
+#red-window-button {
+  background-color: #E86B5F;
+}
+
+#yellow-window-button {
+  background-color: #ECB851;
+}
+
+#green-window-button {
+  background-color: #61C051;
+}
+
+#console .directory {
+  margin-left: 110px;
+  font-weight: 700;
+  color: #5a5a5a;
+}
+
+.command-input {
+  padding: 0 10px 20px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+pre {
+  margin: 0;
+  padding: 50px 10px 0 10px;
+  font-size: 14px;
+  white-space: pre-wrap;
+  line-height: 20px;
+}
+
+input {
+  background-color: #F6F6F6;
+  border: none;
+  width: 70%;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+}
+
+.error-message {
+  color: #e74c3c;
+}
