@@ -43,6 +43,8 @@ function createCadastroForm() {
         <input type="email" id="email" name="email" required>
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
+        <label for="confirmPassword">Confirmar senha:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
         <button type="button" onclick="cadastrar()">Cadastrar</button>
     `;
     return form;
@@ -51,7 +53,6 @@ function createCadastroForm() {
 async function login() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const modal = document.getElementById('modal');
 
     try {
         const response = await fetch(`${API_URL}/auth/login`, {
@@ -82,6 +83,7 @@ async function cadastrar() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
 
     try {
         const response = await fetch(`${API_URL}/auth/register`, {
@@ -89,14 +91,17 @@ async function cadastrar() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name, email, password })
+            body: JSON.stringify({ name, email, password, confirmPassword })
         });
 
         const data = await response.json();
-        if (response.ok) {
-            alert(data.msg);
+        if (response.status === 201) {
+            showModal(data.msg, true);
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 3000);
         } else {
-            alert(data.msg);
+            showModal(data.msg, false);
         }
     } catch (error) {
         console.error(error);

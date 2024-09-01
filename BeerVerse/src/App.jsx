@@ -16,7 +16,7 @@ export default function App() {
     <>
       <header>
         <h1 className="logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Deus_Beer.png" width="50" alt="" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Deus_Beer.png" width="50" alt="BeerVerse icon" />
           BeerVerse
         </h1>
       </header>

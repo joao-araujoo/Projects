@@ -5,6 +5,7 @@ import Exams from "./pages/Exams";
 import Subjects from "./pages/Subjects";
 import WrongQuestions from "./pages/WrongQuestions";
 import Help from "./pages/Help";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         element: <Help />
       }
     ]
+  },
+  {
+    path: "*",
+    element: <Error />
   }
 ])
 

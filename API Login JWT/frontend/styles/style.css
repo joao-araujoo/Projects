@@ -32,7 +32,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #4caf50;
+    background-color: #4d65d1;
     border-radius: 5px;
 }
 
@@ -60,12 +60,12 @@ body {
 }
 
 .tab.active {
-    background-color: #4caf50;
+    background-color: #4d65d1;
     color: white;
 }
 
 .tab:hover {
-    background-color: #45a049;
+    background-color: #677ee4;
 }
 
 .content {
@@ -93,12 +93,12 @@ body {
     margin-top: 10px;
     padding: 10px 30px;
     font-size: 16px;
-    background-color: #4caf50;
+    background-color: #4d65d1;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 .form-group button:hover {
-    background-color: #45a049;
+    background-color: #677ee4;
 }
