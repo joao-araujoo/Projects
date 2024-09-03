@@ -3,7 +3,8 @@ const CategoryModel = require("../../models/Category");
 module.exports = async function updateCategory(req, res) {
   try {
     const categoryID = req.params.id;
-    const { name, budget, actual, userId } = req.body;
+    const { name, budget, actual } = req.body;
+    const userId = req.user.data._id;
 
     // Validar se os campos obrigatórios estão presentes e são válidos
     if (

@@ -18,11 +18,13 @@ router.delete("/users/:id", verifyToken, deleteUser);
 
 const getCategories = require("./controllers/categories/getCategories");
 const getCategoryByID = require("./controllers/categories/getCategoryByID");
+const getCategoriesByUser = require("./controllers/categories/getCategoriesByUser");
 const createCategory = require("./controllers/categories/createCategory");
 const updateCategory = require("./controllers/categories/updateCategory");
 const deleteCategory = require("./controllers/categories/deleteCategory");
 
 router.get("/categories", verifyToken, getCategories);
+router.get("/categories/user", verifyToken, getCategoriesByUser);
 router.get("/categories/:id", verifyToken, getCategoryByID);
 router.post("/categories", verifyToken, createCategory);
 router.put("/categories/:id", verifyToken, updateCategory);
