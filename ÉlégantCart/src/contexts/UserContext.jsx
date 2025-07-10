@@ -12,10 +12,11 @@ export default function UserContextProvider({ children }) {
     const user = localStorage.getItem("elegantcart-user");
     return user ?? {};
   });
+  const apiURL = "https://elegantcart.onrender.com";
 
   const login = async (email, password) => {
     const response = await fetch(
-      "https://elegantcart-api-production.up.railway.app/auth/login",
+      `${apiURL}/auth/login`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +42,7 @@ export default function UserContextProvider({ children }) {
 
   const register = async ({ name, profilePicture, email, password }) => {
     const response = await fetch(
-      "https://elegantcart-api-production.up.railway.app/users",
+      `${apiURL}/users`,
       {
         headers: {
           "Content-Type": "application/json",
